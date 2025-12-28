@@ -8,16 +8,25 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1170px;
-  /* --breakpoint-Xxl: 1320px; */
-  /* --color-primary:#89D32A;
-  --color-heading:#313131;
-  --color-paragraph:#676767;
-  --font-family: "Open Sans", sans-serif; */
-   --font-pop: "Poppins", sans-serif;
+  --font-pop: "Poppins", sans-serif;
+  --color-primary :#DB4444;
 }
+
+
 @layer utilities{
   .container{
     margin: auto;
   }
 }
 
+.slick-dots{
+  bottom: 10px !important;
+  right: 190px;
+}
+
+.slick-dots .slick-active div{
+    background-color:#DB4444 ;
+
+  border: 2px solid white;
+ 
+}
