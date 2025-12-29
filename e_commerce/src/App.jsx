@@ -10,6 +10,7 @@ import Catagories from './Components/Catagories'
 import BestSellingProduct from './Components/BestSellingProduct'
 import BannerTwo from './Components/BannerTwo'
 import ExpOurProduct from './Components/ExpOurProduct'
+import Footer from './Components/Footer'
 
 function App() {
  
@@ -24,6 +25,7 @@ function App() {
     <BestSellingProduct/>
     <BannerTwo />
     <ExpOurProduct />
+    <Footer />
     </>
   )
 }

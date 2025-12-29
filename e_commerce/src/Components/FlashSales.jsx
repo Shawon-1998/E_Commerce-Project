@@ -9,6 +9,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Button from './Button'
+import CountDown from './CountDown'
 
 const FlashSales = () => {
    
@@ -49,12 +50,18 @@ function SamplePrevArrow(props) {
     return (
         <>
             <div className='container'>
-                <div className='mt-37.5 mb-10'>
+                <div className='mt-37.5 mb-10 flex  '>
                     <SecHeading
                         title="Today's"
                         heading='Flash Sales'
                     />
+                      <CountDown />
                 </div>
+
+             
+                    
+                 
+                 
 
                 <div className="slider-container">
                     <Slider {...settings}>
