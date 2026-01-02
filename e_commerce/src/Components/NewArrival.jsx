@@ -15,14 +15,14 @@ const NewArrival = () => {
         className=' text-center justify-center mb-15'
       />
       <Flex  className='lg:gap-7.5 gap-4 items-center'>
-        <div className='w-[47.5%]'>
+        <div className='w-[50%]'>
            <img src={frame1} className='w-full' alt="" />
         </div>
-        <div className='w-[47.5%] '>
+        <div className='w-[50%] '>
               <img src={frame2} className='w-full' alt="" />
             <div className='flex pt-4 lg:pt-8 lg:gap-7.5 gap-4'>
-                 <img src={frame3} className='w-[47.5%]' alt="" />
-                  <img src={frame4} className='w-[47.5%]' alt="" />
+                 <img src={frame3} className='w-[50%]' alt="" />
+                  <img src={frame4} className='w-[50%]' alt="" />
             </div>
        
         </div>
