@@ -11,6 +11,8 @@ import BestSellingProduct from './Components/BestSellingProduct'
 import BannerTwo from './Components/BannerTwo'
 import ExpOurProduct from './Components/ExpOurProduct'
 import Footer from './Components/Footer'
+import Delivery from './Components/Delivery'
+import NewArrival from './Components/NewArrival'
 
 function App() {
  
@@ -25,6 +27,8 @@ function App() {
     <BestSellingProduct/>
     <BannerTwo />
     <ExpOurProduct />
+    <NewArrival />
+    <Delivery />
     <Footer />
     </>
   )

@@ -9,17 +9,19 @@ import { LuEye } from "react-icons/lu";
 const CardSec = ({ productName, ImgSrc, price, discountPrice, digit, discount, btn }) => {
     return (
         <>
-            <div className='w-67.5'>
-                <div className='relative'>
+            <div className='w-67.5  group'>
+                <div className='relative overflow-hidden'>
                     <img src={ImgSrc} alt="" className='w-full' />
-                    <div className='hover:hidden visible  '>
-                        <h3 className='bg-primary px-3 py-1 text-[#fafafac0] absolute left-3 top-3 rounded-sm '>-{discount}%</h3>
+                    <div className=' '>
+                        <h3 className='bg-primary px-3 py-1 text-[#fafafac0] 
+                        absolute left-3 top-3 rounded-sm '>-{discount}%</h3>
                         <div className='flex flex-col gap-2 absolute top-3 right-3 '>
                             <IoHeartOutline className='bg-white rounded-full  h-6 w-6 text-lg ' />
-                            <LuEye className='bg-white rounded-full  h-8 w-6  text-lg ' />
+                            <LuEye className='bg-white rounded-full  h-8 w-6 
+                             text-lg ' />
                         </div>
-                        <button className='bg-black text-white block w-full py-2 px-21.75 font-pop'>{btn}</button>
                     </div>
+                        <button className='absolute bg-black text-white block w-full py-2 px-21.75 font-pop cursor-pointer -bottom-10 group-hover:bottom-0 ease-linear duration-200'>{btn}</button>
                 </div>
                 <h3 className='font-medium mt-4 '>{productName}</h3>
                 <Flex className='my-2 gap-3'>

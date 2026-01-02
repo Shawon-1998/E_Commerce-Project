@@ -9,41 +9,36 @@ import gaming from '../assets/Category-Gamepad.png'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Cards from './Cards'
+import Cards from './CatagoriesCards'
 import { CiCamera } from "react-icons/ci";
-
+import CatagoriesCards from './CatagoriesCards'
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 
 const Catagories = () => {
+ function SampleNextArrow(props) {
+        const { onClick } = props;
+        return (
+            <div className='block absolute rounded-full p-3 bg-gray-100 right-5 -top-12' onClick={onClick} >
+           <FaArrowRight />
+            </div>
+        );
+    }
 
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "gray", top: "-25px", right: "20px" }}
-        onClick={onClick}
-      />
-    );
-  }
-
-
-
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "gray", top: "-25px", left: "1100px" }}
-        onClick={onClick}
-      />
-    );
-  }
+    function SamplePrevArrow(props) {
+        const { onClick } = props;
+        return (
+            <div className='block absolute rounded-full p-3 bg-gray-100 right-17 -top-12' onClick={onClick} >
+             <FaArrowLeft/>
+            </div>
+        );
+    }
   const settings = {
 
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesToScroll: 4,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />
@@ -60,48 +55,48 @@ const Catagories = () => {
 
         <div className="slider-container">
           <Slider {...settings} className='mb-15'>
-
-            <div className=' hover:bg-primary ease-in duration-300'>
-              <Cards
-                imgSrc={phone}
-                productName='phone'
-              />
+            <CatagoriesCards className=' hover:bg-primary ease-linear duration-300'
+              imgSrc={phone}
+              productName='phone'
+            />
+            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+              imgSrc={computer}
+              productName='Computers'
+            />
+            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+              imgSrc={watch}
+              productName='SmartWatch'
+            />
+            <div className=' hover:bg-primary ease-linear duration-300 px-14.25 py-6.25 items-center text-black'>
+              <CiCamera className='text-6xl' />
+              <h3 className='font-medium mt-4 '>Camera</h3>
             </div>
-            <div className=' hover:bg-primary ease-in duration-300'>
-
-              <Cards
-                imgSrc={computer}
-                productName='Computers'
-              />
+            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+              imgSrc={headPhone}
+              productName='HeadPhones'
+            />
+            <Cards className=' hover:bg-primary ease-in duration-300'
+              imgSrc={gaming}
+              productName='Gaming'
+            />
+            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+              imgSrc={watch}
+              productName='SmartWatch'
+            />
+            <div className=' hover:bg-primary ease-linear duration-300 px-14.25 py-6.25 items-center text-black'>
+              <CiCamera className='text-6xl' />
+              <h3 className='font-medium mt-4 '>Camera</h3>
             </div>
-            <div className=' hover:bg-primary ease-in duration-300'>
-
-              <Cards
-                imgSrc={watch}
-                productName='SmartWatch'
-              />
-            </div>
-            <div className=' hover:bg-primary ease-in duration-300 px-14.25 py-6.25 items-center text-black'>
-               <CiCamera className='text-6xl'/>
-               <h3 className='font-medium mt-4 '>Camera</h3>
-            
-            </div>
-            <div className=' hover:bg-primary ease-in duration-300'>
-
-              <Cards
-                imgSrc={headPhone}
-                productName='HeadPhones'
-              />
-            </div>
-            <div className=' hover:bg-primary ease-in duration-300'>
-
-              <Cards
-                imgSrc={gaming}
-                productName='Gaming'
-              />
-            </div>
+            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+              imgSrc={headPhone}
+              productName='HeadPhones'
+            />
+            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+              imgSrc={gaming}
+              productName='Gaming'
+            />
           </Slider>
-           <div  className='border border-[#00000013]'/>
+          <div className='border border-[#00000013]' />
         </div>
 
       </div>

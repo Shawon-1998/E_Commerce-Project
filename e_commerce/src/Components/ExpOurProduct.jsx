@@ -9,30 +9,27 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Button from './Button'
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+
 const ExpOurProduct = () => {
   function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "gray",top:"-25px",right:"20px"}}
-      onClick={onClick}
-    />
-  );
-}
-
-
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-     className={className}
-      style={{ ...style, display: "block", background: "gray",top:"-25px",left:"1100px"}}
-      onClick={onClick}
-    />
-  );
-}
+         const { onClick } = props;
+         return (
+             <div className='block absolute rounded-full p-3 bg-gray-100 right-5 -top-12' onClick={onClick} >
+            <FaArrowRight />
+             </div>
+         );
+     }
+ 
+     function SamplePrevArrow(props) {
+         const { onClick } = props;
+         return (
+             <div className='block absolute rounded-full p-3 bg-gray-100 right-17 -top-12' onClick={onClick} >
+              <FaArrowLeft/>
+             </div>
+         );
+     }
 
 
     const settings = {
@@ -47,7 +44,7 @@ function SamplePrevArrow(props) {
     };
     return (
         <>
-            <div className='container '>
+           <div className="container">
                 <div className='mt-37.5 mb-10'>
                     <SecHeading
                         title="Our Products"
@@ -57,8 +54,6 @@ function SamplePrevArrow(props) {
 
                 <div className="slider-container">
                     <Slider {...settings} >
-
-                        <div>
                             <CardSec
                                 ImgSrc={item1}
                                 productName='HAVIT HV-G92 Gamepad'
@@ -66,8 +61,6 @@ function SamplePrevArrow(props) {
                                 discountPrice='160'
                                 digit='88'
                             />
-                        </div>
-                        <div>
                             <CardSec
                                 ImgSrc={item2}
                                 productName='AK-900 Wired Keyboard'
@@ -75,8 +68,6 @@ function SamplePrevArrow(props) {
                                 discountPrice='1160'
                                 digit='75'
                             />
-                        </div>
-                        <div>
                             <CardSec
                                 ImgSrc={item3}
                                 productName='IPS LCD Gaming Monitor'
@@ -84,8 +75,34 @@ function SamplePrevArrow(props) {
                                 discountPrice='400'
                                 digit='99'
                             />
-                        </div>
-                        <div>
+                              <CardSec
+                                ImgSrc={item4}
+                                productName='S-Series Comfort Chair '
+                                price='375'
+                                discountPrice='400'
+                                digit='99'
+                            />
+                            <CardSec
+                                ImgSrc={item3}
+                                productName='HAVIT HV-G92 Gamepad'
+                                price='120'
+                                discountPrice='160'
+                                digit='88'
+                            />
+                            <CardSec
+                                ImgSrc={item3}
+                                productName='HAVIT HV-G92 Gamepad'
+                                price='120'
+                                discountPrice='160'
+                                digit='88'
+                            />
+                            <CardSec
+                                ImgSrc={item3}
+                                productName='HAVIT HV-G92 Gamepad'
+                                price='120'
+                                discountPrice='160'
+                                digit='88'
+                            />
                             <CardSec
                                 ImgSrc={item4}
                                 productName='S-Series Comfort Chair '
@@ -93,8 +110,6 @@ function SamplePrevArrow(props) {
                                 discountPrice='400'
                                 digit='99'
                             />
-                        </div>
-                        <div>
                             <CardSec
                                 ImgSrc={item3}
                                 productName='HAVIT HV-G92 Gamepad'
@@ -102,8 +117,6 @@ function SamplePrevArrow(props) {
                                 discountPrice='160'
                                 digit='88'
                             />
-                        </div>
-                        <div>
                             <CardSec
                                 ImgSrc={item3}
                                 productName='HAVIT HV-G92 Gamepad'
@@ -111,8 +124,6 @@ function SamplePrevArrow(props) {
                                 discountPrice='160'
                                 digit='88'
                             />
-                        </div>
-                        <div>
                             <CardSec
                                 ImgSrc={item3}
                                 productName='HAVIT HV-G92 Gamepad'
@@ -120,49 +131,11 @@ function SamplePrevArrow(props) {
                                 discountPrice='160'
                                 digit='88'
                             />
-                        </div>
-                        <div>
-                            <CardSec
-                                ImgSrc={item4}
-                                productName='S-Series Comfort Chair '
-                                price='375'
-                                discountPrice='400'
-                                digit='99'
-                            />
-                        </div>
-                        <div>
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                            />
-                        </div>
-                        <div>
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                            />
-                        </div>
-                        <div>
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                            />
-                        </div>
                     </Slider>
                 </div>
                 <Button className='mb-15'>View All Products</Button>
-                <div  className='border border-[#00000013]'/>
-            </div>
-
+                {/* <div  className='border border-[#00000013]'/> */}
+           </div>
         </>
     )
 }

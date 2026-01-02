@@ -13,30 +13,61 @@ const Banner = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+         responsive: [
+      {
+        breakpoint: 1170,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ],
         appendDots: dots => (
-      <div
-        style={{
-        color:"#DB4444"
-        }}
-      >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
+      <div className='text-primary' >
+        <ul className='m-0'> {dots} </ul>
       </div>
     ),
     customPaging: () => (
-      <div className='bg-gray-500 w-3.5 h-3.5 rounded-full' >
-       
-      </div>
+      <div className='bg-gray-500 lg:w-3.5 lg:h-3.5 h-2.5 w-2.5 rounded-full' />
+     
     )
     };
+    
 
     return (
         <>
                 <div className="container">
-                    <Flex className=' gap-12.25 '>
+                    <div className=' lg:flex gap-12.25 '>
                         <ul className='pt-10 pe-4.5  font-pop flex flex-col gap-4 border-r border-[#00000028]'>
-                            <li className='flex  w-54.25 justify-between'>Woman’s Fashion <MdOutlineKeyboardArrowRight className='text-xl'/>
+                            <li className='flex  lg:w-54.25 justify-between'>Woman’s Fashion <MdOutlineKeyboardArrowRight className='text-xl'/>
                             </li>
-                            <li className='flex w-54.25 justify-between'>Men’s Fashion <MdOutlineKeyboardArrowRight className='text-xl'/>
+                            <li className='flex lg:w-54.25 justify-between'>Men’s Fashion <MdOutlineKeyboardArrowRight className='text-xl'/>
                             </li>
                             <li>Baby’s & Toys</li>
                             <li>Groceries &  </li>
@@ -65,7 +96,7 @@ const Banner = () => {
                             </div>
                         </Slider>
                      </div>
-                    </Flex>
+                    </div>
                 </div>
         </>
     )

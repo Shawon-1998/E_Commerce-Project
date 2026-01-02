@@ -10,23 +10,84 @@
   --breakpoint-xl: 1170px;
   --font-pop: "Poppins", sans-serif;
   --color-primary :#DB4444;
+  --color-secondary :#00FF66;
 }
 
 
 @layer utilities{
   .container{
     margin: auto;
+    width: 100%;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
-.slick-dots{
-  bottom: 10px !important;
-  right: 190px;
+@media (min-width: 576px){
+  .container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 992px){
+  .container{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1170px){
+  .container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 576px){
+  .slick-dots{
+    bottom: 0px !important;
+    right: 30px;
+  }
+}
+@media (min-width: 768px){
+  .slick-dots{
+    bottom: 0px !important;
+    right: 50px;
+  }
+}
+@media (min-width: 992px){
+  .slick-dots{
+    bottom: 10px !important;
+    right: 100px;
+  }
+}
+@media (min-width: 1170px){
+  .slick-dots{
+    bottom: 10px !important;
+    right: 190px;
+  }
 }
 
 .slick-dots .slick-active div{
     background-color:#DB4444 ;
-
   border: 2px solid white;
  
+}
+
+.time p{
+  font-size: x-small;
+  --font-pop: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.time h5{
+  padding-left: 10px;
 }

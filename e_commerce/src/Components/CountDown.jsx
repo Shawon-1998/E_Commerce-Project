@@ -2,8 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { countDownDateAndTime } from 'countdown-date-time';
 import Flex from './Flex';
 
-const CountDown = () => {
-  const conduct_date = '2025-12-31 00:00:00';
+// const CountDown = ({className}) => {
+//   const conduct_date = '2026-12-31 00:00:00';
+//   const [time, setTime] = useState({})
+
+//props passing  
+
+const CountDown = ({ className, conductDate }) => {
+  const conduct_date = conductDate;
   const [time, setTime] = useState({})
 
 
@@ -17,11 +23,13 @@ const CountDown = () => {
 
   return (
     <>
-      <Flex className='text-[32px] items-center font-bold gap-4'>
-        <h2><p className='text-xs font-medium font-pop'>Days</p>0{time.days}:</h2>
-        <h2><p className='text-xs'>Hours</p>0{time.hours}:</h2>
-        <h2><p className='text-xs'>Minutes</p>{time.minutes}:</h2>
-        <h2><p className='text-xs'>Seconds</p>{time.seconds}</h2>
+      <Flex className={`lg:text-[32px] text-2xl time items-center font-bold gap-4 ${className}`}>
+        <h2><p>Days</p>{time.days}<h5 className='text-4xl text-primary
+         inline'>:</h5></h2>
+        <h2><p>Hours</p>{time.hours}<h5 className='text-4xl text-primary
+         inline'>:</h5></h2>
+        <h2><p >Minutes</p>{time.minutes}<h5 className='text-4xl text-primary inline'>:</h5></h2>
+        <h2><p className=''>Seconds</p>{time.seconds}<h5 className='text-4xl text-black inline'></h5></h2>
       </Flex>
 
     </>

@@ -8,41 +8,61 @@ import item4 from '../assets/item4.png'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 const BestSellingProduct = () => {
-    function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "gray",top:"-25px",right:"20px"}}
-      onClick={onClick}
-    />
-  );
-}
+   function SampleNextArrow(props) {
+        const { onClick } = props;
+        return (
+            <div className='block absolute rounded-full p-3 bg-gray-100 right-5 -top-12' onClick={onClick} >
+           <FaArrowRight />
+            </div>
+        );
+    }
 
-
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-     className={className}
-      style={{ ...style, display: "block", background: "gray",top:"-25px",left:"1100px"}}
-      onClick={onClick}
-    />
-  );
-}
-
-
+    function SamplePrevArrow(props) {
+        const { onClick } = props;
+        return (
+            <div className='block absolute rounded-full p-3 bg-gray-100 right-17 -top-12' onClick={onClick} >
+             <FaArrowLeft/>
+            </div>
+        );
+    }
     const settings = {
-      
-        infinite: true,
+        
+     infinite: false,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
- 
+        initialSlide: 0,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
     return (
         <>
