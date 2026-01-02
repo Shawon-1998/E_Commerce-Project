@@ -64,10 +64,10 @@ const Banner = () => {
         <>
                 <div className="container">
                     <div className=' lg:flex gap-12.25 '>
-                        <ul className='pt-10 pe-4.5  font-pop flex flex-col gap-4 border-r border-[#00000028]'>
-                            <li className='flex  lg:w-54.25 justify-between'>Woman’s Fashion <MdOutlineKeyboardArrowRight className='text-xl'/>
+                        <ul className='pt-10 lg:pe-4.5  font-pop flex flex-col gap-4 border-r border-[#00000028]'>
+                            <li className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between'>Woman’s Fashion <MdOutlineKeyboardArrowRight className='text-xl'/>
                             </li>
-                            <li className='flex lg:w-54.25 justify-between'>Men’s Fashion <MdOutlineKeyboardArrowRight className='text-xl'/>
+                            <li className='flex lg:w-54.25 gap-18 lg:gap-0 lg:justify-between'>Men’s Fashion <MdOutlineKeyboardArrowRight className='text-xl'/>
                             </li>
                             <li>Baby’s & Toys</li>
                             <li>Groceries &  </li>

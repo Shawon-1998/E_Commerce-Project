@@ -28,9 +28,9 @@ const BestSellingProduct = () => {
             </div>
         );
     }
-    const settings = {
-        
-     infinite: false,
+   const settings = {
+       
+        infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -39,24 +39,31 @@ const BestSellingProduct = () => {
         prevArrow: <SamplePrevArrow />,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1170,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 3,
                     infinite: true,
                     dots: true
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 992,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 2,
                     initialSlide: 2
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -84,7 +91,7 @@ const BestSellingProduct = () => {
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
-                            />
+                                  btn='Add to cart'
                         </div>
                         <div>
                             <CardSec
@@ -93,6 +100,7 @@ const BestSellingProduct = () => {
                                 price='960'
                                 discountPrice='1160'
                                 digit='75'
+                                btn='Add to cart'
                             />
                         </div>
                         <div>
@@ -102,6 +110,7 @@ const BestSellingProduct = () => {
                                 price='370'
                                 discountPrice='400'
                                 digit='99'
+                                  btn='Add to cart'
                             />
                         </div>
                         <div>
@@ -110,8 +119,8 @@ const BestSellingProduct = () => {
                                 productName='S-Series Comfort Chair '
                                 price='375'
                                 discountPrice='400'
-                                digit='99'
-                            />
+                                digit='99' 
+                                  btn='Add to cart'                           />
                         </div>
                         <div className='mb-35'>
                             <CardSec
@@ -120,6 +129,7 @@ const BestSellingProduct = () => {
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
+                                  btn='Add to cart'
                             />
                         </div>
                     </Slider>

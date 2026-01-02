@@ -12,7 +12,7 @@ const NewArrival = () => {
          <SecHeading 
         title="Featured"
         heading='New Arrival'
-        className=' text-center justify-center mb-15'
+        className=' text-center  justify-center mb-5 lg:mb-15'
       />
       <Flex  className='lg:gap-7.5 gap-4 items-center'>
         <div className='w-[50%]'>
@@ -20,7 +20,7 @@ const NewArrival = () => {
         </div>
         <div className='w-[50%] '>
               <img src={frame2} className='w-full' alt="" />
-            <div className='flex pt-4 lg:pt-8 lg:gap-7.5 gap-4'>
+            <div className='flex pt-4 lg:pt-8 lg:gap-7.5  gap-4'>
                  <img src={frame3} className='w-[50%]' alt="" />
                   <img src={frame4} className='w-[50%]' alt="" />
             </div>

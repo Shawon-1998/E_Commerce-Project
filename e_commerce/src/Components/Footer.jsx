@@ -7,8 +7,8 @@ const Footer = () => {
     <>
 
 
-      <footer className="text-white mt-32.5 bg-black">
-        <div className="mx-auto w-full max-w-screen-xl pb-15 pt-20  text-white">
+      <footer className="text-white mt-32.5 bg-black block ">
+        <div className="mx-auto w-full container pb-15 pt-20  text-white">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <a href="#" className="">

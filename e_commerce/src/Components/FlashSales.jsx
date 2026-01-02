@@ -45,24 +45,31 @@ const FlashSales = () => {
         prevArrow: <SamplePrevArrow />,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1170,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 3,
                     infinite: true,
                     dots: true
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 992,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 2,
                     initialSlide: 2
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -73,14 +80,14 @@ const FlashSales = () => {
     return (
         <>
             <div className='container'>
-                <div className='mt-37.5 mb-10 flex  gap-21.75'>
+                <div className='mt-37.5 mb-10 flex  lg:gap-21.75'>
                     <SecHeading
                         title="Today's"
                         heading='Flash Sales'
                     />
                     <CountDown
                     conductDate='2026-12-31 00:00:00'
-                     className='self-end'/>
+                     className='lg:self-end'/>
                 </div>
                 <div className="slider-container">
                     <Slider {...settings}>

@@ -33,14 +33,48 @@ const ExpOurProduct = () => {
 
 
     const settings = {
-      
+       
         infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
-        rows: 2,
+        rows:2,
+        initialSlide: 0,
         nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1170,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
     return (
         <>
@@ -60,6 +94,7 @@ const ExpOurProduct = () => {
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
+                                  btn='Add to cart'
                             />
                             <CardSec
                                 ImgSrc={item2}
@@ -67,6 +102,7 @@ const ExpOurProduct = () => {
                                 price='960'
                                 discountPrice='1160'
                                 digit='75'
+                                  btn='Add to cart'
                             />
                             <CardSec
                                 ImgSrc={item3}
@@ -74,6 +110,7 @@ const ExpOurProduct = () => {
                                 price='370'
                                 discountPrice='400'
                                 digit='99'
+                                  btn='Add to cart'
                             />
                               <CardSec
                                 ImgSrc={item4}
@@ -81,6 +118,7 @@ const ExpOurProduct = () => {
                                 price='375'
                                 discountPrice='400'
                                 digit='99'
+                                  btn='Add to cart'
                             />
                             <CardSec
                                 ImgSrc={item3}
@@ -88,6 +126,7 @@ const ExpOurProduct = () => {
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
+                                  btn='Add to cart'
                             />
                             <CardSec
                                 ImgSrc={item3}
@@ -95,6 +134,7 @@ const ExpOurProduct = () => {
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
+                                  btn='Add to cart'
                             />
                             <CardSec
                                 ImgSrc={item3}
@@ -102,6 +142,7 @@ const ExpOurProduct = () => {
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
+                                  btn='Add to cart'
                             />
                             <CardSec
                                 ImgSrc={item4}
@@ -109,6 +150,7 @@ const ExpOurProduct = () => {
                                 price='375'
                                 discountPrice='400'
                                 digit='99'
+                                  btn='Add to cart'
                             />
                             <CardSec
                                 ImgSrc={item3}
@@ -116,6 +158,7 @@ const ExpOurProduct = () => {
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
+                                  btn='Add to cart'
                             />
                             <CardSec
                                 ImgSrc={item3}
@@ -123,6 +166,7 @@ const ExpOurProduct = () => {
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
+                                  btn='Add to cart'
                             />
                             <CardSec
                                 ImgSrc={item3}
@@ -130,6 +174,7 @@ const ExpOurProduct = () => {
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
+                                  btn='Add to cart'
                             />
                     </Slider>
                 </div>
