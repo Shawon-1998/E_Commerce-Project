@@ -14,7 +14,7 @@ const BestSellingProduct = () => {
    function SampleNextArrow(props) {
         const { onClick } = props;
         return (
-            <div className='block absolute rounded-full p-3 bg-gray-100 right-5 -top-12' onClick={onClick} >
+            <div className='block absolute rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-5 -top-12' onClick={onClick} >
            <FaArrowRight />
             </div>
         );
@@ -23,7 +23,7 @@ const BestSellingProduct = () => {
     function SamplePrevArrow(props) {
         const { onClick } = props;
         return (
-            <div className='block absolute rounded-full p-3 bg-gray-100 right-17 -top-12' onClick={onClick} >
+            <div className='block absolute rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-17 -top-12' onClick={onClick} >
              <FaArrowLeft/>
             </div>
         );
@@ -76,6 +76,7 @@ const BestSellingProduct = () => {
             <div className='container'>
                 <div className='mt-37.5 mb-10'>
                     <SecHeading
+                   
                         title="This Month"
                         heading='Best Selling Products Sales'
                     />
@@ -84,16 +85,18 @@ const BestSellingProduct = () => {
                 <div className="slider-container">
                     <Slider {...settings}>
 
-                        <div>
+                      
                             <CardSec
                                 ImgSrc={item1}
                                 productName='HAVIT HV-G92 Gamepad'
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
-                                  btn='Add to cart'
-                        </div>
-                        <div>
+                                btn='Add to cart'
+                                discount='40'
+                                className='hidden'
+                        
+                     />
                             <CardSec
                                 ImgSrc={item2}
                                 productName='AK-900 Wired Keyboard'
@@ -101,27 +104,28 @@ const BestSellingProduct = () => {
                                 discountPrice='1160'
                                 digit='75'
                                 btn='Add to cart'
+                                discount='40'
                             />
-                        </div>
-                        <div>
+                      
                             <CardSec
                                 ImgSrc={item3}
                                 productName='IPS LCD Gaming Monitor'
                                 price='370'
                                 discountPrice='400'
                                 digit='99'
-                                  btn='Add to cart'
+                                btn='Add to cart'
+                                discount='35'
                             />
-                        </div>
-                        <div>
+                       
                             <CardSec
                                 ImgSrc={item4}
                                 productName='S-Series Comfort Chair '
                                 price='375'
                                 discountPrice='400'
                                 digit='99' 
-                                  btn='Add to cart'                           />
-                        </div>
+                                btn='Add to cart'  
+                                discount='30'                         />
+                        
                         <div className='mb-35'>
                             <CardSec
                                 ImgSrc={item3}
@@ -129,7 +133,8 @@ const BestSellingProduct = () => {
                                 price='120'
                                 discountPrice='160'
                                 digit='88'
-                                  btn='Add to cart'
+                                btn='Add to cart'
+                                discount='25'
                             />
                         </div>
                     </Slider>

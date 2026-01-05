@@ -23,13 +23,13 @@ const CountDown = ({ className, conductDate }) => {
 
   return (
     <>
-      <Flex className={`lg:text-[32px] text-xl time  items-center font-bold gap-4 ${className}`}>
-        <h2><p>Days</p>{time.days}<h5 className='text-4xl text-primary
+      <Flex className={`lg:text-[32px] text-xl time  items-center font-bold gap-2 lg:gap-4 ${className}`}>
+        <h2><p>Days</p>{time.days}<h5 className='lg:text-4xl text-2xl text-primary
          inline'>:</h5></h2>
-        <h2><p>Hours</p>{time.hours}<h5 className='text-4xl text-primary
+        <h2><p>Hours</p>{time.hours}<h5 className='lg:text-4xl text-2xl text-primary
          inline'>:</h5></h2>
-        <h2><p >Minutes</p>{time.minutes}<h5 className='text-4xl text-primary inline'>:</h5></h2>
-        <h2><p className=''>Seconds</p>{time.seconds}<h5 className='text-4xl text-black inline'></h5></h2>
+        <h2><p >Minutes</p>{time.minutes}<h5 className='lg:text-4xl text-2xl text-primary inline'>:</h5></h2>
+        <h2><p className=''>Seconds</p>{time.seconds}<h5 className='lg:text-4xl text-2xl text-black inline'></h5></h2>
       </Flex>
 
     </>

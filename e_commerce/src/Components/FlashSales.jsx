@@ -18,7 +18,7 @@ const FlashSales = () => {
     function SampleNextArrow(props) {
         const { onClick } = props;
         return (
-            <div className='block absolute rounded-full p-3 bg-gray-100 right-5 -top-12' onClick={onClick} >
+            <div className='block absolute rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-5 -top-12' onClick={onClick} >
            <FaArrowRight />
             </div>
         );
@@ -27,7 +27,7 @@ const FlashSales = () => {
     function SamplePrevArrow(props) {
         const { onClick } = props;
         return (
-            <div className='block absolute rounded-full p-3 bg-gray-100 right-17 -top-12' onClick={onClick} >
+            <div className='block absolute rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-17 -top-12' onClick={onClick} >
              <FaArrowLeft/>
             </div>
         );
@@ -80,7 +80,7 @@ const FlashSales = () => {
     return (
         <>
             <div className='container'>
-                <div className='mt-37.5 mb-10 flex  lg:gap-21.75'>
+                <div className='mt-37.5 mb-10 flex gap-10 lg:gap-21.75'>
                     <SecHeading
                         title="Today's"
                         heading='Flash Sales'

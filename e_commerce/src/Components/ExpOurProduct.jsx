@@ -16,7 +16,7 @@ const ExpOurProduct = () => {
   function SampleNextArrow(props) {
          const { onClick } = props;
          return (
-             <div className='block absolute rounded-full p-3 bg-gray-100 right-5 -top-12' onClick={onClick} >
+             <div className='block absolute rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-5 -top-12' onClick={onClick} >
             <FaArrowRight />
              </div>
          );
@@ -25,7 +25,7 @@ const ExpOurProduct = () => {
      function SamplePrevArrow(props) {
          const { onClick } = props;
          return (
-             <div className='block absolute rounded-full p-3 bg-gray-100 right-17 -top-12' onClick={onClick} >
+             <div className='block absolute rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-17 -top-12' onClick={onClick} >
               <FaArrowLeft/>
              </div>
          );
@@ -175,6 +175,7 @@ const ExpOurProduct = () => {
                                 discountPrice='160'
                                 digit='88'
                                   btn='Add to cart'
+                                 
                             />
                     </Slider>
                 </div>
