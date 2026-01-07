@@ -12,7 +12,8 @@ const NewArrival = () => {
          <SecHeading 
         title="Featured"
         heading='New Arrival'
-        className=' text-center  justify-center mb-5 lg:mb-15'
+        className=' text-center block mx-auto mb-5 lg:mb-15'
+        className2='justify-center '
       />
       <Flex  className='lg:gap-7.5 gap-4 items-center '>
         <div className='w-[50%]'>

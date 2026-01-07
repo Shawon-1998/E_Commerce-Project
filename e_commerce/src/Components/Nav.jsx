@@ -4,8 +4,8 @@ import logo from '../assets/logo.png'
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
-import { TiThMenuOutline } from "react-icons/ti";
-import { FaBox } from "react-icons/fa6";
+import { FaBarsStaggered } from "react-icons/fa6";
+
 
 
 const Nav = ({ className }) => {
@@ -20,43 +20,41 @@ const Nav = ({ className }) => {
     setValue1(!value1)
   }
 
-
-
-
-
-
-
-
   return (
     <>
-      <nav className='hidden lg:block pt-11.75 pb-5.75 border-[#0000003d] border-b  font-pop'>
+      <nav className=' block pt-11.75 pb-5.75 border-[#0000003d] border-b font-pop'>
         <div className="container">
-          <Flex className=' flex-none lg:justify-between'>
-            <div className=' lg:flex  lg:gap-47.5'>
+          <div className='flex lg:items-center'>
+            <div className='w-[26%]'>
               <img src={logo} alt="" />
-              <ul className=' lg:flex gap-12 font-normal'>
-                <li>Home</li>
-                <li>Contact</li>
-                <li>About</li>
-                <li>Sign Up</li>
-              </ul>
             </div>
-            <Flex className='gap-6 flex items-center'>
-              <Flex className='relative' >
-                <input type="text" placeholder='What are you looking for?' className='w-60.75 py-2.5 ps-4 bg-[#F5F5F5] rounded[4px] placeholder:text-xs outline-none' />
-                <HiMiniMagnifyingGlass className='absolute top-4 
+            <div className='lg:flex items-center justify-between w-[74%]'>
+              <div className='flex gap-20 lg:gap-47.5'>
+                <ul className='lg:flex gap-6 lg:gap-12 font-normal'>
+                  <li>Home</li>
+                  <li>Contact</li>
+                  <li>About</li>
+                  <li>Sign Up</li>
+                </ul>
+              </div>
+              <Flex className='gap-6 lg:flex items-center hidden'>
+                <Flex className='relative' >
+                  <input type="text" placeholder='What are you looking for?' className='w-60.75 py-2.5 ps-4 bg-[#F5F5F5] rounded[4px] placeholder:text-xs outline-none' />
+                  <HiMiniMagnifyingGlass className='absolute top-4 
             right-4 text-lg' />
+                </Flex>
+                <Flex className='flex gap-4 text-xl'>
+                  <IoHeartOutline />
+                  <IoCartOutline className='text-[24px] opacity-80' />
+                </Flex>
               </Flex>
-              <Flex className='flex gap-4 text-xl'>
-                <IoHeartOutline />
-                <IoCartOutline className='text-[24px] opacity-80' />
-              </Flex>
-            </Flex>
-          </Flex>
+            </div>
+              <FaBarsStaggered className='lg:hidden' />
+          </div>
         </div>
       </nav>
 
-      <nav className='lg:hidden block lg:pt-11.75 py-5 lg:pb-5.75 border-[#0000003d] border-b  font-pop'>
+      {/* <nav className='lg:hidden block lg:pt-11.75 py-5 lg:pb-5.75 border-[#0000003d] border-b  font-pop'>
         <div className="container">
           <img src={logo} alt="" className='mx-auto block' />
 
@@ -92,7 +90,7 @@ const Nav = ({ className }) => {
             }
           </Flex>
         </div>
-      </nav>
+      </nav> */}
     </>
   )
 }

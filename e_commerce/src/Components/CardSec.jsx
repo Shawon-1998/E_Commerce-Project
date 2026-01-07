@@ -9,7 +9,7 @@ import { LuEye } from "react-icons/lu";
 const CardSec = ({ productName, ImgSrc, price, discountPrice, digit, discount, btn,className }) => {
     return (
         <>
-            <div className='w-67.5  group'>
+            <div className='w-67.5 mx-auto group'>
                 <div className='relative overflow-hidden'>
                     <img src={ImgSrc} alt="" className='w-full' />
                     <div className=' '>

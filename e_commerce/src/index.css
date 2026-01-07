@@ -18,38 +18,21 @@
   .container{
     margin: auto;
     width: 100%;
-    max-width: 1170px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
-@media (min-width: 576px){
-  .container{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media (min-width: 768px){
-  .container{
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-
-@media (min-width: 992px){
-  .container{
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
+ /* .slick-dots{
+  bottom: 13px !important;
+  right: 180px;
+ } */
 
 .slick-dots .slick-active div{
     background-color:#DB4444 ;
   border: 2px solid white;
  
 }
+
+/* counter component part customize css */
 
 .time p{
   font-size: x-small;
@@ -58,4 +41,12 @@
 }
 .time h5{
   padding-left: 10px;
+}
+
+/* pages/Product component customize css */
+
+.myList li{
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

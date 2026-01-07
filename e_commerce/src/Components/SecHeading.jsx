@@ -1,15 +1,15 @@
 import React from 'react'
 import Flex from './Flex'
 
-const SecHeading = ({title,heading,className}) => {
+const SecHeading = ({title,heading,className,className2}) => {
   return (
     <>
-      <div>
-        <Flex className= 'gap-4 lg:mb-6 mb-4' >
-            <div className='border-l-20 py-5 rounded-sm border-primary '/>
+      <div className={`${className} `}>
+        <Flex className= {`gap-4 lg:mb-6 mb-4 ${className2}`} >
+            <div className='border-l-20 py-5 rounded-sm border-primary'/>
           <h5 className='font-semibold font-pop  text-primary'>{title}</h5>
       </Flex>
-        <h2 className={`font-semibold lg:text-5xl text-2xl${className}`}>{heading}</h2>
+        <h2 className={`font-semibold lg:text-5xl text-2xl`}>{heading}</h2>
       </div>
     </>
   )

@@ -13,14 +13,14 @@ import ExpOurProduct from './Components/ExpOurProduct'
 import Footer from './Components/Footer'
 import Delivery from './Components/Delivery'
 import NewArrival from './Components/NewArrival'
+import ProductPage from './Pages/ProductPage'
 
 function App() {
  
 
   return (
     <>
-    <Header />
-    <Nav />
+    <ProductPage />
     <Banner />
     <FlashSales/>
     <Catagories/>
@@ -29,7 +29,6 @@ function App() {
     <ExpOurProduct />
     <NewArrival />
     <Delivery />
-    <Footer />
     </>
   )
 }
