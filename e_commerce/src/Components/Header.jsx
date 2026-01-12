@@ -16,9 +16,9 @@ const Header = () => {
                                 </NavLink> </p>
                         </div>
                         <Flex className='w-[23%] justify-end flex-none gap-1 '>
-                            <select name="cars" id="cars" className='bg-black text-white outline-none'>
-                                <option value="volvo">English</option>
-                                <option value="saab">Bangla</option>
+                            <select name="lang" id="lang" className='bg-black cursor-pointer text-white outline-none'>
+                                <option value="">English</option>
+                                <option value="">Bangla</option>
                             </select>
 
                         </Flex>

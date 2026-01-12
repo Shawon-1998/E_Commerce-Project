@@ -7,7 +7,7 @@ const Footer = () => {
     <>
 
 
-      <footer className="text-white mt-32.5 bg-black block ">
+      <footer className="text-white mt-32.5 bg-black  ">
         <div className="mx-auto w-full container pb-15 pt-20 ">
           <div className="lg:flex  lg:justify-between">
             <div className="mb-6 md:mb-0">

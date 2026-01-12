@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Flex from '../Components/Flex';
+import BreadCrumbs from '../Components/BreadCrumbs';
+
 
 const ProductPage = () => {
 
@@ -22,12 +24,13 @@ const ProductPage = () => {
     return (
         <>
             <Container>
+                <BreadCrumbs className='pt-20 pb-12.5'/>
                 <div className='flex justify-between'>
                     <h3 className='font-pop text-xl font-bold text-[#262626]'>Shop by Category</h3>
                     <div className='flex justify-between mb-3.75'>
                         <div>
                             <label htmlFor="text"> Show: </label>
-                            <select name="cars" id="cars" className='border border-[#D9D9D9] w-24.75 text-center'>
+                            <select name="item" id="item" className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
                                 <option value="1">6</option>
                                 <option value="2">10</option>
                                 <option value="3">14</option>

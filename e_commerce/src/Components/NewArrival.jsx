@@ -18,16 +18,16 @@ const NewArrival = () => {
           className2='justify-center '
         />
         <div className='lg:gap-7.5 flex gap-4 items-center text-white group'>
-          <div className='w-[50%] bg-[url(assets/Frame1.png)] bg-no-repeat bg-center bg-cover'>
+          <div className='w-[50%] bg-[url(assets/Frame1.png)] bg-no-repeat bg-center bg-cover rounded-sm'>
              <NewArrivalCard
-                className='pt-111.5 ps-8 pb-8'
+                className='pt-114.5 ps-8 pb-9'
                 className2='py-4 w-60.5 text-sm font-pop leading-5.25 font-normal'
                 productName='PlayStation 5'
                 description='Black and White version of the PS5 coming out on sale.'
               />
           </div>
           <div className='w-[50%] '>
-            <div className=' bg-[url(assets/Frame2.png)] bg-no-repeat bg-center bg-cover w-full'>
+            <div className=' bg-[url(assets/Frame2.png)] bg-no-repeat bg-center bg-cover w-full rounded-sm'>
               <NewArrivalCard
                 className='pt-34.5 pb-6.5 ps-6 '
                 className2='py-4 w-60.5 text-sm font-pop leading-5.25 font-normal'
@@ -36,7 +36,7 @@ const NewArrival = () => {
               />
             </div>
             <div className='flex pt-4 lg:pt-8 lg:gap-7.5  gap-4'>
-              <div className=' bg-[url(assets/Frame3.png)] bg-no-repeat bg-center bg-cover w-full'>
+              <div className=' bg-[url(assets/Frame3.png)] bg-no-repeat bg-center bg-cover w-full rounded-sm'>
                 <NewArrivalCard
                   className='pt-43.75 pb-6.5 ps-6 '
                   productName='Speakers'
@@ -44,7 +44,7 @@ const NewArrival = () => {
                   description='Amazon wireless speakers'
                 />
               </div>
-              <div className=' bg-[url(assets/Frame4.png)] bg-no-repeat bg-center bg-cover w-full'>
+              <div className='rounded-sm bg-[url(assets/Frame4.png)] bg-no-repeat bg-center bg-cover w-full'>
                 <NewArrivalCard
                   className='pt-43.75 pb-6.5 ps-6 group-hover:block hidden'
                   productName='Perfume'
