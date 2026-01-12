@@ -10,24 +10,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import Button from './Button'
 const BestSellingProduct = () => {
-   function SampleNextArrow(props) {
-        const { onClick } = props;
-        return (
-            <div className='block absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-5 -top-12' onClick={onClick} >
-           <FaArrowRight />
-            </div>
-        );
-    }
-
-    function SamplePrevArrow(props) {
-        const { onClick } = props;
-        return (
-            <div className='block absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-17 -top-12' onClick={onClick} >
-             <FaArrowLeft/>
-            </div>
-        );
-    }
+ 
    const settings = {
        
         infinite: true,
@@ -35,8 +20,6 @@ const BestSellingProduct = () => {
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
         responsive: [
             {
                 breakpoint: 1170,
@@ -74,12 +57,12 @@ const BestSellingProduct = () => {
     return (
         <>
             <div className='container'>
-                <div className='mt-37.5 mb-10'>
-                    <SecHeading
-                   
+                <div className='mt-37.5 mb-10 flex justify-between'>
+                    <SecHeading     
                         title="This Month"
                         heading='Best Selling Products Sales'
                     />
+                    <Button className='self-end '>View All</Button>
                 </div>
 
                 <div className="slider-container">

@@ -5,7 +5,7 @@ import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { FaBarsStaggered } from "react-icons/fa6";
-
+import { NavLink } from "react-router";
 
 
 const Nav = ({ className }) => {
@@ -25,13 +25,13 @@ const Nav = ({ className }) => {
       <nav className=' block pt-11.75 pb-5.75 border-[#0000003d] border-b font-pop'>
         <div className="container">
           <div className='flex lg:items-center'>
-            <div className='w-[26%]'>
-              <img src={logo} alt="" />
+            <div className='w-[26%]'>   
+                <NavLink to="/" end> <img src={logo} alt="" /></NavLink>
             </div>
             <div className='lg:flex items-center justify-between w-[74%]'>
               <div className='flex gap-20 lg:gap-47.5'>
                 <ul className='lg:flex gap-6 lg:gap-12 font-normal'>
-                  <li>Home</li>
+                   <NavLink to="/" end>Home</NavLink>
                   <li>Contact</li>
                   <li>About</li>
                   <li>Sign Up</li>

@@ -1,8 +1,9 @@
 import React from 'react'
 import { Outlet } from "react-router";
-import Nav from './Nav';
-import Footer from './Footer';
-import Header from './Header';
+import Header from './Components/Header';
+import Nav from './Components/Nav';
+import Footer from './Components/Footer';
+
 
 const RootLayout = () => {
     return (

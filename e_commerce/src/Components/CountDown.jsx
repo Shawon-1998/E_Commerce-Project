@@ -22,13 +22,39 @@ const CountDown = ({ className, conductDate }) => {
   }, [])
 
     return (
-      <Flex className={`lg:text-[32px] text-xl time items-center font-bold gap-2
-        lg:gap-4 ${className}`}>
-        {/* <h2><p>Days</p>{time.days}<h5 className='lg:text-4xl text-2xl text-primary inline'>:</h5></h2>
-        <h2><p>Hours</p>{time.hours}<h5 className='lg:text-4xl text-2xl text-primary inline'>:</h5></h2>
-        <h2><p>Minutes</p>{time.minutes}<h5 className='lg:text-4xl text-2xl text-primary inline'>:</h5></h2>
-        <h2><p className=''>Seconds</p>{time.seconds}<h5 className='lg:text-4xl text-2xl text-black inline'></h5></h2> */}
-      </Flex>
+    <Flex
+// use custom css in time class name 
+  className={`lg:text-[32px] text-xl time items-center font-bold gap-2
+   lg:gap-4 ${className}`}
+>
+
+  <h2 className="flex flex-col items-center">
+    <span className="text-sm">Days</span>
+    <span>{time.days}</span>
+  </h2>
+
+  <span className="lg:text-4xl text-2xl text-primary">:</span>
+
+  <h2 className="flex flex-col items-center">
+    <span className="text-sm">Hours</span>
+    <span>{time.hours}</span>
+  </h2>
+
+  <span className="lg:text-4xl text-2xl text-primary">:</span>
+
+  <h2 className="flex flex-col items-center">
+    <span className="text-sm">Minutes</span>
+    <span>{time.minutes}</span>
+  </h2>
+
+  <span className="lg:text-4xl text-2xl text-primary">:</span>
+
+  <h2 className="flex flex-col items-center">
+    <span className="text-sm">Seconds</span>
+    <span>{time.seconds}</span>
+  </h2>
+</Flex>
+
     );
   }
 

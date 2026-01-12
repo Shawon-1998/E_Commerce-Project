@@ -3,7 +3,7 @@ import SecHeading from './SecHeading'
 import phone from '../assets/Category-CellPhone.svg'
 import computer from '../assets/Category-Computer.svg'
 import watch from '../assets/Category-SmartWatch.png'
-import camera from '../assets/Category-Camera.png'
+
 import headPhone from '../assets/Category-Headphone.png'
 import gaming from '../assets/Category-Gamepad.png'
 import Slider from "react-slick";
@@ -86,46 +86,47 @@ const settings = {
             heading='Flash Browse By Category'
           />
         </div>
-
+         {/* use custom css className cataroies  */}
         <div className="slider-container">
-          <Slider {...settings} className='mb-15'>
-            <CatagoriesCards className=' hover:bg-primary ease-linear duration-300'
+          <Slider {...settings} className='mb-15 '>
+            <CatagoriesCards className='catagories'
               imgSrc={phone}
               productName='phone'
             />
-            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+            <CatagoriesCards className='catagories'
               imgSrc={computer}
               productName='Computers'
             />
-            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+            <CatagoriesCards className='catagories'
               imgSrc={watch}
               productName='SmartWatch'
             />
-            <div className=' hover:bg-primary ease-linear duration-300 px-14.25 py-6.25 items-center text-black'>
+            {/* <div className='px-14.25 py-6.25 text-center border border-[#00000067] w-42.5 h-36.25 text-black'>
               <CiCamera className='text-6xl' />
               <h3 className='font-medium mt-4 '>Camera</h3>
-            </div>
-            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+            </div> */}
+            <CatagoriesCards className='catagories'
               imgSrc={headPhone}
               productName='HeadPhones'
             />
-            <Cards className=' hover:bg-primary ease-in duration-300'
+            <Cards className='catagories'
               imgSrc={gaming}
               productName='Gaming'
             />
-            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+            <CatagoriesCards className='catagories'
               imgSrc={watch}
               productName='SmartWatch'
             />
-            <div className=' hover:bg-primary ease-linear duration-300 px-14.25 py-6.25 items-center text-black'>
+            {/* <div className=' hover:bg-primary  border-[#00000067] w-42.5 h-36.25 ease-linear duration-300 px-14.25 py-6.25 items-center text-black'>
               <CiCamera className='text-6xl' />
               <h3 className='font-medium mt-4 '>Camera</h3>
-            </div>
-            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+            </div> */}
+           
+            <CatagoriesCards className='catagories'
               imgSrc={headPhone}
               productName='HeadPhones'
             />
-            <CatagoriesCards className=' hover:bg-primary ease-in duration-300'
+            <CatagoriesCards className='catagories'
               imgSrc={gaming}
               productName='Gaming'
             />

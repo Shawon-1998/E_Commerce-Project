@@ -5,40 +5,40 @@ import CardSec from '../Components/CardSec';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Flex from '../Components/Flex';
 
 const ProductPage = () => {
 
-    const [product, setProduct] = useState([])
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
         fetch('https://dummyjson.com/products')
             .then(res => res.json())
-            .then((data) => setProduct(data.products));
+            .then((data) => setProducts(data.products));
     }, [])
 
-    console.log(product)
+    console.log(products)
 
     return (
         <>
             <Container>
-                
-               <li className='list-none flex gap-2 mt-20 mb-12.5 text-[#00000080]'><p>Home</p>/<p>Shop</p></li>
-
-                <div className='flex justify-between mb-7.5'>
-                    <h3 className='text-start font-pop'>Shop by Category</h3>
-                    <div>
-                        <label htmlFor="text"> Show: </label>
-                        <select name="cars" id="cars" className='border border-[#D9D9D9] w-24.75 text-center'>
-                            <option value="volvo">6</option>
-                            <option value="saab">10</option>
-                            <option value="mercedes">14</option>
-                            <option value="audi">20</option>
-                            <option value="audi">All</option>
-                        </select>
+                <div className='flex justify-between'>
+                    <h3 className='font-pop text-xl font-bold text-[#262626]'>Shop by Category</h3>
+                    <div className='flex justify-between mb-3.75'>
+                        <div>
+                            <label htmlFor="text"> Show: </label>
+                            <select name="cars" id="cars" className='border border-[#D9D9D9] w-24.75 text-center'>
+                                <option value="1">6</option>
+                                <option value="2">10</option>
+                                <option value="3">14</option>
+                                <option value="4">20</option>
+                                <option value="5">All</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div className=' lg:flex  gap-12.25  '>
-                    <div>
+                <Flex className="items-start">
+                    <div className='w-[20%]'>
                         <ul className='pt-5 lg:pe-4.5  font-pop flex flex-col gap-4 '>
                             <li className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between'>Woman’s Fashion
                             </li>
@@ -59,28 +59,45 @@ const ProductPage = () => {
                             <li ><VscCircleFilled className='text-green-400' />Color 3</li>
                         </ul>
                     </div>
-                    <div className='flex flex-wrap justify-between'>
-                        {
-                            product.map((item) => {
-                                return (
-                                    <CardSec
-                                        ImgSrc={item.images}
-                                        productName={item.Essence}
-                                        price={item.price}
-                                        discountPrice='1160'
-                                        digit='75'
-                                        discount={item.discountPercentage}
-                                        btn='Add to cart'
-                                    />
-                                )
-                            })
-                        }
+                    <div className='w-[80%]'>
+                        <div className='flex flex-wrap gap-y-5 justify-between'>
+                            {
+                                products.map((item) => {
+                                    return (
+                                        <CardSec
+                                            ImgSrc={item.thumbnail}
+                                            productName={item.title}
+                                            price={item.price}
+                                            discountPrice={Math.round((item.price-(item.price*item.discountPercentage)/100))}
+                                            digit={item.reviews.length}
+                                            rating={item.rating}
+                                            discount={item.discountPercentage}
+                                            btn='Add to cart'
+                                        />
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
-
-                </div>
+                </Flex>
             </Container>
         </>
     )
 }
 
 export default ProductPage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

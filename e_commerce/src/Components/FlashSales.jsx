@@ -156,8 +156,8 @@ const FlashSales = () => {
                         />
                     </Slider>
                 </div>
-                <Button className='mb-15'>View All Products</Button>
-                <div className='border border-[#00000013]' />
+                <Button className='mx-auto block mt-9.25 '>View All Products</Button>
+                <div className='border mt-15 border-[#00000013]' />
             </div>
 
         </>
