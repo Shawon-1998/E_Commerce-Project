@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Flex from '../Components/Flex';
 import BreadCrumbs from '../Components/BreadCrumbs';
+import Paginate from '../Components/Paginate';
 
 
 const ProductPage = () => {
@@ -63,8 +64,8 @@ const ProductPage = () => {
                         </ul>
                     </div>
                     <div className='w-[80%]'>
-                        <div className='flex flex-wrap gap-y-5 justify-between'>
-                            {
+                        <div className='flex flex-wrap gap-5 justify-between relative'>
+                            {/* {
                                 products.map((item) => {
                                     return (
                                         <CardSec
@@ -79,7 +80,8 @@ const ProductPage = () => {
                                         />
                                     )
                                 })
-                            }
+                            } */}
+                            <Paginate itemsPerPage={6} product={products}/>
                         </div>
                     </div>
                 </Flex>
