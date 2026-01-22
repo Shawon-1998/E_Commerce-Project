@@ -88,7 +88,7 @@ const settings = {
         </div>
          {/* use custom css className cataroies  */}
         <div className="slider-container">
-          <Slider {...settings} className='mb-15 '>
+          <Slider {...settings} className='mb-15  '>
             <CatagoriesCards className='catagories'
               imgSrc={phone}
               productName='phone'
