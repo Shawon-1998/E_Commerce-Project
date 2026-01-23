@@ -20,7 +20,7 @@ const ProductPage = () => {
             .then((data) => setProducts(data.products));
     }, [])
 
-    console.log(products)
+    // console.log(products)
 
     return (
         <>

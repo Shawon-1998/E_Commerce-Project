@@ -26,12 +26,12 @@ const Nav = ({ className }) => {
         <div className="container">
           <div className='flex lg:items-center'>
             <div className='w-[26%]'>   
-                <NavLink to="/home" end> <img src={logo} alt="" /></NavLink>
+                <NavLink to="/" end> <img src={logo} alt="" /></NavLink>
             </div>
             <div className='lg:flex items-center justify-between w-[74%]'>
               <div className='flex gap-20 lg:gap-47.5'>
                 <ul className='lg:flex gap-6 lg:gap-12 font-normal'>
-                   <NavLink to="/home" end>Home</NavLink>
+                   <NavLink to="/" end>Home</NavLink>
                   <li>Contact</li>
                   <li>About</li>
                   <li>Sign Up</li>

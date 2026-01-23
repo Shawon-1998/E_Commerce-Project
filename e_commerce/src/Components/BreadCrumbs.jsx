@@ -4,7 +4,7 @@ import { useLocation } from 'react-router'
 const BreadCrumbs = ({className}) => {
      let location = useLocation()
      let pathName= location.pathname.split('/')[1]
-     console.log(pathName)
+    //  console.log(pathName)
   return (
     <>
       <div className={`${className} text-sm font-pop flex gap-2`}>

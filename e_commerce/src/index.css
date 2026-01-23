@@ -21,15 +21,12 @@
   }
 }
 
- /* .slick-dots{
-  bottom: 13px !important;
-  right: 180px;
- } */
+
 
 .slick-dots .slick-active div{
     background-color:#DB4444 ;
   border: 2px solid white;
- 
+ cursor: pointer;
 }
 
 /* counter component part customize css */
