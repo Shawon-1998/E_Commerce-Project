@@ -12,7 +12,7 @@ import Skeleton from '../Components/Skeleton';
 
 
 
-const ProductPage = () => {
+const ProductPage2 = () => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(1)
@@ -26,11 +26,11 @@ const ProductPage = () => {
                 setLoading(0)
             });
     }, [])
-    useEffect(()=>{
-        const uniqueCategory= [...new Set(products.map((item)=>item.category))]
+    useEffect(() => {
+        const uniqueCategory = [...new Set(products.map((item) => item.category))]
         setCategory(uniqueCategory)
     },
-    [products])
+        [products])
 
     // console.log(products)
 
@@ -111,7 +111,7 @@ const ProductPage = () => {
     )
 }
 
-export default ProductPage
+export default ProductPage2
 
 
 

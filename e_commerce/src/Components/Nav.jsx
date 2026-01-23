@@ -33,7 +33,7 @@ const Nav = ({ className }) => {
                 <ul className='lg:flex gap-6 lg:gap-12 font-normal'>
                    <NavLink to="/" end>Home</NavLink>
                   <li>Contact</li>
-                  <li>About</li>
+                  <li><NavLink to="/Product" end>Product</NavLink></li>
                   <li>Sign Up</li>
                 </ul>
               </div>
