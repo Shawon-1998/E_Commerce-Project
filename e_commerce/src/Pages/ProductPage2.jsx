@@ -9,7 +9,7 @@ import Flex from '../Components/Flex';
 import BreadCrumbs from '../Components/BreadCrumbs';
 import Paginate from '../Components/Paginate';
 import Skeleton from '../Components/Skeleton';
-
+import axios from 'axios';
 
 
 const ProductPage2 = () => {
@@ -18,19 +18,28 @@ const ProductPage2 = () => {
     const [loading, setLoading] = useState(1)
     const [category, setCategory] = useState([])
 
+    // useEffect(() => {
+    //     fetch('https://dummyjson.com/products')
+    //         .then(res => res.json())
+    //         .then((data) => {
+    //             setProducts(data.products)
+    //             setLoading(0)
+    //         });
+    // }, [])
+
+  async function data (){
+   await axios.get('https://dummyjson.com/products')
+     .then ((res )=>{ 
+        console.log(res.data.products)
+        setProducts(res.data.products)
+        setLoading(0)
+    })
+   }
+
     useEffect(() => {
-        fetch('https://dummyjson.com/products')
-            .then(res => res.json())
-            .then((data) => {
-                setProducts(data.products)
-                setLoading(0)
-            });
-    }, [])
-    useEffect(() => {
-        const uniqueCategory = [...new Set(products.map((item) => item.category))]
-        setCategory(uniqueCategory)
+      data()
     },
-        [products])
+        [])
 
     // console.log(products)
 
