@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Flex from '../Components/Flex';
 import BreadCrumbs from '../Components/BreadCrumbs';
 import Paginate from '../Components/Paginate';
+import Skeleton from '../Components/Skeleton';
+
 
 
 const ProductPage = () => {
@@ -26,6 +28,7 @@ const ProductPage = () => {
         <>
             <Container>
                 <BreadCrumbs className='pt-20 pb-12.5'/>
+                <Skeleton />
                 <div className='flex justify-between'>
                     <h3 className='font-pop text-xl font-bold text-[#262626]'>Shop by Category</h3>
                     <div className='flex justify-between mb-3.75'>
@@ -83,6 +86,7 @@ const ProductPage = () => {
                             } */}
                             <Paginate itemsPerPage={6} product={products}/>
                         </div>
+                        
                     </div>
                 </Flex>
             </Container>
