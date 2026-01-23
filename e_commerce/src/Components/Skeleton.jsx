@@ -3,25 +3,32 @@ import React from 'react'
 const Skeleton = () => {
   return (
     <>
-      
-<div role="status" className="max-w-sm p-4 border border-default rounded-base shadow-xs animate-pulse md:p-6">
-  <div role="status" className="flex items-center justify-center h-48 max-w-sm bg-neutral-quaternary rounded-base animate-pulse mb-4 sm:mb-6">
-    <svg className="w-11 h-11 text-fg-disabled" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM9 12h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Zm5.697 2.395v-.733l1.269-1.219v2.984l-1.268-1.032Z" /></svg>
-    <span className="sr-only">Loading...</span>
-  </div>
-  <div className="h-2.5 bg-neutral-quaternary rounded-full w-48 mb-4" />
-  <div className="h-2 bg-neutral-quaternary rounded-full mb-2.5" />
-  <div className="h-2 bg-neutral-quaternary rounded-full mb-2.5" />
-  <div className="h-2 bg-neutral-quaternary rounded-full" />
-  <div className="flex items-center mt-4">
-    <svg className="w-8 h-8 text-fg-disabled me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /></svg>
-    <div>
-      <div className="h-2.5 bg-neutral-quaternary rounded-full w-32 mb-2" />
-      <div className="w-48 h-2 bg-neutral-quaternary rounded-full" />
-    </div>
-  </div>
-  <span className="sr-only">Loading...</span>
-</div>
+      <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-67.5  animate-pulse">
+        <div className="relative grid h-56  mx-4 mt-4 overflow-hidden text-gray-700 bg-gray-300 bg-clip-border rounded-xl place-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12 text-gray-500">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z">
+            </path>
+          </svg>
+        </div>
+        <div className="p-6">
+          <div className="block w-full h-3 mb-4 font-sans text-5xl antialiased font-semibold leading-tight tracking-normal bg-gray-300 rounded-full text-inherit">
+            &nbsp;
+          </div>
+          <div className="block  w-full h-2 mb-2 font-sans text-base antialiased font-light leading-relaxed bg-gray-300 rounded-full text-inherit">
+            &nbsp;
+          </div>
+          <div className="block  w-full h-2 mb-2 font-sans text-base antialiased font-light leading-relaxed bg-gray-300 rounded-full text-inherit">
+            &nbsp;
+          </div>
+          <div className="block  w-full h-2 mb-2 font-sans text-base antialiased font-light leading-relaxed bg-gray-300 rounded-full text-inherit">
+            &nbsp;
+          </div>
+          <div className="block  w-full h-2 mb-2 font-sans text-base antialiased font-light leading-relaxed bg-gray-300 rounded-full text-inherit">
+            &nbsp;
+          </div>
+        </div>
+
+      </div>
 
     </>
   )

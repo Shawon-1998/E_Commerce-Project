@@ -15,11 +15,15 @@ import Skeleton from '../Components/Skeleton';
 const ProductPage = () => {
 
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(1)
 
     useEffect(() => {
         fetch('https://dummyjson.com/products')
             .then(res => res.json())
-            .then((data) => setProducts(data.products));
+            .then((data) => {
+                setProducts(data.products)
+               setLoading(0)
+            });
     }, [])
 
     // console.log(products)
@@ -27,8 +31,8 @@ const ProductPage = () => {
     return (
         <>
             <Container>
-                <BreadCrumbs className='pt-20 pb-12.5'/>
-                <Skeleton />
+                <BreadCrumbs className='pt-20 pb-12.5' />
+
                 <div className='flex justify-between'>
                     <h3 className='font-pop text-xl font-bold text-[#262626]'>Shop by Category</h3>
                     <div className='flex justify-between mb-3.75'>
@@ -84,12 +88,22 @@ const ProductPage = () => {
                                     )
                                 })
                             } */}
-                            <Paginate itemsPerPage={6} product={products}/>
-                        </div>
-                        
+
+                            {
+                            !loading ? <Paginate itemsPerPage={6} product={products} /> :
+                                <>
+                                    <Skeleton />
+                                    <Skeleton />
+                                    <Skeleton />
+                                    <Skeleton />
+                                    <Skeleton />
+                                    <Skeleton />
+                                 </>
+                               }
                     </div>
-                </Flex>
-            </Container>
+                </div>
+            </Flex>
+        </Container >
         </>
     )
 }
