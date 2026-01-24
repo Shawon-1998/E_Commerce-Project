@@ -30,7 +30,7 @@ const ProductPage2 = () => {
   async function data (){
    await axios.get('https://dummyjson.com/products')
      .then ((res )=>{ 
-        console.log(res.data.products)
+        // console.log(res.data.products)
         setProducts(res.data.products)
         setLoading(0)
     })
