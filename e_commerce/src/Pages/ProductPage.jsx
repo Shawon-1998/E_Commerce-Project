@@ -58,9 +58,9 @@ const ProductPage = () => {
                     <div className='w-[20%]'>
                         <ul className='pt-5 lg:pe-4.5  font-pop flex flex-col gap-4 '>
                             {
-                                category.map((item) => {
+                                category.map((item,idx) => {
                                     return (
-                                        <li className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
+                                        <li key={idx} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
                                     )
                                 })
                             }
