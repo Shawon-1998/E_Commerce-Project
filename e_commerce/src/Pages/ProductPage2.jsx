@@ -18,30 +18,33 @@ const ProductPage2 = () => {
     const [loading, setLoading] = useState(1)
     const [category, setCategory] = useState([])
 
-    // useEffect(() => {
-    //     fetch('https://dummyjson.com/products')
-    //         .then(res => res.json())
-    //         .then((data) => {
-    //             setProducts(data.products)
-    //             setLoading(0)
-    //         });
-    // }, [])
-
-  async function data (){
-   await axios.get('https://dummyjson.com/products')
-     .then ((res )=>{ 
-        // console.log(res.data.products)
-        setProducts(res.data.products)
-        setLoading(0)
-    })
-   }
+    async function data() {
+        await axios.get('https://dummyjson.com/products')
+            .then((res) => {
+                // console.log(res.data.products)
+                setProducts(res.data.products)
+                setLoading(0)
+            })
+    }
 
     useEffect(() => {
-      data()
+        data()
     },
         [])
+    useEffect(() => {
+        const uniqueCateg = [...new Set(products.map((item) => item.category))]
+        setCategory(uniqueCateg)
+    },
+        [products])
 
-    // console.log(products)
+    const handleFilter = (item) => {
+        const filterProduct = products.filter((filterItem) => {
+            return (
+                filterItem.category === item
+            )
+        })
+        setProducts(filterProduct)
+    }
 
     return (
         <>
@@ -67,9 +70,9 @@ const ProductPage2 = () => {
                     <div className='w-[20%]'>
                         <ul className='pt-5 lg:pe-4.5  font-pop flex flex-col gap-4 '>
                             {
-                                category.map((item) => {
+                                category.map((item, idx) => {
                                     return (
-                                        <li className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between'> {item} </li>
+                                        <li key={idx} onClick={() => { handleFilter(item) }} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
                                     )
                                 })
                             }

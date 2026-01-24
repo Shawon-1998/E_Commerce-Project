@@ -26,11 +26,11 @@ const ProductPage = () => {
                 setLoading(0)
             });
     }, [])
-    useEffect(()=>{
-        const uniqueCategory= [...new Set(products.map((item)=>item.category))]
+    useEffect(() => {
+        const uniqueCategory = [...new Set(products.map((item) => item.category))]
         setCategory(uniqueCategory)
     },
-    [products])
+        [products])
 
     // console.log(products)
 
@@ -60,7 +60,7 @@ const ProductPage = () => {
                             {
                                 category.map((item) => {
                                     return (
-                                        <li className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between'> {item} </li>
+                                        <li className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
                                     )
                                 })
                             }
@@ -75,25 +75,9 @@ const ProductPage = () => {
                     </div>
                     <div className='w-[80%]'>
                         <div className='flex flex-wrap gap-5 justify-between relative'>
-                            {/* {
-                                products.map((item) => {
-                                    return (
-                                        <CardSec
-                                            ImgSrc={item.thumbnail}
-                                            productName={item.title}
-                                            price={item.price}
-                                            discountPrice={Math.round((item.price-(item.price*item.discountPercentage)/100))}
-                                            digit={item.reviews.length}
-                                            rating={item.rating}
-                                            discount={item.discountPercentage}
-                                            btn='Add to cart'
-                                        />
-                                    )
-                                })
-                            } */}
-
+                        
                             {
-                                !loading ? <Paginate itemsPerPage={8} product={products} /> :
+                                !loading ? <Paginate itemsPerPage={6} product={products} /> :
                                     <>
                                         <Skeleton />
                                         <Skeleton />
