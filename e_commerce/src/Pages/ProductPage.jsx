@@ -93,7 +93,7 @@ const ProductPage = () => {
                             } */}
 
                             {
-                                !loading ? <Paginate itemsPerPage={6} product={products} /> :
+                                !loading ? <Paginate itemsPerPage={8} product={products} /> :
                                     <>
                                         <Skeleton />
                                         <Skeleton />
