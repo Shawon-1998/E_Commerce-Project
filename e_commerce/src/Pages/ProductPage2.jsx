@@ -55,9 +55,9 @@ const ProductPage2 = () => {
                             <label htmlFor="text"> Show: </label>
                             <select name="item" id="item" className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
                                 <option value="1">6</option>
-                                <option value="2">10</option>
-                                <option value="3">14</option>
-                                <option value="4">20</option>
+                                <option value="2">12</option>
+                                <option value="3">18</option>
+                                <option value="4">24</option>
                                 <option value="5">All</option>
                             </select>
                         </div>
