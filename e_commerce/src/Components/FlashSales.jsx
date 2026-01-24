@@ -114,7 +114,7 @@ const FlashSales = () => {
                             productName='IPS LCD Gaming Monitor'
                             price='370'
                             discountPrice='400'
-                            digit='99'
+                            digit='97'
                             discount='30'
                             btn='Add to cart'
                         />
