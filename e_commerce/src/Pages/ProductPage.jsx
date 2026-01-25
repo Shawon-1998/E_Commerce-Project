@@ -18,12 +18,15 @@ const ProductPage = () => {
     const [loading, setLoading] = useState(1)
     const [category, setCategory] = useState([])
 
+
     useEffect(() => {
         fetch('https://dummyjson.com/products')
             .then(res => res.json())
             .then((data) => {
                 setProducts(data.products)
+
                 setLoading(0)
+
             });
     }, [])
     useEffect(() => {
@@ -32,11 +35,20 @@ const ProductPage = () => {
     },
         [products])
 
+    const handleFilter = (item) => {
+        const filterProduct = products.filter((filterItem) => {
+            return (
+                filterItem.category == item
+            )
+        })
+        setProducts(filterProduct)
+    }
+
     // console.log(products)
 
     return (
         <>
-            {/* <Container>
+            <Container>
                 <BreadCrumbs className='pt-20 pb-12.5' />
 
                 <div className='flex justify-between'>
@@ -58,9 +70,9 @@ const ProductPage = () => {
                     <div className='w-[20%]'>
                         <ul className='pt-5 lg:pe-4.5  font-pop flex flex-col gap-4 '>
                             {
-                                category.map((item,idx) => {
+                                category.map((item, idx) => {
                                     return (
-                                        <li key={idx} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
+                                        <li key={idx} onClick={() => { handleFilter(item) }} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
                                     )
                                 })
                             }
@@ -75,9 +87,9 @@ const ProductPage = () => {
                     </div>
                     <div className='w-[80%]'>
                         <div className='flex flex-wrap gap-5 justify-between relative'>
-                        
+
                             {
-                     !loading ? <Paginate itemsPerPage={6} product={products} /> :
+                                !loading ? <Paginate itemsPerPage={6} product={products} /> :
                                     <>
                                         <Skeleton />
                                         <Skeleton />
@@ -90,7 +102,7 @@ const ProductPage = () => {
                         </div>
                     </div>
                 </Flex>
-            </Container > */}
+            </Container >
         </>
     )
 }
