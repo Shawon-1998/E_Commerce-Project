@@ -2,15 +2,15 @@ import React from 'react'
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  value: 0,
+  value: null,
 }
 
 export const ProductSlice = createSlice({
-  name: 'counter',
+  name: 'product',
   initialState,
   reducers: {
-    allProducts: (state) => {
-     
+    allProducts: (state,action) => {
+     state.value =action.payload
     },
   },
 })
