@@ -2,11 +2,14 @@
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import CardSec from './CardSec';
-
+import { useSelector } from 'react-redux'
 
 const Paginate = ({ itemsPerPage,product }) => {
   const items = product;
-  
+   const allProducts = useSelector((state) => state.productItem)
+   
+   console.log(allProducts)
+
   function Items({ currentItems }) {
     return (
       <>

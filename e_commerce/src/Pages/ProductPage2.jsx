@@ -10,13 +10,15 @@ import BreadCrumbs from '../Components/BreadCrumbs';
 import Paginate from '../Components/Paginate';
 import Skeleton from '../Components/Skeleton';
 import axios from 'axios';
-
+import { useDispatch } from 'react-redux'
+import { allProducts } from '../slices/ProductSlice';
 
 const ProductPage2 = () => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(1)
     const [category, setCategory] = useState([])
+    const dispatch =useDispatch()
 
     async function data() {
         await axios.get('https://dummyjson.com/products')
@@ -24,6 +26,7 @@ const ProductPage2 = () => {
                 // console.log(res.data.products)
                 setProducts(res.data.products)
                 setLoading(0)
+                dispatch(allProducts(res.data.products))
             })
     }
 

@@ -9,6 +9,7 @@ import ProductPage from './Pages/ProductPage.jsx';
 import ProductPage2 from './Pages/ProductPage2.jsx';
 import { Provider } from 'react-redux'
 import {store} from '../src/Store/store.js'
+// import store from '../src/Store/store.js'
 
 const router = createBrowserRouter([
   {
