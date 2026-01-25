@@ -5,12 +5,14 @@ import CardSec from './CardSec';
 import { useSelector } from 'react-redux'
 
 const Paginate = ({ itemsPerPage,product }) => {
-  const items = product;
-   const allProducts = useSelector((state) => state.productItem)
-   
-   console.log(allProducts)
 
-  function Items({ currentItems }) {
+  const allProducts = useSelector((state) => state.productItem.value)
+
+  const items = allProducts;
+  // const items = product;
+   
+
+  function Items({ currentItems}) {
     return (
       <>
         {currentItems &&

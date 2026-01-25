@@ -36,7 +36,7 @@ const ProductPage = () => {
 
     return (
         <>
-            <Container>
+            {/* <Container>
                 <BreadCrumbs className='pt-20 pb-12.5' />
 
                 <div className='flex justify-between'>
@@ -77,7 +77,7 @@ const ProductPage = () => {
                         <div className='flex flex-wrap gap-5 justify-between relative'>
                         
                             {
-                                !loading ? <Paginate itemsPerPage={6} product={products} /> :
+                     !loading ? <Paginate itemsPerPage={6} product={products} /> :
                                     <>
                                         <Skeleton />
                                         <Skeleton />
@@ -90,7 +90,7 @@ const ProductPage = () => {
                         </div>
                     </div>
                 </Flex>
-            </Container >
+            </Container > */}
         </>
     )
 }

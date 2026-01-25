@@ -26,6 +26,7 @@ const ProductPage2 = () => {
                 // console.log(res.data.products)
                 setProducts(res.data.products)
                 setLoading(0)
+                setProducts(category)
                 dispatch(allProducts(res.data.products))
             })
     }
@@ -108,7 +109,7 @@ const ProductPage2 = () => {
                             } */}
 
                             {
-                                !loading ? <Paginate itemsPerPage={6} product={products} /> :
+                                !loading ? <Paginate itemsPerPage={6}  /> :
                                     <>
                                         <Skeleton />
                                         <Skeleton />
