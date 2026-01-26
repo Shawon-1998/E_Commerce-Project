@@ -9,28 +9,36 @@ import Flex from '../Components/Flex';
 import BreadCrumbs from '../Components/BreadCrumbs';
 import Paginate from '../Components/Paginate';
 import Skeleton from '../Components/Skeleton';
-
-
+import axios from 'axios';
+import { useDispatch } from 'react-redux'
+import { allProducts } from '../slices/ProductSlice';
 
 const ProductPage = () => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(1)
     const [category, setCategory] = useState([])
+    const dispatch =useDispatch()
 
-
-    useEffect(() => {
-        fetch('https://dummyjson.com/products')
-            .then(res => res.json())
-            .then((data) => {
-                setProducts(data.products)
+    async function data() {
+        await axios.get('https://dummyjson.com/products')
+            .then((res) => {
+                // console.log(res.data.products)
+                setProducts(res.data.products)
                 setLoading(0)
+              
+                dispatch(allProducts(res.data.products))
+            })
+    }
 
-            });
-    }, [])
     useEffect(() => {
-        const uniqueCategory = [...new Set(products.map((item) => item.category))]
-        setCategory(uniqueCategory)
+        data()
+    },
+        [])
+        
+    useEffect(() => {
+        const uniqueCateg = [...new Set(products.map((item) => item.category))]
+        setCategory(uniqueCateg)
     },
         [products])
 
@@ -43,11 +51,9 @@ const ProductPage = () => {
         setProducts(filterProduct)
     }
 
-    // console.log(products)
-
     return (
         <>
-            {/* <Container>
+            <Container>
                 <BreadCrumbs className='pt-20 pb-12.5' />
 
                 <div className='flex justify-between'>
@@ -56,11 +62,11 @@ const ProductPage = () => {
                         <div>
                             <label htmlFor="text"> Show: </label>
                             <select name="item" id="item" className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
-                                <option value="1">6</option>
-                                <option value="2">10</option>
-                                <option value="3">14</option>
-                                <option value="4">20</option>
-                                <option value="5">All</option>
+                                <option value="6">6</option>
+                                <option value="9">9</option>
+                                <option value="12">12</option>
+                                <option value="15">15</option>
+                                
                             </select>
                         </div>
                     </div>
@@ -71,7 +77,7 @@ const ProductPage = () => {
                             {
                                 category.map((item, idx) => {
                                     return (
-                                        <li key={idx} onClick={() => { handleFilter(item) }} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
+                                        <li key={idx} onClick={() => {handleFilter (item) }} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
                                     )
                                 })
                             }
@@ -86,9 +92,9 @@ const ProductPage = () => {
                     </div>
                     <div className='w-[80%]'>
                         <div className='flex flex-wrap gap-5 justify-between relative'>
-
+                           
                             {
-                                !loading ? <Paginate itemsPerPage={6} product={products} /> :
+                                !loading ? <Paginate itemsPerPage={6} /> :
                                     <>
                                         <Skeleton />
                                         <Skeleton />
@@ -101,7 +107,7 @@ const ProductPage = () => {
                         </div>
                     </div>
                 </Flex>
-            </Container > */}
+            </Container >
         </>
     )
 }
