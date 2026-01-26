@@ -8,9 +8,9 @@ const Paginate = ({ itemsPerPage,product }) => {
 
   const allProducts = useSelector((state) => state.productItem.value)
 
-  // const items = allProducts;   //its for productPage 2 component
+  const items = allProducts;   //its for productPage 2 component
 
-  const items = product;         //its for productPage component
+  // const items = product;         //its for productPage component
    
 
   function Items({ currentItems}) {

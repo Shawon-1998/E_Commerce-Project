@@ -26,7 +26,7 @@ const ProductPage2 = () => {
                 // console.log(res.data.products)
                 setProducts(res.data.products)
                 setLoading(0)
-                setProducts(category)
+              
                 dispatch(allProducts(res.data.products))
             })
     }
@@ -45,7 +45,7 @@ const ProductPage2 = () => {
     const handleFilter = (item) => {
         const filterProduct = products.filter((filterItem) => {
             return (
-                filterItem.category === item
+                filterItem.category == item
             )
         })
         setProducts(filterProduct)
@@ -62,11 +62,11 @@ const ProductPage2 = () => {
                         <div>
                             <label htmlFor="text"> Show: </label>
                             <select name="item" id="item" className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
-                                <option value="1">6</option>
-                                <option value="2">12</option>
-                                <option value="3">18</option>
-                                <option value="4">24</option>
-                                <option value="5">All</option>
+                                <option value="6">6</option>
+                                <option value="9">9</option>
+                                <option value="12">12</option>
+                                <option value="15">15</option>
+                                
                             </select>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ const ProductPage2 = () => {
                             {
                                 category.map((item, idx) => {
                                     return (
-                                        <li key={idx} onClick={() => { handleFilter(item) }} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
+                                        <li key={idx} onClick={() => {handleFilter (item) }} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
                                     )
                                 })
                             }
@@ -94,7 +94,7 @@ const ProductPage2 = () => {
                         <div className='flex flex-wrap gap-5 justify-between relative'>
                            
                             {
-                                !loading ? <Paginate itemsPerPage={6}  /> :
+                                !loading ? <Paginate itemsPerPage={6} /> :
                                     <>
                                         <Skeleton />
                                         <Skeleton />

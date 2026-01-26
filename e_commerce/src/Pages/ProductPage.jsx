@@ -24,7 +24,6 @@ const ProductPage = () => {
             .then(res => res.json())
             .then((data) => {
                 setProducts(data.products)
-
                 setLoading(0)
 
             });
@@ -48,7 +47,7 @@ const ProductPage = () => {
 
     return (
         <>
-            <Container>
+            {/* <Container>
                 <BreadCrumbs className='pt-20 pb-12.5' />
 
                 <div className='flex justify-between'>
@@ -102,7 +101,7 @@ const ProductPage = () => {
                         </div>
                     </div>
                 </Flex>
-            </Container >
+            </Container > */}
         </>
     )
 }
