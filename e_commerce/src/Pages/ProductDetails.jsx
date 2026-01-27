@@ -6,6 +6,7 @@ import ProductDetails3 from '../assets/ProductDetails/ProductDetails3.png'
 import ProductDetails4 from '../assets/ProductDetails/ProductDetails4.png'
 import ProductDetails5 from '../assets/ProductDetails/ProductDetails5.png'
 import ProductDetailsCard from '../Components/ProductDetailsCard'
+import BestSellingProduct from '../Components/BestSellingProduct'
 
 
 
@@ -40,8 +41,10 @@ const ProductDetails = () => {
             <div>
                <ProductDetailsCard />
             </div>
-
          </div>
+            <div>
+              <BestSellingProduct />
+            </div>
        </Container>
     </>
   )
