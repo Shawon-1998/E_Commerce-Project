@@ -64,5 +64,23 @@
 /* productDetails */
 
 .product img{
-   width: -100%;
+   width: 100%;
 }
+.product img:hover {
+   transform: scale(1.2);
+   transition: all 0.3s linear;
+}
+.product button{
+  height: 32px;
+  width: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.349);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+ .productCard button:hover, p:hover {
+  background-color: #DB4444;
+  color: white;
+}
+ 
+ 
