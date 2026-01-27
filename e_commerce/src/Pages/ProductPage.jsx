@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Container from '../Components/Container'
 import { VscCircleFilled } from "react-icons/vsc";
-import CardSec from '../Components/CardSec';
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Flex from '../Components/Flex';
@@ -18,44 +16,45 @@ const ProductPage = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(1)
     const [category, setCategory] = useState([])
-    const dispatch =useDispatch()
+    const dispatch = useDispatch()
+
+
+        //     useEffect(() => {
+        //     fetch('https://dummyjson.com/products')
+        //         .then(res => res.json())
+        //         .then((data) => {
+        //             setProducts(data.products)
+        //             setLoading(0)
+
+        //         });
+        // }, [])
 
     async function data() {
         await axios.get('https://dummyjson.com/products')
             .then((res) => {
-                // console.log(res.data.products)
                 setProducts(res.data.products)
                 setLoading(0)
-              
                 dispatch(allProducts(res.data.products))
             })
     }
 
-    useEffect(() => {
-        data()
-    },
-        [])
-        
+    useEffect(() => { data() }, [])
+
     useEffect(() => {
         const uniqueCateg = [...new Set(products.map((item) => item.category))]
         setCategory(uniqueCateg)
-    },
-        [products])
+    }, [products])
 
     const handleFilter = (item) => {
         const filterProduct = products.filter((filterItem) => {
-            return (
-                filterItem.category == item
-            )
+            return (filterItem.category == item)
         })
-        setProducts(filterProduct)
     }
 
     return (
         <>
             <Container>
                 <BreadCrumbs className='pt-20 pb-12.5' />
-
                 <div className='flex justify-between'>
                     <h3 className='font-pop text-xl font-bold text-[#262626]'>Shop by Category</h3>
                     <div className='flex justify-between mb-3.75'>
@@ -66,7 +65,6 @@ const ProductPage = () => {
                                 <option value="9">9</option>
                                 <option value="12">12</option>
                                 <option value="15">15</option>
-                                
                             </select>
                         </div>
                     </div>
@@ -77,7 +75,8 @@ const ProductPage = () => {
                             {
                                 category.map((item, idx) => {
                                     return (
-                                        <li key={idx} onClick={() => {handleFilter (item) }} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
+                       //parameter dorkar hole onlick er moddhe arrow function use korbo 
+                                        <li key={idx} onClick={()=>{handleFilter(item)}} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
                                     )
                                 })
                             }
@@ -92,7 +91,7 @@ const ProductPage = () => {
                     </div>
                     <div className='w-[80%]'>
                         <div className='flex flex-wrap gap-5 justify-between relative'>
-                           
+
                             {
                                 !loading ? <Paginate itemsPerPage={6} /> :
                                     <>

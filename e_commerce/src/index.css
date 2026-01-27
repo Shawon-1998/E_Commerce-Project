@@ -61,4 +61,8 @@
   background-color: #DB4444;
 }
 
+/* productDetails */
 
+.product img{
+   width: -100%;
+}

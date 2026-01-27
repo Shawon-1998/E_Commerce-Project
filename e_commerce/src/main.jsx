@@ -8,8 +8,9 @@ import Home from './Pages/Home.jsx';
 import ShopPage from '../src/Pages/ShopPage.jsx'
 import ProductPage from './Pages/ProductPage.jsx';
 import { Provider } from 'react-redux'
-import {store} from '../src/Store/store.js'
-// import store from '../src/Store/store.js'
+// import {store} from '../src/Store/store.js'
+import store from '../src/Store/store.js'
+import ProductDetails from './Pages/ProductDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "shop", Component: ShopPage },
       { path: "Product", Component: ProductPage },
+      { path: "Details", Component:ProductDetails },
     ],
   },
 ]);

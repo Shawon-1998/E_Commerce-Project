@@ -7,6 +7,7 @@ import BannerTwo from '../Components/BannerTwo'
 import ExpOurProduct from '../Components/ExpOurProduct'
 import NewArrival from '../Components/NewArrival'
 import Delivery from '../Components/Delivery'
+import ProductDetails from './ProductDetails'
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <Banner />
             <FlashSales />
             <Catagories />
+            <ProductDetails/>
             <BestSellingProduct />
             <BannerTwo />
             <ExpOurProduct />
