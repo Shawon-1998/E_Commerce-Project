@@ -16,8 +16,9 @@ const ProductPage = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(1)
     const [category, setCategory] = useState([])
+    const [value,setValue] =useState (6)
     const dispatch = useDispatch()
-
+ console.log(value)
     //     useEffect(() => {
     //     fetch('https://dummyjson.com/products')
     //         .then(res => res.json())
@@ -60,7 +61,7 @@ const ProductPage = () => {
                     <div className='flex justify-between mb-3.75'>
                         <div>
                             <label htmlFor="text"> Show: </label>
-                            <select name="item" id="item" className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
+                            <select onChange={(e)=>setValue(e.target.value)} name="item" id="item" className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
                                 <option value="6">6</option>
                                 <option value="9">9</option>
                                 <option value="12">12</option>
@@ -97,7 +98,7 @@ const ProductPage = () => {
                         <div className='flex flex-wrap gap-5 justify-between relative'>
 
                             {
-                                !loading ? <Paginate itemsPerPage={6} /> :
+                                !loading ? <Paginate itemsPerPage={value} /> :
                                     <>
                                         <Skeleton />
                                         <Skeleton />
