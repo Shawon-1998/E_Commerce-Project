@@ -6,7 +6,7 @@ import { IoHeartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 
 
-const CardSec = ({ productName,details, ImgSrc, price,rating, discountPrice, digit, discount, btn,className }) => {
+const CardSec = ({ productName, ImgSrc, price,rating, discountPrice, digit, discount, btn,className }) => {
     return (
         <>
             <div className='w-67.5 mx-auto group'>
@@ -32,7 +32,6 @@ const CardSec = ({ productName,details, ImgSrc, price,rating, discountPrice, dig
                      <Rate allowHalf defaultValue={rating} />
                     <p>({digit})</p>
                 </Flex>
-                    <p className='mt-5'>${details}</p>
 
             </div>
         </>

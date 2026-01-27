@@ -12,10 +12,13 @@ export const ProductSlice = createSlice({
     allProducts: (state,action) => {
      state.value = action.payload
     },
+    filterData: (state,action) => {
+     state.value = action.payload
+    },
   },
 })
 
 
-export const { allProducts} = ProductSlice.actions
+export const { allProducts,filterData} = ProductSlice.actions
 
 export default ProductSlice.reducer
