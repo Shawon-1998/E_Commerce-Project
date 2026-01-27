@@ -21,7 +21,7 @@ const ProductDetailsCard = () => {
 
     return (
         <>
-            <div className='ms-17.75 productCard'>
+            <div className='ms-17.75'>
                 <h2 className='text-2xl font-semibold'>Havic HV G-92 Gamepad</h2>
                 <Flex className='my-4'>
                     <Rate allowHalf defaultValue="5" />
@@ -33,17 +33,18 @@ const ProductDetailsCard = () => {
                 <hr className='text-[#0000002f]' />
                 <div>
                     <h3 className='flex gap-2 items-center my-6 text-xl'>Color <span className='flex'><VscCircleFilled className='text-green-500 text-3xl' />  <VscCircleFilled className='text-orange-500 text-3xl' /></span></h3>
-                    <div className='flex gap-4 items-center'>
+                    <div className='flex gap-4 items-center  productCard'>
                         <label className='text-lg' htmlFor="text">Size:</label>
-                        <button className='h-6 w-6 border border-[#00000085] rounded-sm'>Xs</button>
+                        <button>Xs</button>
                         <button>S</button>
                         <button>M</button>
                         <button>L</button>
                         <button>XXl</button>
                     </div>
-                    <div className='flex pt-6 pb-10 '>
+                    <div className='flex pt-6 pb-10 productCard'>
                         <button onClick={handleClick1} >-</button>
-                        <p className='py-1 px-8.5'>{incre}</p>
+                        {/* custom card classname */}
+                        <p className='py-1 px-8.5 Card'>{incre}</p>
                         <button onClick={handleClick2}>+</button>
                     </div>
                   <div className='border border-[#00000065] '>

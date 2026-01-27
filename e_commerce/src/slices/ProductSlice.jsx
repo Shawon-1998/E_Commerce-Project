@@ -1,8 +1,8 @@
-import React from 'react'
+
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  value: null,
+  value: [],
 }
 
 export const ProductSlice = createSlice({
@@ -15,7 +15,7 @@ export const ProductSlice = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
+
 export const { allProducts} = ProductSlice.actions
 
 export default ProductSlice.reducer

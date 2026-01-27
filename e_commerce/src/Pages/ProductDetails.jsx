@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Container from '../Components/Container'
-import Flex from '../Components/Flex'
 import ProductDetails1 from '../assets/ProductDetails/ProductDetails1.png'
 import ProductDetails2 from '../assets/ProductDetails/ProductDetails2.png'
 import ProductDetails3 from '../assets/ProductDetails/ProductDetails3.png'
 import ProductDetails4 from '../assets/ProductDetails/ProductDetails4.png'
 import ProductDetails5 from '../assets/ProductDetails/ProductDetails5.png'
 import ProductDetailsCard from '../Components/ProductDetailsCard'
+
 
 
 const ProductDetails = () => {
@@ -37,7 +37,10 @@ const ProductDetails = () => {
                 <img src={ProductDetails5}  alt="" />
             </div>
            </div>
-             <ProductDetailsCard />
+            <div>
+               <ProductDetailsCard />
+            </div>
+
          </div>
        </Container>
     </>

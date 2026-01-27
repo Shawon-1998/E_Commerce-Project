@@ -78,7 +78,7 @@
   font-weight: 600;
 }
 
- .productCard button:hover, p:hover {
+ .productCard button:hover,.Card:hover{
   background-color: #DB4444;
   color: white;
 }

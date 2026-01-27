@@ -18,7 +18,6 @@ const ProductPage = () => {
     const [category, setCategory] = useState([])
     const dispatch = useDispatch()
 
-
         //     useEffect(() => {
         //     fetch('https://dummyjson.com/products')
         //         .then(res => res.json())
