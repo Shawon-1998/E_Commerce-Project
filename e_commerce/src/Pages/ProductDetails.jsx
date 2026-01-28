@@ -11,48 +11,53 @@ import BreadCrumbs from '../Components/BreadCrumbs'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { allProducts } from '../slices/ProductSlice'
-
+import { useParams } from "react-router";
 
 const ProductDetails = () => {
   const [products, setProducts] = useState([])
+  const dispatch = useDispatch()
+  let {id} = useParams();
 
- const dispatch = useDispatch()
+  async function data() {
 
-   async function data() {
-        await axios.get('https://dummyjson.com/products')
-            .then((res) => {
-                setProducts(res.data.products)
-                dispatch(allProducts(res.data.products))
-            })
-    }
+    await axios.get(`https://dummyjson.com/products/${id}`)
+    // await axios.get('https://dummyjson.com/products')
 
-    useEffect(() => { data() }, [])
-        console.log(products)
+      .then((res) => {
+        setProducts(res.data)
+        // dispatch(allProducts(res.data.products))
+       
+      })
+  }
+
+  useEffect(() => { data() }, [])
+   
   return (
-    <>   
-       <Container>
+    <>
+      <Container>
         <BreadCrumbs />
         {/* Custom class name (prduct) */}
-         <div className='my-15 product flex'> 
-           <div className='flex gap-7.5'>
-              <div className='flex flex-col gap-4 '>
-                  <img src={ProductDetails1}  alt="" />
-                  <img src={ProductDetails2}  alt="" />
-                  <img src={ProductDetails3}  alt="" />
-                  <img src={ProductDetails4}  alt="" />
-              </div>
+        
+        <div className='my-15 product flex'>
+          <div className='flex gap-7.5'>
+            <div className='flex flex-col gap-4 '>
+              <img src={ProductDetails1} alt="" />
+              <img src={ProductDetails2} alt="" />
+              <img src={ProductDetails3} alt="" />
+              <img src={ProductDetails4} alt="" />
+            </div>
             <div className=''>
-                <img src={ProductDetails5}  alt="" />
+              <img src={ProductDetails5} alt="" />
             </div>
-           </div>
-            <div>
-               <ProductDetailsCard />
-            </div>
-         </div>
-            <div>
-             <RelatedItems />
-            </div>
-       </Container>
+          </div>
+          <div>
+            <ProductDetailsCard />
+          </div>
+        </div>
+        <div>
+          <RelatedItems />
+        </div>
+      </Container>
     </>
   )
 }

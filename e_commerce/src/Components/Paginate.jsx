@@ -10,7 +10,7 @@ const Paginate = ({ itemsPerPage, product }) => {
 
   const items = allProducts;   //its for productPage 2 component
 
-  // const items = product;         //its for productPage component
+  // const items = product;         //its for shopPage component
 
   function Items({ currentItems }) {
     return (
