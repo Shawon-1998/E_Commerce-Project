@@ -11,7 +11,7 @@ const Header = () => {
                         <div className='w-[77%] lg:flex font-pop justify-end font-normal text-sm gap-2 '>
                             <p className='lg:flex gap-2 '>Summer Sale For All Swim Suits
                                 And Free Express Delivery - OFF 50%!
-                                <NavLink className='font-semibold ' to="/shop" end>
+                                <NavLink className='font-semibold cursor-pointer' to="/shop" end>
                                     ShopNow
                                 </NavLink> </p>
                         </div>
