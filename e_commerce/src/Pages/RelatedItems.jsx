@@ -1,6 +1,6 @@
 import React from 'react'
-import SecHeading from './SecHeading'
-import CardSec from './CardSec'
+import SecHeading from '../Components/SecHeading'
+import CardSec from '../Components/CardSec'
 import item1 from '../assets/item1.png'
 import item2 from '../assets/item2.png'
 import item3 from '../assets/item3.png'
@@ -8,9 +8,10 @@ import item4 from '../assets/item4.png'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Button from './Button'
 
-const BestSellingProduct = () => {
+
+
+const RelatedItems= () => {
  
    const settings = {
        
@@ -58,10 +59,9 @@ const BestSellingProduct = () => {
             <div className='container'>
                 <div className='mt-37.5 mb-10 flex justify-between'>
                     <SecHeading     
-                        title="This Month"
-                        heading='Best Selling Products Sales'
+                        title="Related Items"
                     />
-                    <Button className='self-end '>View All</Button>
+                  
                 </div>
 
                 <div className="slider-container">
@@ -128,4 +128,4 @@ const BestSellingProduct = () => {
     )
 }
 
-export default BestSellingProduct
+export default RelatedItems
