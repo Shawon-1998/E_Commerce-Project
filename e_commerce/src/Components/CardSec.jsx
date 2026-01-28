@@ -6,12 +6,12 @@ import { IoHeartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 import { useNavigate } from "react-router";
 
-const CardSec = ({ productName, ImgSrc, price, rating, discountPrice,digit, discount, btn, className }) => {
+const CardSec = ({ productName, ImgSrc, price, rating, discountPrice,digit, discount, btn, className,id }) => {
 
     let navigate = useNavigate();
 
     const handleProductDetails = () => {
-        navigate('/Details')
+        navigate(`/Details/${id}`)
     }
 
 

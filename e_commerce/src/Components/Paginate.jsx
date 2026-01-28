@@ -18,6 +18,7 @@ const Paginate = ({ itemsPerPage, product }) => {
         {currentItems &&
           currentItems.map((item, idx) => (
             <CardSec
+              id={item.id}
               key={idx}
               ImgSrc={item.thumbnail}
               productName={item.title}
