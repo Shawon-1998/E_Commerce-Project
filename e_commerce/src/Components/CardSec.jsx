@@ -1,7 +1,6 @@
 import React from 'react'
 import { Rate } from 'antd';
 import Flex from './Flex'
-import { FaStar } from "react-icons/fa6";
 import { IoHeartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 import { useNavigate } from "react-router";
