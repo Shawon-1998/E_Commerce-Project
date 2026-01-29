@@ -13,12 +13,12 @@ const Nav = ({ className }) => {
   const [value, setValue] = useState(false)
   const [value1, setValue1] = useState(false)
 
-  const handleClick = () => {
-    setValue(!value)
-  }
-  const handleClick2 = () => {
-    setValue1(!value1)
-  }
+  // const handleClick = () => {
+  //   setValue(!value)
+  // }
+  // const handleClick2 = () => {
+  //   setValue1(!value1)
+  // }
 
   return (
     <>
