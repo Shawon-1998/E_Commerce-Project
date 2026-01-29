@@ -67,7 +67,7 @@
    width: 100%;
 }
 .product img:hover {
-   transform: scale(1.4);
+   transform: scale(1.3);
    transition: all 0.3s linear;
 }
 .product button{
