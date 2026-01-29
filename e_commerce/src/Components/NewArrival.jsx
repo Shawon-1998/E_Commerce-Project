@@ -1,11 +1,5 @@
 import React from 'react'
 import SecHeading from './SecHeading'
-import Flex from './Flex'
-import frame1 from '../assets/Frame1.png'
-import frame2 from '../assets/Frame2.png'
-import frame3 from '../assets/Frame3.png'
-import frame4 from '../assets/Frame4.png'
-import { NavLink } from "react-router";
 import NewArrivalCard from './NewArrivalCard'
 const NewArrival = () => {
   return (

@@ -33,7 +33,6 @@ const FlashSales = () => {
         );
     }
 
-
     const settings = {
        
         infinite: true,
