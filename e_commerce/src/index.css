@@ -21,6 +21,11 @@
   }
 }
 
+/* Banner componnent */
+.Banner img{
+  height:344px;
+  width: 892px;
+}
 
 
 .slick-dots .slick-active div{

@@ -1,6 +1,10 @@
 import React from 'react'
 import Flex from './Flex'
-import banner from '../assets/banner.jpg'
+import banner1 from '../assets/strawberry-4246395.jpg'
+import banner2 from '../assets/perfume-6518634.jpg'
+import banner3 from '../assets/pasta-1282067.jpg'
+import banner4 from '../assets/cosmetics-9086984.jpg'
+import banner5 from '../assets/banner.jpg'
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -79,21 +83,21 @@ const Banner = () => {
                             <li>Health & Beauty</li>
                         </ul>
                      <div className='w-full pt-10'>
-                           <Slider {...settings} >
+                           <Slider {...settings} className='Banner'>
                             <div>
-                            <img src={banner} alt="" />
+                            <img src={banner1} alt="" />
                             </div>
                             <div> 
-                                  <img src={banner} alt="" />
+                                  <img src={banner2}  alt="" />
                             </div>
                             <div> 
-                                  <img src={banner} alt="" />
+                                  <img src={banner3}  alt="" />
                             </div>
                             <div> 
-                                  <img src={banner} alt="" />
+                                  <img src={banner4} alt="" />
                             </div>
                             <div> 
-                                  <img src={banner} alt="" />
+                                  <img src={banner5} alt="" />
                             </div>
                         </Slider>
                      </div>
