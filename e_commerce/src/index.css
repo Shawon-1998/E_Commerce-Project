@@ -90,4 +90,9 @@
   color: white;
 }
  
- 
+ /* Cart custom class cart */
+ .cart button{
+  padding: 16px 48px;
+  border: 1px solid #0000005d;
+  font-weight: 600;
+ }

@@ -16,15 +16,10 @@ const CartDetails = ({ className, price, product, subTotal, quantity, imgSrc }) 
     }
     return (
         <>
-            <div className='py-6 px-10 shadow-md flex justify-between'>
-                <span>Product</span>
-                <span>Price</span>
-                <span>Quantity</span>
-                <span>SubTotal</span>
-            </div>
+        
             <div className={`py-6 px-10 mb-10 shadow-md flex justify-between ${className}`}>
                 <div>{product}</div>
-                <div>{price}</div>
+                <div>${price}</div>
                 <div className='items-center flex gap-2 py-1.5 px-3 border'>
                     {incre}
                     <div className=' grid '>
@@ -32,7 +27,7 @@ const CartDetails = ({ className, price, product, subTotal, quantity, imgSrc }) 
                         <button onClick={handleClick1} className='Block'><IoIosArrowDown /></button>
                     </div>
                 </div>
-                <div>{subTotal}</div>
+                <div>${subTotal}</div>
             </div>
 
 

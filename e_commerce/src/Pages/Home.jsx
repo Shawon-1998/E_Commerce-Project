@@ -7,13 +7,13 @@ import BannerTwo from '../Components/BannerTwo'
 import ExpOurProduct from '../Components/ExpOurProduct'
 import NewArrival from '../Components/NewArrival'
 import Delivery from '../Components/Delivery'
-import Cart from './Cart'
+
 
 
 const Home = () => {
     return (
         <>
-        <Cart/>
+       
             <Banner />
             <FlashSales />
             <Catagories />
