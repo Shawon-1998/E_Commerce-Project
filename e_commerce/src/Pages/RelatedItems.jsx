@@ -76,7 +76,7 @@ const RelatedItems= () => {
                                 digit='88'
                                 btn='Add to cart'
                                 discount='40'
-                                className='hidden'
+                                className=''
                         
                      />
                             <CardSec
