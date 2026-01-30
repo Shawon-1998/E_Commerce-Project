@@ -13,7 +13,7 @@ import Delivery from '../Components/Delivery'
 const Home = () => {
     return (
         <>
-       
+        
             <Banner />
             <FlashSales />
             <Catagories />

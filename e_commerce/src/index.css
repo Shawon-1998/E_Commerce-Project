@@ -96,3 +96,19 @@
   border: 1px solid #0000005d;
   font-weight: 600;
  }
+
+/* contact component  */
+ .contact p{
+  font-size: 14px;
+ }
+
+ /* Input class name */
+ .Input input{
+  width: 33%;
+  padding: 13px ;
+  border: solid 1px #0000005d;
+  background-color:#00000011 ;
+  border-radius: 4px;
+  outline: none;
+  border-color: #00000011;
+ }

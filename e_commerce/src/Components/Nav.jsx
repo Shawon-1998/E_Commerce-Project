@@ -32,8 +32,8 @@ const Nav = ({ className }) => {
               <div className='flex gap-20 lg:gap-47.5'>
                 <ul className='lg:flex gap-6 lg:gap-12 font-normal'>
                    <NavLink to="/" end>Home</NavLink>
-                  <li>Contact</li>
-                  <li><NavLink to="/About" end>About</NavLink></li>
+                  <li><NavLink to="Contact" end> Contact </NavLink></li>
+                  <li><NavLink to="/" end>About</NavLink></li>
                   <li>Sign Up</li>
                 </ul>
               </div>
