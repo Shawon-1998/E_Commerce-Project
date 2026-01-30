@@ -51,7 +51,7 @@ const ProductDetails = () => {
   return (
     <>
       <Container>
-        <BreadCrumbs className='my-20' />
+        <BreadCrumbs />
         {/* Custom class name (prduct) */}
 
         {

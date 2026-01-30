@@ -58,8 +58,7 @@ const Banner = () => {
       </div>
     ),
     customPaging: () => (
-      <div className='bg-gray-500 lg:w-3.5 lg:h-3.5 h-2 w-2 
-      rounded-full absolute bottom-9 lg:bottom-12  lg:right-46 md:right-36 xlright-26 ' />
+      <div className='bg-gray-500 lg:w-3.5 lg:h-3.5 h-2 w-2 rounded-full absolute bottom-9 lg:bottom-12  lg:right-46 md:right-36 right-26  ' />
      
     )
     };
@@ -83,12 +82,12 @@ const Banner = () => {
                             <li>Health & Beauty</li>
                         </ul>
                      <div className='w-full pt-10'>
-                           <Slider {...settings} className='Banner'>
-                            <div>
-                            <img src={banner1} alt="" />
-                            </div>
+                           <Slider {...settings} className='Banner '>
                             <div> 
                                   <img src={banner2}  alt="" />
+                            </div>
+                            <div>
+                            <img src={banner1} alt="" />
                             </div>
                             <div> 
                                   <img src={banner3}  alt="" />

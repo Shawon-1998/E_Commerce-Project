@@ -48,7 +48,7 @@ const ShopPage = () => {
     return (
         <>
             {/* <Container>
-                <BreadCrumbs className='pt-20 pb-12.5' />
+                <BreadCrumbs  />
 
                 <div className='flex justify-between'>
                     <h3 className='font-pop text-xl font-bold text-[#262626]'>Shop by Category</h3>
