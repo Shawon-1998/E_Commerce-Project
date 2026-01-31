@@ -5,7 +5,7 @@ import { IoHeartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 import { useNavigate } from "react-router";
 
-const CardSec = ({ productName, ImgSrc, price, rating, discountPrice,digit, discount, btn, className,id }) => {
+const CardSec = ({ productName, ImgSrc, price, rating, discountPrice,digit, discount, className,id }) => {
 
     let navigate = useNavigate();
 
@@ -28,7 +28,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice,digit, disc
                              text-lg ' />
                         </div>
                     </div>
-                    <button className='absolute bg-black text-white block w-full py-2 px-21.75 font-pop cursor-pointer -bottom-10 group-hover:bottom-0 ease-linear duration-400'>{btn}</button>
+                    <button className='absolute bg-black text-white block w-full py-2 px-21.75 font-pop cursor-pointer -bottom-10 group-hover:bottom-0 ease-linear duration-400'>Add to cart</button>
                 </div>
                 <h3 className='font-medium mt-4 '>{productName}</h3>
                 <Flex className='my-2 gap-3'>

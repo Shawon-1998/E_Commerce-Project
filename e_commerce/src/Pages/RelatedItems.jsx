@@ -57,7 +57,7 @@ const RelatedItems= () => {
     return (
         <>
             <div className='container'>
-                <div className='mt-37.5 mb-10 flex justify-between'>
+                <div className='mt-37.5 mb-10 flex flex-wrap justify-between'>
                     <SecHeading     
                         title="Related Items"
                     />

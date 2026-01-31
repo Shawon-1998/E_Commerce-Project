@@ -83,21 +83,23 @@ const Banner = () => {
                         </ul>
                      <div className='w-full pt-10'>
                            <Slider {...settings} className='Banner '>
-                            <div> 
-                                  <img src={banner2}  alt="" />
+                            
+                            <div>
+                            <img src={banner5} alt="" />
                             </div>
                             <div>
-                            <img src={banner1} alt="" />
+                            <img src={banner5} alt="" />
                             </div>
-                            <div> 
-                                  <img src={banner3}  alt="" />
+                            <div>
+                            <img src={banner5} alt="" />
                             </div>
-                            <div> 
-                                  <img src={banner4} alt="" />
+                            <div>
+                            <img src={banner5} alt="" />
                             </div>
-                            <div> 
-                                  <img src={banner5} alt="" />
+                            <div>
+                            <img src={banner5} alt="" />
                             </div>
+                           
                         </Slider>
                      </div>
                     </div>

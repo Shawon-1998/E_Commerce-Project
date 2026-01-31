@@ -27,7 +27,6 @@ const Paginate = ({ itemsPerPage, product }) => {
               digit={item.reviews.length}
               rating={item.rating}
               discount={item.discountPercentage}
-              btn='Add to cart'
             />
           ))}
       </>
