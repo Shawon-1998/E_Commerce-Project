@@ -36,7 +36,7 @@ const ProductDetails = () => {
         setLoading(0)
         setProductImg(res.data.images)
       })
-    console.log(productImg)
+   
   }
   useEffect(() => {
     data()
@@ -69,7 +69,7 @@ const ProductDetails = () => {
                 <h2 className='text-2xl font-semibold'>{products.title}</h2>
                 <Flex className='my-4'>
                   <Rate allowHalf defaultValue="5" />
-                  <p className='px-4'>(150 reviews)</p>
+                  <p className='px-4'>({products.reviews ? products.reviews.length : null} reviews)</p>
                   <p className='text-green-500 ps-4'>in stoke</p>
                 </Flex>
                 <h3 className='text-2xl'>$ {products.price}</h3>
