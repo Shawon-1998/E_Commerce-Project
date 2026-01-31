@@ -38,7 +38,9 @@ const ProductPage = () => {
             })
     }
 
-    useEffect(() => { data() }, [])
+    useEffect(() => { 
+        data() 
+    }, [])
 
     useEffect(() => {
         const uniqueCateg = [...new Set(products.map((item) => item.category))]

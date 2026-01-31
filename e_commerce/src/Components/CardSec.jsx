@@ -16,9 +16,9 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice,digit, disc
 
     return (
         <>
-            <div className='w-67.5 mx-auto group ' onClick={handleProductDetails}>
+            <div className='w-67.5 mx-auto group '>
                 <div className='relative overflow-hidden'>
-                    <img src={ImgSrc} alt="" className='w-full' />
+                    <img src={ImgSrc} alt="" className='w-full'  onClick={handleProductDetails} />
                     <div className=' '>
                         <h3 className={`bg-primary px-3 py-1 text-[#fafafac0] 
                         absolute left-3 top-3 rounded-sm ${className} block`}>-{discount}%</h3>

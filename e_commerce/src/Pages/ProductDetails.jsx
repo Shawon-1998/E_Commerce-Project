@@ -47,10 +47,9 @@ const ProductDetails = () => {
     <>
       <Container>
         <BreadCrumbs />
-        {/* Custom class name (prduct) */}
-
         {
           !loading ?
+          /* Custom class name (prduct) */
             <div className='my-15 product lg:flex justify-between'>
               <div className='flex lg:gap-7.5'>
                 <div className='flex flex-col gap-4 '>
@@ -123,7 +122,7 @@ const ProductDetails = () => {
                   </path>
                 </svg>
               </div>
-              <div className="w-max">
+              <div className="w-max Skeleton">
                 <div className="block w-130 h-5 mb-4 font-sans text-5xl antialiased font-semibold leading-tight tracking-normal bg-gray-300 rounded-full text-inherit">
                   &nbsp;
                 </div>
