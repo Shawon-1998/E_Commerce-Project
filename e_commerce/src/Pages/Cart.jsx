@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import Container from '../Components/Container'
 import BreadCrumbs from '../Components/BreadCrumbs'
-// import CartDetails from '../Components/CartDetails'
-// import cartItem from '../assets/CartItems.png'
 import Flex from '../Components/Flex'
 import Button from '../Components/Button'
 import { IoIosArrowDown } from "react-icons/io";
@@ -30,7 +28,7 @@ const Cart = () => {
           <span>Quantity</span>
           <span>SubTotal</span>
         </div>
-        <div className='py-6 px-10 mb-10 shadow-md flex justify-between '>
+        <div className='py-6 px-10 my-10 shadow-md flex justify-between '>
           <div>{ }</div>
           <div>${ }</div>
           <div className='items-center flex gap-2 py-1.5 px-3 border'>

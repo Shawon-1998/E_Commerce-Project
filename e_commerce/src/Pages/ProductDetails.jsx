@@ -68,11 +68,11 @@ const ProductDetails = () => {
               <div className='lg:ms-17.75 mx-3 lg:mx-0 mt-5 lg:mt-0'>
                 <h2 className='text-2xl font-semibold'>{products.title}</h2>
                 <Flex className='my-4'>
-                  <Rate allowHalf defaultValue="5" />
+                  <Rate allowHalf defaultValue={products.rating } />
                   <p className='px-4'>({products.reviews ? products.reviews.length : null} reviews)</p>
                   <p className='text-green-500 ps-4'>in stoke</p>
                 </Flex>
-                <h3 className='text-2xl'>$ {products.price}</h3>
+                <h3 className='text-2xl'>${products.price}</h3>
                 <p className='w-75 my-6 text-sm'>{products.description}</p>
                 <hr className='text-[#0000002f]' />
                 <div>
