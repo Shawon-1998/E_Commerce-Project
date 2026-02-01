@@ -75,19 +75,15 @@ const ProductPage = () => {
                 <Flex className="items-start">
                     <div className='w-[20%]'>
                         <ul className='pt-5 lg:pe-4.5  font-pop flex flex-col gap-4 '>
-
                             <li onClick={()=>dispatch(allProducts(products))} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> All Products </li>
-
                             {
                                 category.map((item, idx) => {
                                     return (
-
                                         //parameter dorkar hole onlick er moddhe arrow function use korbo 
                                         <li key={idx} onClick={() => { handleFilter(item) }} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
                                     )
                                 })
                             }
-
                         </ul>
                         <ul className=' mt-10 myList'>
                             <h3 className='text-start font-pop'>Shop by Color</h3>
@@ -98,7 +94,6 @@ const ProductPage = () => {
                     </div>
                     <div className='w-[80%]'>
                         <div className='flex flex-wrap gap-5 justify-between relative'>
-
                             {
                                 !loading ? <Paginate itemsPerPage={value} /> :
                                     <>
