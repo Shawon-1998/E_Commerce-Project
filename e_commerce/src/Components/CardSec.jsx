@@ -10,12 +10,12 @@ import { cartData } from '../slices/ProductSlice';
 
 const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id, cart }) => {
  const dispatch = useDispatch()
-    let navigate = useNavigate();
+   
     const handleProductDetails = () => {
         navigate(`/Details/${id}`)
     }
     const handleCart = () => {
-        // gi
+       
         dispatch(cartData(cart))
     }
 

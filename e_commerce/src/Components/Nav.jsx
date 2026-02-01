@@ -6,12 +6,18 @@ import { IoHeartOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router";
+import { useNavigate } from "react-router";
+import { useSelector } from 'react-redux'
 
 
 const Nav = ({ className }) => {
-
+  let navigate = useNavigate();
   const [value, setValue] = useState(false)
   const [value1, setValue1] = useState(false)
+  const Data = useSelector((state) => state.Products.cart)
+   const handleCart = () => {     
+           navigate("/cart")
+      }
 
   // const handleClick = () => {
   //   setValue(!value)
@@ -44,8 +50,13 @@ const Nav = ({ className }) => {
             right-4 text-lg' />
                 </Flex>
                 <Flex className='flex gap-4 text-xl'>
-                  <IoHeartOutline />
-                  <IoCartOutline className='text-[24px] opacity-80' />
+                  <IoHeartOutline className=' cursor-pointer' />
+                 <div className='relative'>
+                    <IoCartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleCart}/>
+                    <div className='absolute -top-1 -right-2 h-4 w-4 font-extralight bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
+                      {Data.length}
+                    </div>
+                 </div>
                 </Flex>
               </Flex>
             </div>
