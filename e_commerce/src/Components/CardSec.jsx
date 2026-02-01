@@ -5,6 +5,7 @@ import { IoHeartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 import { useNavigate } from "react-router";
 import { useDispatch } from 'react-redux';
+import { cartData } from '../slices/ProductSlice';
 
 
 const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id, cart }) => {
@@ -14,8 +15,8 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         navigate(`/Details/${id}`)
     }
     const handleCart = () => {
-        navigate(`/cart`)
-        dispatch(cart())
+        // gi
+        dispatch(cartData(cart))
     }
 
     return (
