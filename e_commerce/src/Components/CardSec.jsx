@@ -4,16 +4,18 @@ import Flex from './Flex'
 import { IoHeartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 import { useNavigate } from "react-router";
+import { useDispatch } from 'react-redux';
 
 
-const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id }) => {
-
+const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id, cart }) => {
+ const dispatch = useDispatch()
     let navigate = useNavigate();
     const handleProductDetails = () => {
         navigate(`/Details/${id}`)
     }
     const handleCart = () => {
         navigate(`/cart`)
+        dispatch(cart())
     }
 
     return (
