@@ -9,21 +9,26 @@ import { cartData } from '../slices/ProductSlice';
 
 
 const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id, cart }) => {
+
  const dispatch = useDispatch()
-   
+
+    let navigate = useNavigate();
+
     const handleProductDetails = () => {
         navigate(`/Details/${id}`)
     }
-    const handleCart = () => {
-       
+    const handleCart = () => { 
         dispatch(cartData(cart))
+    }
+    const handleWish = () => { 
+        
     }
 
     return (
         <>
             <div className='w-67.5 mx-auto group '>
                 <div className='relative overflow-hidden'>
-                    <img src={ImgSrc} alt="" className='w-full' onClick={handleProductDetails} />
+                    <img src={ImgSrc} alt="" className='w-full cursor-pointer' onClick={handleProductDetails} />
                     <div className=' '>
                         <h3 className={`bg-primary px-3 py-1 text-[#fafafac0] 
                         absolute left-3 top-3 rounded-sm ${className} block`}>-{discount}%</h3>

@@ -11,12 +11,22 @@ import { useSelector } from 'react-redux'
 
 
 const Nav = ({ className }) => {
+
   let navigate = useNavigate();
+
   const [value, setValue] = useState(false)
+
   const [value1, setValue1] = useState(false)
+
   const Data = useSelector((state) => state.Products.cart)
+
    const handleCart = () => {     
+
+    
            navigate("/cart")
+      }
+   const handleWish = () => {     
+           navigate("/wishList")
       }
 
   // const handleClick = () => {
@@ -50,7 +60,12 @@ const Nav = ({ className }) => {
             right-4 text-lg' />
                 </Flex>
                 <Flex className='flex gap-4 text-xl'>
-                  <IoHeartOutline className=' cursor-pointer' />
+                 <div className='relative'>
+                      <IoHeartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleWish}/>
+                    <div className='absolute -top-1 -right-2 h-4 w-4 font-extralight bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
+                      {Data.length}
+                    </div>
+                 </div>
                  <div className='relative'>
                     <IoCartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleCart}/>
                     <div className='absolute -top-1 -right-2 h-4 w-4 font-extralight bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>

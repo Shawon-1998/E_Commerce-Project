@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Container from '../Components/Container'
-import RelatedItems from './RelatedItems'
+
 import BreadCrumbs from '../Components/BreadCrumbs'
 import axios from 'axios'
 import { useParams } from "react-router";
@@ -10,6 +10,7 @@ import Flex from '../Components/Flex'
 import logo1 from '../assets/icon-delivery.png'
 import logo2 from '../assets/Icon-return.png'
 import Skeleton from '../Components/Skeleton'
+import RelatedItems from '../Components/RelatedItems';
 
 
 const ProductDetails = () => {
