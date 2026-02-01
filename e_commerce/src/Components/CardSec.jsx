@@ -4,20 +4,17 @@ import Flex from './Flex'
 import { IoHeartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 import { useNavigate } from "react-router";
-import { NavLink } from "react-router";
 
 
 const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id }) => {
 
     let navigate = useNavigate();
-
     const handleProductDetails = () => {
         navigate(`/Details/${id}`)
     }
     const handleCart = () => {
         navigate(`/cart`)
     }
-
 
     return (
         <>
@@ -33,7 +30,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
                              text-lg ' />
                         </div>
                     </div>
-                    <button onClick={handleCart} className='absolute bg-black text-white block w-full py-2 px-21.75 font-pop cursor-pointer -bottom-10 group-hover:bottom-0 ease-linear duration-400'> <NavLink to="cart" end>Add to cart</NavLink></button>
+                    <button onClick={handleCart} className='absolute bg-black text-white block w-full py-2 px-21.75 font-pop cursor-pointer -bottom-10 group-hover:bottom-0 ease-linear duration-400'> Add to cart</button>
                 </div>
                 <h3 className='font-medium mt-4 '>{productName}</h3>
                 <Flex className='my-2 gap-3'>
@@ -44,7 +41,6 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
                     <Rate allowHalf defaultValue={rating} />
                     <p>({digit})</p>
                 </Flex>
-
             </div>
         </>
     )

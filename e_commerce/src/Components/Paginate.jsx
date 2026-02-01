@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux'
 const Paginate = ({ itemsPerPage, product }) => {
 
   const allProducts = useSelector((state) => state.Products.value)
-  
   const items = allProducts;   //its for productPage 2 component
 
   // const items = product;         //its for shopPage component
@@ -37,10 +36,8 @@ const Paginate = ({ itemsPerPage, product }) => {
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
-  const handlePageClick = (event) => {
-    
-    const newOffset = (event.selected * itemsPerPage) % items.length;
-    
+  const handlePageClick = (event) => {  
+  const newOffset = (event.selected * itemsPerPage) % items.length;   
     setItemOffset(newOffset);
   };
   return (

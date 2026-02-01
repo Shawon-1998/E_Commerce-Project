@@ -8,7 +8,6 @@ import { IoIosArrowUp } from "react-icons/io";
 
 
 const Cart = () => {
-
   const [incre, setIncre] = useState(0)
   const handleClick1 = () => {
     if (incre > 0) {
@@ -41,8 +40,8 @@ const Cart = () => {
           <div>${ }</div>
         </div>
         <Flex className='justify-between pt-6 pb-20 cart'>
-          <button>Return To Shop</button>
-          <button>Update Cart</button>
+          <button className='hover:bg-primary hover:text-white rounded-sm'>Return To Shop</button>
+          <button className='hover:bg-primary hover:text-white rounded-sm'>Update Cart</button>
         </Flex>
 
         <Flex className='justify-between items-start'>
