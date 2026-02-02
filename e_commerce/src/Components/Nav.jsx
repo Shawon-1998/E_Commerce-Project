@@ -7,12 +7,14 @@ import { IoCartOutline } from "react-icons/io5";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router";
 import { useNavigate } from "react-router";
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { wishList } from '../slices/ProductSlice';
 
 
 const Nav = ({ className }) => {
   const Data = useSelector((state) => state.Products.cart)
-
+  const DataWish = useSelector((state) => state.Products.wish)
+ const dispatch = useDispatch()
   let navigate = useNavigate();
 
   const [value, setValue] = useState(false)
@@ -22,11 +24,11 @@ const Nav = ({ className }) => {
 
    const handleCart = () => {     
 
-    
            navigate("/cart")
       }
    const handleWish = () => {     
            navigate("/wishList")
+           dispatch(wishList(DataWish))
       }
 
   // const handleClick = () => {
@@ -63,7 +65,7 @@ const Nav = ({ className }) => {
                  <div className='relative'>
                       <IoHeartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleWish}/>
                     <div className='absolute -top-1 -right-2 h-4 w-4 font-extralight bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
-                      0
+                       {DataWish.length}
                     </div>
                  </div>
                  <div className='relative'>

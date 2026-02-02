@@ -4,6 +4,7 @@ import Skeleton from '../Components/Skeleton'
 import RelatedItems from '../Components/RelatedItems'
 import { useSelector } from 'react-redux'
 import Container from '../Components/Container'
+import CardSec from '../Components/CardSec'
 
 
 
@@ -24,7 +25,25 @@ const WishList = () => {
     <>
      <Container>
           <BreadCrumbs/>
-        
+         <div>{
+          all.map((item)=>{
+           return(
+              <CardSec
+              
+              // props akare puro item gula pathiye dicchi jate ieta dispatch kora jay
+              cart={item} 
+              key={item.id}
+              ImgSrc={item.thumbnail}
+              productName={item.title}
+              price={item.price}
+              discountPrice={Math.round((item.price - (item.price * item.discountPercentage) / 100))}
+              
+              rating={item.rating}
+              discount={item.discountPercentage}
+            />
+           )
+          })
+          }</div>
        {
           !loading ? <div> <RelatedItems /> </div> :
             <div className='flex justify-between'>
