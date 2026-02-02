@@ -34,7 +34,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
                         absolute left-3 top-3 rounded-sm ${className} block`}>-{discount}%</h3>
                         <div className='flex flex-col gap-2 absolute top-3 right-3 '>
                             <IoHeartOutline className='bg-white rounded-full  h-6 w-6 text-lg ' />
-                            <LuEye className='bg-white rounded-full  h-8 w-6 
+                            <LuEye className='bg-white rounded-full  h-6 w-6 
                              text-lg ' />
                         </div>
                     </div>

@@ -9,11 +9,12 @@ import Container from '../Components/Container'
 
 const WishList = () => {
   
+  const all = useSelector((state) => state.Products.value)
+  
+  console.log(all)
+
      const [loading, setLoading] = useState(1)
 
-  const allProducts = useSelector((state) => state.Products.value)
-  
-    console.log(allProducts)
      useEffect(()=>{
         setLoading(0)
      },

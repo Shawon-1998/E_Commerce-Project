@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux'
 
 
 const Nav = ({ className }) => {
+  const Data = useSelector((state) => state.Products.cart)
 
   let navigate = useNavigate();
 
@@ -18,7 +19,6 @@ const Nav = ({ className }) => {
 
   const [value1, setValue1] = useState(false)
 
-  const Data = useSelector((state) => state.Products.cart)
 
    const handleCart = () => {     
 
@@ -63,7 +63,7 @@ const Nav = ({ className }) => {
                  <div className='relative'>
                       <IoHeartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleWish}/>
                     <div className='absolute -top-1 -right-2 h-4 w-4 font-extralight bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
-                      {Data.length}
+                      0
                     </div>
                  </div>
                  <div className='relative'>
