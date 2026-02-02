@@ -4,10 +4,11 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   value: [],
   cart :[],
+  wish :[],
 }
 
 export const ProductSlice = createSlice({
-  name:'product',
+  name:'Products',
   initialState,
   reducers: {
     allProducts: (state,action) => {
@@ -19,10 +20,13 @@ export const ProductSlice = createSlice({
     cartData: (state,action) => {
      state.cart = [...state.cart,action.payload]
     },
+    wishList: (state,action) => {
+     state.wish= [...state.wish,action.payload]
+    },
   },
 })
 
 
-export const { allProducts,filterData,cartData} = ProductSlice.actions
+export const { allProducts,filterData,cartData,wishList} = ProductSlice.actions
 
 export default ProductSlice.reducer

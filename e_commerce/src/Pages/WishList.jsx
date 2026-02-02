@@ -9,7 +9,7 @@ import Container from '../Components/Container'
 
 const WishList = () => {
   
-  const all = useSelector((state) => state.Products.value)
+  const all = useSelector((state) => state.Products.wish)
   
   console.log(all)
 

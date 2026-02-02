@@ -5,7 +5,8 @@ import { IoHeartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 import { useNavigate } from "react-router";
 import { useDispatch } from 'react-redux';
-import { cartData } from '../slices/ProductSlice';
+import { cartData, wishList } from '../slices/ProductSlice';
+
 
 
 const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id, cart }) => {
@@ -21,7 +22,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         dispatch(cartData(cart))
     }
     const handleWish = () => { 
-        
+        dispatch(wishList(cart))
     }
 
     return (
@@ -33,7 +34,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
                         <h3 className={`bg-primary px-3 py-1 text-[#fafafac0] 
                         absolute left-3 top-3 rounded-sm ${className} block`}>-{discount}%</h3>
                         <div className='flex flex-col gap-2 absolute top-3 right-3 '>
-                            <IoHeartOutline className='bg-white rounded-full  h-6 w-6 text-lg ' />
+                            <IoHeartOutline className='bg-white rounded-full  h-6 w-6 text-lg ' onClick={handleWish}/>
                             <LuEye className='bg-white rounded-full  h-6 w-6 
                              text-lg ' />
                         </div>
