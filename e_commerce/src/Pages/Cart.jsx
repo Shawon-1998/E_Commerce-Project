@@ -9,17 +9,17 @@ import { useSelector } from 'react-redux'
 
 const Cart = () => {
   const Data = useSelector((state) => state.Products.cart)
-  const [incre, setIncre] = useState(0)
+  const [value, setValue] = useState(0)
   console.log(Data)
 
 
-  const handleClick1 = () => {
-    if (incre > 0) {
-      setIncre(incre - 1)
+  const handleProductDecrement = () => {
+    if (value > 0) {
+      setValue(value - 1)
     }
   }
-  const handleClick2 = () => {
-    setIncre(incre + 1)
+  const handleProductIncrement = () => {
+    setValue(value + 1)
   }
   return (
     <>
@@ -34,16 +34,16 @@ const Cart = () => {
 
 
         {
-          Data.map((item) => {
+          Data.map((item,idx) => {
             return (
-              <div className='py-6 px-10 my-10 shadow-md flex justify-between '>
-                <div key={item.id}>{item.title}</div>
+              <div  key={idx} className='py-6 px-10 my-10 shadow-md flex justify-between '>
+                <div className='flex gap-2 items-center'><img className='w-10 h-10' src={item.thumbnail} alt="" />{item.title}</div>
                 <div>${item.price}</div>
                 <div className='items-center flex gap-2 py-1.5 px-3 border'>
-                  {incre}
+                  {value}
                   <div className=' grid '>
-                    <button onClick={handleClick2} className='Block'><IoIosArrowUp /></button>
-                    <button onClick={handleClick1} className='Block'><IoIosArrowDown /></button>
+                    <button onClick={handleProductIncrement} className='Block'><IoIosArrowUp /></button>
+                    <button onClick={handleProductDecrement} className='Block'><IoIosArrowDown /></button>
                   </div>
                 </div>
                 <div>${item.price}</div>

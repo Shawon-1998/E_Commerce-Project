@@ -36,8 +36,7 @@ const WishList = () => {
               ImgSrc={item.thumbnail}
               productName={item.title}
               price={item.price}
-              discountPrice={Math.round((item.price - (item.price * item.discountPercentage) / 100))}
-              
+              discountPrice={Math.round((item.price - (item.price * item.discountPercentage) / 100))}              
               rating={item.rating}
               discount={item.discountPercentage}
             />
