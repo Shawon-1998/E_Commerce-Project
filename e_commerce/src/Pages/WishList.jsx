@@ -10,7 +10,7 @@ import CardSec from '../Components/CardSec'
 
 const WishList = () => {
   
-  const all = useSelector((state) => state.Products.wish)
+  const all = useSelector((state) => state.Products.value)
   
   console.log(all)
 

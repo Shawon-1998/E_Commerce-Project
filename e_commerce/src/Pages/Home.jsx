@@ -8,12 +8,9 @@ import ExpOurProduct from '../Components/ExpOurProduct'
 import NewArrival from '../Components/NewArrival'
 import Delivery from '../Components/Delivery'
 
-
-
 const Home = () => {
     return (
         <>
-        
             <Banner />
             <FlashSales />
             <Catagories />

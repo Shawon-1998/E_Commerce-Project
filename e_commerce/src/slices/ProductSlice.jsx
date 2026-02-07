@@ -5,7 +5,7 @@ const initialState = {
   value: [],
   cart :[],
   wish :[],
-}
+} 
 
 export const ProductSlice = createSlice({
   name:'Products',

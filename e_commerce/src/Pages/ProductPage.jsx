@@ -14,9 +14,10 @@ import { allProducts, filterData } from '../slices/ProductSlice';
 const ProductPage = () => {
 
     const [products, setProducts] = useState([])
+    const [productst, setProductst] = useState([])
     const [loading, setLoading] = useState(1)
     const [category, setCategory] = useState([])
-    const [value,setValue] =useState (6)
+    const [value, setValue] = useState(6)
     const dispatch = useDispatch()
 
     //     useEffect(() => {
@@ -29,17 +30,22 @@ const ProductPage = () => {
     //         });
     // }, [])
 
+    // Axios documentation isn't great always search for axios npm
+
+    // async means we can work with this art even though it is interpreted language and await means wait bro let me hold on this part so that you don't have to wait when it is loading and you can get next part loaded before it is stoping you from move forward
+
+    // api data sometimes take time to show in page so that why it may prevent you from seeing what next part is.
     async function data() {
         await axios.get('https://dummyjson.com/products')
-            .then((res) => {
-                setProducts(res.data.products)
+            .then((dummyApi) => {
+                setProducts(dummyApi.data.products)
                 setLoading(0)
-                dispatch(allProducts(res.data.products))
+                dispatch(allProducts(dummyApi.data.products))
             })
     }
 
-    useEffect(() => { 
-        data() 
+    useEffect(() => {
+        data()
     }, [])
 
     useEffect(() => {
@@ -51,19 +57,19 @@ const ProductPage = () => {
         const filterProduct = products.filter((filterItem) => {
             return (filterItem.category == item)
         })
-        dispatch(filterData(filterProduct))
+        dispatch(filterData(filterProduct)) 
     }
 
     return (
         <>
             <Container>
-                <BreadCrumbs  />
+                <BreadCrumbs />
                 <div className='flex justify-between'>
                     <h3 className='font-pop text-xl font-bold text-[#262626]'>Shop by Category</h3>
                     <div className='flex justify-between mb-3.75'>
                         <div>
                             <label htmlFor="text"> Show: </label>
-                            <select onChange={(e)=>setValue(e.target.value)} name="item" id="item" className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
+                            <select onChange={(e) => setValue(e.target.value)} name="item" id="item" className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
                                 <option value="6">6</option>
                                 <option value="9">9</option>
                                 <option value="12">12</option>
@@ -75,7 +81,7 @@ const ProductPage = () => {
                 <Flex className="items-start">
                     <div className='w-[20%]'>
                         <ul className='pt-5 lg:pe-4.5  font-pop flex flex-col gap-4 '>
-                            <li onClick={()=>dispatch(allProducts(products))} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> All Products </li>
+                            <li onClick={() => dispatch(allProducts(products))} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> All Products </li>
                             {
                                 category.map((item, idx) => {
                                     return (
