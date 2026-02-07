@@ -20,7 +20,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         dispatch(cartData(cart))
     }
     const handleWish = () => {
-        dispatch(wishList(wish))
+        dispatch(wishList(cart))
     }
 
     return (

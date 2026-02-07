@@ -10,7 +10,7 @@ import CardSec from '../Components/CardSec'
 
 const WishList = () => {
   
-  const all = useSelector((state) => state.Products.value)
+   const all = useSelector((state) => state.Products.cart)
   
   console.log(all)
 
@@ -26,13 +26,13 @@ const WishList = () => {
      <Container>
           <BreadCrumbs/>
          <div>{
-          all.map((item)=>{
+          all.map((item,idx)=>{
            return(
               <CardSec
               
               // props akare puro item gula pathiye dicchi jate ieta dispatch kora jay
               cart={item} 
-              key={item.id}
+              key={idx}
               ImgSrc={item.thumbnail}
               productName={item.title}
               price={item.price}

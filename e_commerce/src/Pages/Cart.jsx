@@ -32,7 +32,6 @@ const Cart = () => {
           <span>SubTotal</span>
         </div>
 
-
         {
           Data.map((item,idx) => {
             return (
