@@ -15,17 +15,17 @@ import RelatedItems from '../Components/RelatedItems';
 const ProductDetails = () => {
   const [products, setProducts] = useState([])
   const [productImg, setProductImg] = useState([])
-  const [incre, setIncre] = useState(0)
+  const [value, setValue] = useState(0)
   const [loading, setLoading] = useState(1)
   let { id } = useParams();
 
-  const handleClick1 = () => {
-    if (incre > 0) {
-      setIncre(incre - 1)
+  const handleProductDecrement = () => {
+    if (value > 0) {
+      setValue(value - 1)
     }
   }
-  const handleClick2 = () => {
-    setIncre(incre + 1)
+  const handleProductIncrement = () => {
+    setValue(value + 1)
   }
 
   async function data() {
@@ -85,10 +85,10 @@ const ProductDetails = () => {
                     <button>XXl</button>
                   </div>
                   <div className='flex pt-6 pb-10 productCard'>
-                    <button onClick={handleClick1} >-</button>
+                    <button onClick={handleProductDecrement} >-</button>
                     {/* custom card classname */}
-                    <p className='py-1 px-8.5 Card'>{incre}</p>
-                    <button onClick={handleClick2}>+</button>
+                    <p className='py-1 px-8.5 Card'>{value}</p>
+                    <button onClick={handleProductIncrement}>+</button>
                   </div>
                   <div className='border border-[#00000065] '>
                     <Flex className='items-center gap-4 pt-5 pb-3 lg:ps-4 lg:pe-12.75'>

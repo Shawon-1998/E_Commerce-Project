@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Rate } from 'antd';
 import Flex from './Flex'
 import { IoHeartOutline } from "react-icons/io5";
