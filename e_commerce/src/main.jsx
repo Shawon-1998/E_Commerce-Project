@@ -13,6 +13,7 @@ import ProductDetails from './Pages/ProductDetails.jsx';
 import Contact from './Pages/Contact.jsx';
 import Cart from '../src/Pages/Cart.jsx'
 import WishList from './Pages/WishList.jsx';
+import AboutUs from './Pages/AboutUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: "shop", Component: ProductPage },
       { path: "Contact", Component: Contact },
       { path: "cart", Component: Cart },
+      { path: "About", Component: AboutUs },
       { path: "wishList", Component: WishList },
       { path: "/Details/:id", Component:ProductDetails },
     ],
