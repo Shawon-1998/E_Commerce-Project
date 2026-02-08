@@ -2,48 +2,43 @@ import React, { useEffect, useState } from 'react'
 import BreadCrumbs from '../Components/BreadCrumbs'
 import Skeleton from '../Components/Skeleton'
 import RelatedItems from '../Components/RelatedItems'
-import { useSelector } from 'react-redux'
 import Container from '../Components/Container'
+import { useSelector } from 'react-redux'
 import CardSec from '../Components/CardSec'
 
-
-
 const WishList = () => {
-  
-   const all = useSelector((state) => state.Products.cart)
-  
-  console.log(all)
-
-     const [loading, setLoading] = useState(1)
-
-     useEffect(()=>{
-        setLoading(0)
-     },
-     [])
+  const wishData = useSelector((state) => state.Products.wish)
+  const [loading, setLoading] = useState(1)
+  console.log(wishData)
+  useEffect(() => {
+    setLoading(0)
+  },
+    [])
 
   return (
     <>
-     <Container>
-          <BreadCrumbs/>
-         <div>{
-          all.map((item,idx)=>{
-           return(
+      <Container>
+        <BreadCrumbs />
+        <div className='flex flex-wrap gap-y-5'> {
+          wishData.map((item,idx) => {
+            return (
               <CardSec
-              
-              // props akare puro item gula pathiye dicchi jate ieta dispatch kora jay
-              cart={item} 
-              key={idx}
-              ImgSrc={item.thumbnail}
-              productName={item.title}
-              price={item.price}
-              discountPrice={Math.round((item.price - (item.price * item.discountPercentage) / 100))}              
-              rating={item.rating}
-              discount={item.discountPercentage}
-            />
-           )
+                id={item.id}
+                // props akare puro item gula pathiye dicchi jate ieta dispatch kora jay
+                cart={item}
+                key={idx}
+                ImgSrc={item.thumbnail}
+                productName={item.title}
+                price={item.price}
+                discountPrice={Math.round((item.price - (item.price * item.discountPercentage) / 100))}
+                digit={item.reviews.length}
+                rating={item.rating}
+                discount={item.discountPercentage}
+              />
+            )
           })
-          }</div>
-       {
+        } </div>
+        {
           !loading ? <div> <RelatedItems /> </div> :
             <div className='flex justify-between'>
               <Skeleton />
@@ -52,7 +47,7 @@ const WishList = () => {
               <Skeleton />
             </div>
         }
-    </Container>
+      </Container>
     </>
   )
 }

@@ -14,7 +14,6 @@ import { allProducts, filterData } from '../slices/ProductSlice';
 const ProductPage = () => {
 
     const [products, setProducts] = useState([])
-    const [productst, setProductst] = useState([])
     const [loading, setLoading] = useState(1)
     const [category, setCategory] = useState([])
     const [value, setValue] = useState(6)
@@ -86,7 +85,8 @@ const ProductPage = () => {
                                 category.map((item, idx) => {
                                     return (
                                         //parameter dorkar hole onlick er moddhe arrow function use korbo 
-                                        <li key={idx} onClick={() => { handleFilter(item) }} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
+                                        <li key={idx} 
+                                        onClick={() => handleFilter(item)} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
                                     )
                                 })
                             }

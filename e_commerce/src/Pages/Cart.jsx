@@ -8,9 +8,9 @@ import { IoIosArrowUp } from "react-icons/io";
 import { useSelector } from 'react-redux'
 
 const Cart = () => {
-  const Data = useSelector((state) => state.Products.cart)
+  const cartData = useSelector((state) => state.Products.cart)
   const [value, setValue] = useState(0)
-  console.log(Data)
+  console.log(cartData)
 
 
   const handleProductDecrement = () => {
@@ -33,7 +33,7 @@ const Cart = () => {
         </div>
 
         {
-          Data.map((item,idx) => {
+          cartData.map((item,idx) => {
             return (
               <div  key={idx} className='py-6 px-10 my-10 shadow-md flex justify-between '>
                 <div className='flex gap-2 items-center'><img className='w-10 h-10' src={item.thumbnail} alt="" />{item.title}</div>

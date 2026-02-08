@@ -17,11 +17,10 @@ const Nav = ({ className }) => {
   let navigate = useNavigate();
 
    const handleCart = () => {     
-
            navigate("/cart")
       }
    const handleWish = () => {     
-           navigate("/wishList")
+          navigate("/wishList")
       }
 
   return (

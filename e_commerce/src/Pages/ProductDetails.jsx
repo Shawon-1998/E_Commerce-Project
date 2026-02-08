@@ -11,18 +11,18 @@ import logo2 from '../assets/Icon-return.png'
 import Skeleton from '../Components/Skeleton'
 import RelatedItems from '../Components/RelatedItems';
 
-
 const ProductDetails = () => {
   const [products, setProducts] = useState([])
   const [productImg, setProductImg] = useState([])
   const [value, setValue] = useState(0)
   const [loading, setLoading] = useState(1)
   let { id } = useParams();
-
+   
   const handleProductDecrement = () => {
     if (value > 0) {
       setValue(value - 1)
     }
+
   }
   const handleProductIncrement = () => {
     setValue(value + 1)

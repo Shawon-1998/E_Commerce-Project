@@ -19,8 +19,9 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         dispatch(cartData(cart))
     }
     const handleWish = () => {
-        dispatch(wishList(cart))
+       dispatch(wishList(cart))
     }
+     
 
     return (
         <>
@@ -31,7 +32,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
                         <h3 className={`bg-primary px-3 py-1 text-[#fafafac0] 
                         absolute left-3 top-3 rounded-sm ${className} block`}>-{discount}%</h3>
                         <div className='flex flex-col gap-2 absolute top-3 right-3 '>
-                            <IoHeartOutline className='bg-white rounded-full  h-6 w-6 text-lg ' onClick={handleWish} />
+                            <IoHeartOutline className='bg-white rounded-full  h-6 w-6 text-lg cursor-pointer' onClick={handleWish} />
                             <LuEye className='bg-white rounded-full  h-6 w-6 
                              text-lg ' />
                         </div>
