@@ -8,12 +8,14 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from 'react-redux'
-import { wishList } from '../slices/ProductSlice';
 import Container from '../Components/Container'
+import { FaShoppingBasket } from "react-icons/fa";
 
 const Nav = ({ className }) => {
   const Data = useSelector((state) => state.Products.cart)
   const DataWish = useSelector((state) => state.Products.wish)
+  const [change, setChange] = useState(false)
+  const [shopping, setShopping] = useState(false)
   let navigate = useNavigate();
 
   const handleCart = () => {
@@ -23,9 +25,15 @@ const Nav = ({ className }) => {
     navigate("/wishList")
   }
 
+  const handleToggle= () => {
+    setChange(!change)
+  }
+  const handleShopping = () => {
+    setShopping(!shopping)
+  }
   return (
     <>
-      <nav className=' block pt-11.75 pb-5.75 border-[#0000003d] border-b font-pop'>
+      {/* <nav className=' block pt-11.75 pb-5.75 border-[#0000003d] border-b font-pop'>
         <div className="container">
           <div className='flex lg:items-center'>
             <div className='w-[26%]'>
@@ -65,44 +73,46 @@ const Nav = ({ className }) => {
             <FaBarsStaggered className='lg:hidden' />
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       <nav className=' pt-11.75 pb-5.75 border-[#0000003d] border-b font-pop '>
         <Container>
-          <div className='flex md:items-center   justify-between '>
+          <div className='flex md:items-center justify-between '>
             <div className=''>
               <NavLink to="/" end> <img src={logo} alt="" /></NavLink>
             </div>
-             <div className='md:flex gap-5 relative md:items-center'>
-            <ul className='md:flex bg-black text-white md:bg-transparent md:text-black gap-6 lg:gap-12 font-normal md:static absolute 
-             top-5 -right-30 py-3 px-3 '>
-              <li><NavLink to="/" end>Home</NavLink></li>
-              <li><NavLink to="Contact" end> Contact </NavLink></li>
-              <li><NavLink to="/" end>About</NavLink></li>
-              <li>Sign Up</li>
-            </ul>
-          <div className='md:flex hidden'>
-            <div className='relative' >
-              <input type="text" placeholder='What are you looking for?' className=' w-50 md:w-55 lg:w-60.75 py-2.5 md:ps-4 ps-2 bg-[#F5F5F5] rounded[4px] placeholder:text-xs outline-none relative' />
-              <HiMiniMagnifyingGlass className='absolute top-0 right-0 text-lg' />
+            <div className='md:flex gap-5 relative md:items-center'>
+              <ul className={` ${change ? "block" : "hidden"} md:flex bg-black text-white md:bg-transparent md:text-black gap-6  lg:gap-12 font-normal md:static absolute top-5 -right-36 py-3 px-3 hover:transition-all rounded-sm leading-10 `}>
+                <li><NavLink to="/" end>Home</NavLink></li>
+                <li><NavLink to="Contact" end> Contact </NavLink></li>
+                <li><NavLink to="/" end>About</NavLink></li>
+                <li>Sign Up</li>
+              </ul> 
+              <div className={`md:flex ${shopping ? "block" : "hidden" } `}>
+                <div className='relative md:ms-0 md:me-2 lg:ms-37 lg:me-6' >
+                  <input type="text" placeholder='What are you looking for?' className=' w-50 md:w-45 lg:w-60.75 py-2.5 md:ps-4 ps-2 bg-[#F5F5F5] rounded[4px] md:placeholder:text-[10px] placeholder:text-xs outline-none relative' />
+                  <HiMiniMagnifyingGlass className='absolute top-4 right-4 text-lg' />
+                </div>
+                <Flex className='flex gap-4 text-xl mt-3 '>
+                  <div className='relative'>
+                    <IoHeartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleWish} />
+                    <div className='absolute -top-1 -right-2 h-4 w-4 font-extralight bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
+                      {DataWish.length}
+                    </div>
+                  </div>
+                  <div className='relative'>
+                    <IoCartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleCart} />
+                    <div className='absolute -top-1 -right-2 h-4 w-4 font-extralight bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
+                      {Data.length}
+                    </div>
+                  </div>
+                </Flex>
+              </div>
             </div>
-            <Flex className='flex gap-4 text-xl '>
-              <div className='relative'>
-                <IoHeartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleWish} />
-                <div className='absolute -top-1 -right-2 h-4 w-4 font-extralight bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
-                  {DataWish.length}
-                </div>
-              </div>
-              <div className='relative'>
-                <IoCartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleCart} />
-                <div className='absolute -top-1 -right-2 h-4 w-4 font-extralight bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
-                  {Data.length}
-                </div>
-              </div>
-            </Flex>
+          <div>
+              <FaBarsStaggered className='md:hidden' onClick={handleToggle} />
+            <FaShoppingBasket className='md:hidden mt-5' onClick={handleShopping} />
           </div>
-             </div>
-           <FaBarsStaggered className='md:hidden' />
           </div>
         </Container>
       </nav>
