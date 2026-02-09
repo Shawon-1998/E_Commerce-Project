@@ -4,22 +4,27 @@ import Flex from './Flex'
 import { IoHeartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 import { useNavigate } from "react-router";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { cartData, wishList } from '../slices/ProductSlice';
 
 
 const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id, cart }) => {
 
+    const wishProducts = useSelector((state) => state.Products.wish)
+    const cartProducts = useSelector((state) => state.Products.cart)
+    
     const dispatch = useDispatch()
     let navigate = useNavigate();
     const handleProductDetails = () => {
         navigate(`/Details/${id}`)
     }
     const handleCart = () => {
-        dispatch(cartData(cart))
+         cartProducts.find((findItem) => (findItem.id== id)) ? 
+       dispatch(!cartData(cart)) : dispatch(cartData(cart))
     }
     const handleWish = () => {
-       dispatch(wishList(cart))
+       wishProducts.find((findItem) => (findItem.id== id)) ? 
+       dispatch(!wishList(cart)) : dispatch(wishList(cart))
     }
      
 

@@ -24,7 +24,7 @@ const WishList = () => {
             return (
               <CardSec
                 id={item.id}
-                // props akare puro item gula pathiye dicchi jate ieta dispatch kora jay
+                // props akare puro item gula pathiye dicchi jate eita dispatch kora jay
                 cart={item}
                 key={idx}
                 ImgSrc={item.thumbnail}
