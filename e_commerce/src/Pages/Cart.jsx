@@ -14,8 +14,8 @@ const Cart = () => {
     <>
       <Container >
         <BreadCrumbs />
-        <div className='py-6 px-10 shadow-md flex justify-between'>
-          <span>Product</span>
+        <div className=' py-6 px-10 shadow-md flex gap-50 justify-between'>
+          <span className='w-50'>Product</span>
           <span>Price</span>
           <span>Quantity</span>
           <span>SubTotal</span>
@@ -25,6 +25,7 @@ const Cart = () => {
             return (
              <CartItem
               id={item.id}
+              price={item.price}
               title={item.title}
               imgSrc={item.thumbnail}
               key={idx}
