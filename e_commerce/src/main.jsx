@@ -14,6 +14,7 @@ import Contact from './Pages/Contact.jsx';
 import Cart from '../src/Pages/Cart.jsx'
 import WishList from './Pages/WishList.jsx';
 import AboutUs from './Pages/AboutUs.jsx';
+ import { ToastContainer} from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
+       <ToastContainer />
       <RouterProvider router={router} />
     </Provider>
   </StrictMode>

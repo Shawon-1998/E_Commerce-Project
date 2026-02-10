@@ -57,7 +57,7 @@ import { FiUser } from "react-icons/fi";
                 <Flex className='flex gap-4 text-xl mt-3 '>
                   <div className='relative'>
                     <IoHeartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleWish} />
-                    <div className='absolute font-medium -top-1 -right-2 h-4 w-4  bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
+                    <div className='absolute -top-1 -right-2 h-4 w-4 font-medium bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
                       {DataWish.length}
                     </div>
                   </div>

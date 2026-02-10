@@ -6,13 +6,26 @@ import { LuEye } from "react-icons/lu";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from 'react-redux';
 import { cartData, wishList } from '../slices/ProductSlice';
+import { Bounce, toast } from 'react-toastify';
 
 
 const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id, cart }) => {
-
+    
     const wishProducts = useSelector((state) => state.Products.wish)
     const cartProducts = useSelector((state) => state.Products.cart)
-    
+
+     const notify = () =>toast.success('Successfully added', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        });
+
     const dispatch = useDispatch()
     let navigate = useNavigate();
     const handleProductDetails = () => {
@@ -20,11 +33,13 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
     }
     const handleCart = () => {
          cartProducts.find((findItem) => (findItem.id== id)) ? 
-       dispatch(!cartData(cart)) : dispatch(cartData(cart))
+         dispatch(!cartData(cart)) : dispatch(cartData(cart)) 
+        notify()
     }
     const handleWish = () => {
        wishProducts.find((findItem) => (findItem.id== id)) ? 
        dispatch(!wishList(cart)) : dispatch(wishList(cart))
+       notify()
     }
      
 
