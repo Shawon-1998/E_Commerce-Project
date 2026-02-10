@@ -3,24 +3,13 @@ import Container from '../Components/Container'
 import BreadCrumbs from '../Components/BreadCrumbs'
 import Flex from '../Components/Flex'
 import Button from '../Components/Button'
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
+
 import { useSelector } from 'react-redux'
+import CartItem from '../Components/CartItem'
 
 const Cart = () => {
   const cartData = useSelector((state) => state.Products.cart)
-  const [value, setValue] = useState(0)
-  console.log(cartData)
 
-
-  const handleProductDecrement = () => {
-    if (value > 0) {
-      setValue(value - 1)
-    }
-  }
-  const handleProductIncrement = () => {
-    setValue(value + 1)
-  }
   return (
     <>
       <Container >
@@ -31,22 +20,15 @@ const Cart = () => {
           <span>Quantity</span>
           <span>SubTotal</span>
         </div>
-
         {
           cartData.map((item,idx) => {
             return (
-              <div  key={idx} className='py-6 px-10 my-10 shadow-md flex justify-between '>
-                <div className='flex gap-2 items-center'><img className='w-10 h-10' src={item.thumbnail} alt="" />{item.title}</div>
-                <div>${item.price}</div>
-                <div className='items-center flex gap-2 py-1.5 px-3 border'>
-                  {value}
-                  <div className=' grid '>
-                    <button onClick={handleProductIncrement} className='Block'><IoIosArrowUp /></button>
-                    <button onClick={handleProductDecrement} className='Block'><IoIosArrowDown /></button>
-                  </div>
-                </div>
-                <div>${item.price}</div>
-              </div>
+             <CartItem
+              id={item.id}
+              title={item.title}
+              imgSrc={item.thumbnail}
+              key={idx}
+             />
             )
           })
         }
