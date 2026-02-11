@@ -7,8 +7,8 @@ const Footer = () => {
     <>
 
 
-      <footer className="text-white mt-32.5 bg-black ">
-        <div className="mx-auto w-full container pb-15 pt-20 ">
+      <footer className="text-white mt-32.5 bg-black pb-15 pt-20">
+        <div className="mx-auto w-full container  ">
           <div className="flex flex-col lg:flex-row mx-auto justify-between items-center lg:items-start ">
             <div className="mb-6 md:mb-0">
                 <h2 className=' text-2xl font-bold'>Exclusive</h2>
