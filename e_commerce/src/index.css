@@ -100,8 +100,7 @@ nav ul li:hover {
   font-weight: 600;
 }
 
-.productCard button:hover,
-.Card:hover {
+.productCard button:hover,.Card:hover {
   background-color: #DB4444;
   color: white;
 }
