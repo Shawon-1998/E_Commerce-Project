@@ -86,10 +86,11 @@ const AboutUs = () => {
         </section>
 
         <CatagoriesCards />
-        <section>
-          <div className=' pt-10'>
-            <Slider {...settings} className=' '>
 
+    
+          <div className=' pt-10'>
+            <Slider {...settings} >
+                
               <AboutCard
                 imgSrc={picture1}
                 title='Tom Cruise'
@@ -124,7 +125,7 @@ const AboutUs = () => {
               />
             </Slider>
           </div>
-        </section>
+        
         <Delivery />
       </Container>
     </>
