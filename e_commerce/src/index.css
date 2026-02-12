@@ -36,6 +36,7 @@
   cursor: pointer;
 }
 
+
 nav ul li {
   border-radius: 12px;
   padding: 0px 3px;
@@ -100,7 +101,8 @@ nav ul li:hover {
   font-weight: 600;
 }
 
-.productCard button:hover,.Card:hover {
+.productCard button:hover,
+.Card:hover {
   background-color: #DB4444;
   color: white;
 }
@@ -127,4 +129,3 @@ nav ul li:hover {
   outline: none;
   border-color: #00000011;
 }
-

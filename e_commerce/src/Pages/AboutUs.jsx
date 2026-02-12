@@ -15,11 +15,11 @@ import picture3 from '../assets/About3.png'
 
 const AboutUs = () => {
   const settings = {
-    dots: true,
+     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
+    slidesToShow: 3,
     responsive: [
       {
         breakpoint: 1170,
@@ -61,7 +61,7 @@ const AboutUs = () => {
       </div>
     ),
     customPaging: () => (
-      <div className='bg-gray-500 lg:w-3.5 lg:h-3.5 h-2 w-2 rounded-full absolute bottom-9 lg:bottom-0  lg:right-46 md:right-36 right-26  ' />
+      <div className='bg-gray-500 lg:w-3.5 lg:h-3.5 h-2 w-2 rounded-full absolute bottom- lg:-bottom-10  lg:right-26 md:right-36 right-26  ' />
 
     )
   };
@@ -87,8 +87,8 @@ const AboutUs = () => {
 
         <CatagoriesCards />
 
-    
-          <div className=' pt-10'>
+           <div className="slider-container">
+
             <Slider {...settings} >
                 
               <AboutCard
@@ -99,14 +99,15 @@ const AboutUs = () => {
 
               <AboutCard
                 imgSrc={picture2}
-                title='Tom Cruise'
+                title='Emma watson'
                 description='Founder & Chairman'
               />
               <AboutCard
                 imgSrc={picture3}
-                title='Tom Cruise'
+                title='Will Smith'
                 description='Founder & Chairman'
               />
+             
               <AboutCard
                 imgSrc={picture1}
                 title='Tom Cruise'
@@ -115,16 +116,35 @@ const AboutUs = () => {
 
               <AboutCard
                 imgSrc={picture2}
-                title='Tom Cruise'
+                title='Emma watson'
                 description='Founder & Chairman'
               />
               <AboutCard
                 imgSrc={picture3}
+                title='Will Smith'
+                description='Founder & Chairman'
+              />
+             
+              <AboutCard
+                imgSrc={picture1}
                 title='Tom Cruise'
                 description='Founder & Chairman'
               />
+
+              <AboutCard
+                imgSrc={picture2}
+                title='Emma watson'
+                description='Founder & Chairman'
+              />
+              <AboutCard
+                imgSrc={picture3}
+                title='Will Smith'
+                description='Founder & Chairman'
+              />
+             
             </Slider>
-          </div>
+         
+           </div>
         
         <Delivery />
       </Container>

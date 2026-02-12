@@ -8,7 +8,7 @@ const AboutCard = ({imgSrc,title,description}) => {
   return (
     <>
       <div className=' w-92.5'>
-       <div className='bg-[#F5F5F5] px-16.75 pt-9.75 rounded-sm'>
+       <div className='bg-[#F5F5F5] rounded-sm'>
          <img className='w-full' src={imgSrc} alt="" />
        </div>
          <h3 className='text-[32px] pt-8 pb-2'>{title}</h3>
