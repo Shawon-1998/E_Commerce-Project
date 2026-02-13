@@ -1,9 +1,4 @@
 import React from 'react'
-import Flex from './Flex'
-import banner1 from '../assets/strawberry-4246395.jpg'
-import banner2 from '../assets/perfume-6518634.jpg'
-import banner3 from '../assets/pasta-1282067.jpg'
-import banner4 from '../assets/cosmetics-9086984.jpg'
 import banner5 from '../assets/banner.jpg'
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Slider from "react-slick";
