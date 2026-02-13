@@ -5,8 +5,6 @@ import { VscSend } from "react-icons/vsc";
 const Footer = () => {
   return (
     <>
-
-
       <footer className="text-white mt-32.5 bg-black pb-15 pt-20">
         <div className="mx-auto w-full container  ">
           <div className="flex flex-col lg:flex-row mx-auto justify-between items-center lg:items-start ">

@@ -16,8 +16,8 @@ const Header = () => {
                         </div>
                         <Flex className='w-[23%] justify-end flex-none gap-1 '>
                             <select name="lang" id="lang" className='bg-black cursor-pointer text-white outline-none'>
-                                <option value="">English</option>
-                                <option value="">Bangla</option>
+                                <option value="English">English</option>
+                                <option value="Bangla">Bangla</option>
                             </select>
 
                         </Flex>

@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
   const dispatch = useDispatch()
   const [value, setValue] = useState(0)
+  
   const handleProductDecrement = () => {
     if (value > 0) {
       setValue(value - 1)

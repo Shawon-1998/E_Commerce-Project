@@ -1,16 +1,15 @@
 import React from 'react'
+
 import SecHeading from './SecHeading'
 import phone from '../assets/Category-CellPhone.svg'
 import computer from '../assets/Category-Computer.svg'
 import watch from '../assets/Category-SmartWatch.png'
-
 import headPhone from '../assets/Category-Headphone.png'
 import gaming from '../assets/Category-Gamepad.png'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Cards from './CatagoriesCards'
-import { CiCamera } from "react-icons/ci";
 import CatagoriesCards from './CatagoriesCards'
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
@@ -101,10 +100,6 @@ const settings = {
               imgSrc={watch}
               productName='SmartWatch'
             />
-            {/* <div className='px-14.25 py-6.25 text-center border border-[#00000067] w-42.5 h-36.25 text-black'>
-              <CiCamera className='text-6xl' />
-              <h3 className='font-medium mt-4 '>Camera</h3>
-            </div> */}
             <CatagoriesCards className='catagories'
               imgSrc={headPhone}
               productName='HeadPhones'
@@ -117,10 +112,6 @@ const settings = {
               imgSrc={watch}
               productName='SmartWatch'
             />
-            {/* <div className=' hover:bg-primary  border-[#00000067] w-42.5 h-36.25 ease-linear duration-300 px-14.25 py-6.25 items-center text-black'>
-              <CiCamera className='text-6xl' />
-              <h3 className='font-medium mt-4 '>Camera</h3>
-            </div> */}
            
             <CatagoriesCards className='catagories'
               imgSrc={headPhone}
@@ -133,9 +124,7 @@ const settings = {
           </Slider>
           <div className='border border-[#00000013]' />
         </div>
-
       </div>
-
     </>
   )
 }
