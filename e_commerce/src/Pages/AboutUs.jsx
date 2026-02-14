@@ -94,7 +94,7 @@ const AboutUs = () => {
               <AboutCard
                 imgSrc={picture1}
                 title='Tom Cruise'
-                description='Founder & Chairman'
+                description='Founder &  Chairman'
               />
 
               <AboutCard

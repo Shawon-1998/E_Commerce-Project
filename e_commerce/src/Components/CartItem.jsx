@@ -26,7 +26,7 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
         <div className='flex gap-2 items-center w-50 '>
           <div className='relative' >
             <span className='w-4 h-4 text-xs bg-primary text-white absolute top-0 left-0 rounded-full items-center flex justify-center cursor-pointer' onClick={handleRemove}>X</span>
-            <img className='w-20 h-12 ' src={imgSrc} alt="" />{title}</div>
+            <img className='w-20 h-12' src={imgSrc} alt="product" />{title}</div>
         </div>
         <div>${price}</div>
         <div className='items-center flex gap-2 py-1.5 px-3 border'>
