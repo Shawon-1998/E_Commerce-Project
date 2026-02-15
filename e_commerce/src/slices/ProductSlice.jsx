@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   value: [],
   cart : JSON.parse(localStorage.getItem("cart")) || [],
-  wish :[],
+  wish :JSON.parse(localStorage.getItem("wish")) || [],
 } 
 
 export const ProductSlice = createSlice({
@@ -23,14 +23,18 @@ export const ProductSlice = createSlice({
     },
     wishList: (state,action) => {
      state.wish= [...state.wish,action.payload]
+     localStorage.setItem("wish",JSON.stringify(state.wish))
     },
     removeCartReducer: (state,action) => {
      state.cart = [...state.cart.filter((item)=>item.id !==action.payload)]
+    },
+    removeWishReducer: (state,action) => {
+     state.wish = [...state.wish.filter((item)=>item.id !==action.payload)]
     },
   },
 })
 
 
-export const { allProducts,filterData,cartData,wishList,removeCartReducer} = ProductSlice.actions
+export const { allProducts,filterData,cartData,wishList,removeCartReducer,removeWishReducer} = ProductSlice.actions
 
 export default ProductSlice.reducer
