@@ -25,13 +25,16 @@ export const ProductSlice = createSlice({
     wishList: (state,action) => {
      state.wish= [...state.wish,action.payload]
     },
-    removeReducer: (state,action) => {
+    removeCartReducer: (state,action) => {
      state.cart = [...state.cart.filter((item)=>item.id !==action.payload)]
+    },
+    removeWishReducer: (state,action) => {
+     state.wish = [...state.wish.filter((item)=>item.id !==action.payload)]
     },
   },
 })
 
 
-export const { allProducts,filterData,cartData,wishList,removeReducer} = ProductSlice.actions
+export const { allProducts,filterData,cartData,wishList,removeCartReducer} = ProductSlice.actions
 
 export default ProductSlice.reducer

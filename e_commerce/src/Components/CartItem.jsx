@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
-import { removeReducer } from '../slices/ProductSlice';
+
 import { useDispatch } from 'react-redux';
+import { removeCartReducer } from '../slices/ProductSlice';
 
 const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
   const dispatch = useDispatch()
@@ -17,7 +18,7 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
     setProductCount(productCount + 1)
   }
   const handleRemove = () => {
-    dispatch(removeReducer(id))
+    dispatch(removeCartReducer(id))
 
   }
   return (
