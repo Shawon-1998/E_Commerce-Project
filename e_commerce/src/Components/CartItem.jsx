@@ -6,15 +6,15 @@ import { useDispatch } from 'react-redux';
 
 const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
   const dispatch = useDispatch()
-  const [value, setValue] = useState(0)
+  const [productCount, setProductCount] = useState(0)
   
   const handleProductDecrement = () => {
-    if (value > 0) {
-      setValue(value - 1)
+    if (productCount > 0) {
+      setProductCount(productCount - 1)
     }
   }
   const handleProductIncrement = () => {
-    setValue(value + 1)
+    setProductCount(productCount + 1)
   }
   const handleRemove = () => {
     dispatch(removeReducer(id))
@@ -30,7 +30,7 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
         </div>
         <div>${price}</div>
         <div className='items-center flex gap-2 py-1.5 px-3 border'>
-          {value}
+          {productCount}
           <span className=' grid '>
             <button onClick={handleProductIncrement} className='Block'><IoIosArrowUp /></button>
             <button onClick={handleProductDecrement} className='Block'><IoIosArrowDown /></button>

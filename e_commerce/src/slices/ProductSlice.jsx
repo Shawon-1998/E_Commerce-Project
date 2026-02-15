@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   value: [],
-  cart :[],
+  cart : JSON.parse(localStorage.getItem("cart")) || [],
   wish :[],
 } 
 
@@ -19,6 +19,8 @@ export const ProductSlice = createSlice({
     },
     cartData: (state,action) => {
      state.cart = [...state.cart,action.payload]
+     localStorage.setItem("cart", JSON.stringify(state.cart))
+
     },
     wishList: (state,action) => {
      state.wish= [...state.wish,action.payload]
