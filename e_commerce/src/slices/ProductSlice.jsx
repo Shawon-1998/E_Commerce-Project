@@ -20,16 +20,12 @@ export const ProductSlice = createSlice({
     cartData: (state,action) => {
      state.cart = [...state.cart,action.payload]
      localStorage.setItem("cart", JSON.stringify(state.cart))
-
     },
     wishList: (state,action) => {
      state.wish= [...state.wish,action.payload]
     },
     removeCartReducer: (state,action) => {
      state.cart = [...state.cart.filter((item)=>item.id !==action.payload)]
-    },
-    removeWishReducer: (state,action) => {
-     state.wish = [...state.wish.filter((item)=>item.id !==action.payload)]
     },
   },
 })
