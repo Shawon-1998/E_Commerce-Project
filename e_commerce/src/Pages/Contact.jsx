@@ -36,12 +36,12 @@ const Contact = () => {
                </div>
                <div className='w-[72%]'>
                   <form className='Input flex gap-4 ' action="">
-                    <input type="text" placeholder='Your Name' />
-                    <input type="email" placeholder='Your Email' />
-                    <input type="tele" placeholder='Your Phone Number' />
+                    <input id='text' name='text' type="text" placeholder='Your Name' />
+                    <input id='email' name='email' type="email" placeholder='Your Email'/>
+                    <input id='tele' name='tele' type="tele" placeholder='Your Phone Number' />
                   </form>
                   <form action="">
-                    <input type="text" placeholder='Your Name' className='w-full boder border-[#0000005d] rounded-sm bg-[#00000011] ps-3.25 pt-3.25 pb-42.5 my-8 outline-0'/>
+                    <input id='text' name='text' type="text" placeholder='Your Name' className='w-full boder border-[#0000005d] rounded-sm bg-[#00000011] ps-3.25 pt-3.25 pb-42.5 my-8 outline-0'/>
                   </form>
                  <div className='flex justify-end text-white'> 
                      <Button> Send Massage</Button>

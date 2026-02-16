@@ -13,7 +13,7 @@ const Footer = () => {
                 <h2 className='font-medium font-pop text-xl py-6'>Subscribe</h2>
                 <p className='w-65.75 mb-7.5'>Get 10% off your first order</p>
                 <Flex className='relative' >
-                  <input type="email" placeholder='Enter your email' className='w-60.75 py-2.5 ps-4  rounded[4px] rounded-sm text-white border border-white' />
+                  <input id='email' name='email' type="email" placeholder='Enter your email' className='w-60.75 py-2.5 ps-4  rounded[4px] rounded-sm text-white border border-white' />
                   <VscSend
                     className='absolute top-4 right-12 lg:right-8 text-lg' />
                 </Flex>

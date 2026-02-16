@@ -35,8 +35,8 @@ const ProductDetails = () => {
         setLoading(0)
         setProductImg(res.data.images)
       })
-   
   }
+  
   useEffect(() => {
     data()
   }, [])
