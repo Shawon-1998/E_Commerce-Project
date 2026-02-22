@@ -3,7 +3,7 @@ import Container from '../Components/Container'
 import BreadCrumbs from '../Components/BreadCrumbs'
 import Flex from '../Components/Flex'
 import Button from '../Components/Button'
-
+import { NavLink } from "react-router";
 import { useSelector } from 'react-redux'
 import CartItem from '../Components/CartItem'
 
@@ -35,7 +35,8 @@ const Cart = () => {
         }
 
         <Flex className='justify-between pt-6 pb-20 cart'>
-          <button className='hover:bg-primary hover:text-white rounded-sm'>Return To Shop</button>
+           <button className='hover:bg-primary hover:text-white rounded-sm'> <NavLink to="/shop" end>Return To Shop</NavLink></button>
+         
           <button className='hover:bg-primary hover:text-white rounded-sm'>Update Cart</button>
         </Flex>
 

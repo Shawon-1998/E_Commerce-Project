@@ -5,14 +5,15 @@ import { IoHeartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from 'react-redux';
-import { cartData, removeWishReducer, wishList } from '../slices/ProductSlice';
+import { cartData, removeCartReducer, removeWishReducer, wishList } from '../slices/ProductSlice';
 import { Bounce, toast } from 'react-toastify';
 
 
-const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id, cart, remove, className1 }) => {
+const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id, allProduct, remove, className1 }) => {
 
     const wishProducts = useSelector((state) => state.Products.wish)
     const cartProducts = useSelector((state) => state.Products.cart)
+    console.log(cartProducts)
 
     const notify = (matchItem) => {
         matchItem == undefined ?
@@ -49,8 +50,9 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         //  cartProducts.find((findItem) => (findItem.id== id)) ? 
         //  dispatch(!cartData(cart)) : dispatch(cartData(cart)) 
         // notify()
-        const matchItem = wishProducts.find((findItem) => (findItem.id == id))
-        !matchItem ? dispatch(wishList(cart)) : null
+        const matchItem = cartProducts.find((findItem) => (findItem.id== id))
+
+        !matchItem ? dispatch(cartData(allProduct)) : null
         notify(matchItem)
     }
     const handleWish = () => {
@@ -58,14 +60,15 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         //    dispatch(!wishList(cart)) : dispatch(wishList(cart))
 
         const matchItem = wishProducts.find((findItem) => (findItem.id == id))
-        !matchItem ? dispatch(wishList(cart)) : null
+
+        !matchItem ? dispatch(wishList(allProduct)) : null
         notify(matchItem)
     }
+
     const handleRemove = () => {
-        dispatch(removeWishReducer(id))
-        
-      !matchItem ? dispatch(wishList(cart)) : null
-       notify(matchItem)
+        dispatch(removeWishReducer(id)) 
+        dispatch(removeCartReducer(id)) 
+         
     }
 
     return (

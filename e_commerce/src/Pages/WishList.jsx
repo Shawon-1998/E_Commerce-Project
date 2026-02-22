@@ -27,7 +27,7 @@ const WishList = () => {
                 remove="X"
                 className='bg-primary'
                 // props akare puro item gula pathiye dicchi jate eita dispatch kora jay
-                cart={item}
+                allProduct={item}
                 key={idx}
                 ImgSrc={item.thumbnail}
                 productName={item.title}
