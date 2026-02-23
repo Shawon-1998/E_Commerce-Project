@@ -67,8 +67,6 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
 
     const handleRemove = () => {
         dispatch(removeWishReducer(id)) 
-        dispatch(removeCartReducer(id)) 
-         
     }
 
     return (

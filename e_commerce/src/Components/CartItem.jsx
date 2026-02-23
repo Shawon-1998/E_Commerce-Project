@@ -9,6 +9,19 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
   const dispatch = useDispatch()
   const [productCount, setProductCount] = useState(0)
   
+    const notify = () => 
+          toast.error('🦄 Wow so easy!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+          });
+    
   const handleProductDecrement = () => {
     if (productCount > 0) {
       setProductCount(productCount - 1)
@@ -19,7 +32,7 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
   }
   const handleRemove = () => {
     dispatch(removeCartReducer(id))
-
+       notify()
   }
   return (
     <>
