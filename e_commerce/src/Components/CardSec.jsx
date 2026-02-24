@@ -50,7 +50,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         //  dispatch(!cartData(cart)) : dispatch(cartData(cart)) 
         // notify()
         const matchItem = cartProducts.find((findItem) => (findItem.id == id))
-        !matchItem ? dispatch(cartData(allProduct)) : null
+        !matchItem ? dispatch(cartData({...allProduct,ame :1})) : null
         notify(matchItem)
     }
     const handleWish = () => {

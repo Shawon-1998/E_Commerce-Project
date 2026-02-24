@@ -10,7 +10,7 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
   const dispatch = useDispatch()
   const [productCount, setProductCount] = useState(0)
   
-    const notify = () =>  toast.error('products been removed', {
+    const notify = () =>  toast.error('product been removed', {
           position: "top-right",
           autoClose: 1000,
           hideProgressBar: false,
@@ -38,8 +38,8 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
     <>
       <div className=' py-6 px-10 my-10 shadow-md flex gap-50 justify-between items-center'>
         <div className='flex gap-2 items-center w-50 '>
-          <div className='relative' >
-            <span className='w-4 h-4 text-xs bg-primary text-white absolute top-0 left-0 rounded-full items-center flex justify-center cursor-pointer' onClick={handleRemove}>X</span>
+          <div className='relative flex items-center gap-2' >
+            <span className='w-4 h-4 text-xs bg-primary text-white absolute top-0 -left-2 rounded-full items-center flex justify-center cursor-pointer' onClick={handleRemove}>X</span>
             <img className='w-20 h-12' src={imgSrc} alt="product" />{title}</div>
         </div>
         <div>${price}</div>
