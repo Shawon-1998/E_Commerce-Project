@@ -9,8 +9,7 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
   const dispatch = useDispatch()
   const [productCount, setProductCount] = useState(0)
   
-    const notify = () => 
-          toast.error('🦄 Wow so easy!', {
+    const notify = () =>  toast.error('🦄 Wow so easy!', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,

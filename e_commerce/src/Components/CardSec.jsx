@@ -13,7 +13,6 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
 
     const wishProducts = useSelector((state) => state.Products.wish)
     const cartProducts = useSelector((state) => state.Products.cart)
-    console.log(cartProducts)
 
     const notify = (matchItem) => {
         matchItem == undefined ?
@@ -50,7 +49,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         //  cartProducts.find((findItem) => (findItem.id== id)) ? 
         //  dispatch(!cartData(cart)) : dispatch(cartData(cart)) 
         // notify()
-        const matchItem = cartProducts.find((findItem) => (findItem.id== id))
+        const matchItem = cartProducts.find((findItem) => (findItem.id == id))
 
         !matchItem ? dispatch(cartData(allProduct)) : null
         notify(matchItem)
@@ -60,13 +59,12 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         //    dispatch(!wishList(cart)) : dispatch(wishList(cart))
 
         const matchItem = wishProducts.find((findItem) => (findItem.id == id))
-
         !matchItem ? dispatch(wishList(allProduct)) : null
         notify(matchItem)
     }
 
     const handleRemove = () => {
-        dispatch(removeWishReducer(id)) 
+        dispatch(removeWishReducer(id))
     }
 
     return (

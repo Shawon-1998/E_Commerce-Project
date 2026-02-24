@@ -51,7 +51,7 @@ import { FiUser } from "react-icons/fi";
               </ul>
               <div className={`md:flex ${shopping ? "block" : "hidden"} `}>
                 <div className='relative md:ms-0 md:me-2 lg:ms-34 lg:me-6' >
-                  <input id='text' name='text' type="text" placeholder='What are you looking for?' className=' w-50 md:w-45 lg:w-60.75 md:py-2.5 md:ps-4 ps-2 bg-[#F5F5F5] rounded[4px] md:placeholder:text-[10px] placeholder:text-xs outline-none relative' />
+                  <input id='text' name='text' type="text" placeholder='What are you looking for?' className=' w-50 md:w-45 lg:w-60.75 md:py-2.5 lg:placeholder:text-[12px] md:ps-4 ps-2 bg-[#F5F5F5] rounded[4px] md:placeholder:text-[10px] placeholder:text-xs outline-none relative' />
                   <HiMiniMagnifyingGlass className='absolute top-1 md:top-4 right-4 text-lg' />
                 </div>
                 <Flex className='flex gap-4 text-xl mt-3 '>
