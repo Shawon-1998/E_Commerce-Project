@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Rate } from 'antd';
 import Flex from './Flex'
 import { IoHeartOutline } from "react-icons/io5";
@@ -7,6 +7,7 @@ import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from 'react-redux';
 import { cartData, removeCartReducer, removeWishReducer, wishList } from '../slices/ProductSlice';
 import { Bounce, toast } from 'react-toastify';
+import { RiHeart3Fill } from "react-icons/ri";
 
 
 const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, discount, className, id, allProduct, remove, className1 }) => {
@@ -53,9 +54,10 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         const matchItem = cartProducts.find((findItem) => (findItem.id == id))
 
         // allProduct coming from paginate
-        !matchItem ? dispatch(cartData({...allProduct, quan : 1})) : null
+        !matchItem ? dispatch(cartData({ ...allProduct, quan: 1 })) : null
         notify(matchItem)
     }
+    const [change, setChange] = useState(true)
     const handleWish = () => {
         //    wishProducts.find((findItem) => (findItem.id== id)) ? 
         //    dispatch(!wishList(cart)) : dispatch(wishList(cart))
@@ -63,10 +65,12 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         const matchItem = wishProducts.find((findItem) => (findItem.id == id))
         !matchItem ? dispatch(wishList(allProduct)) : null
         notify(matchItem)
+         setChange(!change)
     }
-
+    
     const handleRemove = () => {
         dispatch(removeWishReducer(id))
+       
     }
 
     return (
@@ -81,7 +85,9 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
                         <h3 className={`bg-primary px-3 py-1 text-[#fafafac0] 
                         absolute left-3 top-3 rounded-sm ${className1} block`}>-{discount}%</h3>
                         <div className='flex flex-col gap-2 absolute top-3 right-3 '>
-                            <IoHeartOutline className='bg-white rounded-full  h-6 w-6 text-lg cursor-pointer' onClick={handleWish} />
+                           { change ? <IoHeartOutline
+                                className='bg-white rounded-full  h-6 w-6 text-lg cursor-pointer' onClick={handleWish} /> :
+                                 <RiHeart3Fill className='text-primary rounded-full  h-6 w-6 text-lg cursor-pointer' onClick={handleWish} />}
                             <LuEye className='bg-white rounded-full  h-6 w-6 
                              text-lg ' />
                         </div>
