@@ -4,14 +4,15 @@ import { IoIosArrowUp } from "react-icons/io";
 
 import { useDispatch } from 'react-redux';
 import { removeCartReducer } from '../slices/ProductSlice';
+import { toast,Bounce } from 'react-toastify';
 
 const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
   const dispatch = useDispatch()
   const [productCount, setProductCount] = useState(0)
   
-    const notify = () =>  toast.error('🦄 Wow so easy!', {
+    const notify = () =>  toast.error('products been removed', {
           position: "top-right",
-          autoClose: 5000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: false,
           pauseOnHover: true,
@@ -35,7 +36,7 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
   }
   return (
     <>
-      <div className=' py-6 px-10 my-10 shadow-md flex gap-50 justify-between'>
+      <div className=' py-6 px-10 my-10 shadow-md flex gap-50 justify-between items-center'>
         <div className='flex gap-2 items-center w-50 '>
           <div className='relative' >
             <span className='w-4 h-4 text-xs bg-primary text-white absolute top-0 left-0 rounded-full items-center flex justify-center cursor-pointer' onClick={handleRemove}>X</span>

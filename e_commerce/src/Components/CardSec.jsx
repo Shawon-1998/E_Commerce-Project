@@ -18,7 +18,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         matchItem == undefined ?
             toast.success('Successfully added', {
                 position: "top-right",
-                autoClose: 5000,
+                autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: false,
                 pauseOnHover: true,
@@ -29,7 +29,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
             }) :
             toast.warn('Already Added!', {
                 position: "top-right",
-                autoClose: 5000,
+                autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: false,
                 pauseOnHover: true,
@@ -50,14 +50,12 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         //  dispatch(!cartData(cart)) : dispatch(cartData(cart)) 
         // notify()
         const matchItem = cartProducts.find((findItem) => (findItem.id == id))
-
         !matchItem ? dispatch(cartData(allProduct)) : null
         notify(matchItem)
     }
     const handleWish = () => {
         //    wishProducts.find((findItem) => (findItem.id== id)) ? 
         //    dispatch(!wishList(cart)) : dispatch(wishList(cart))
-
         const matchItem = wishProducts.find((findItem) => (findItem.id == id))
         !matchItem ? dispatch(wishList(allProduct)) : null
         notify(matchItem)

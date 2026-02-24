@@ -9,7 +9,6 @@ import CardSec from '../Components/CardSec'
 const WishList = () => {
   const wishData = useSelector((state) => state.Products.wish)
   const [loading, setLoading] = useState(1)
-  console.log(wishData)
   useEffect(() => {
     setLoading(0)
   },

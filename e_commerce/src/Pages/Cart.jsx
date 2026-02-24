@@ -21,23 +21,23 @@ const Cart = () => {
           <span>SubTotal</span>
         </div>
         {
-          cartData.map((item,idx) => {
+          cartData.map((item, idx) => {
             return (
-             <CartItem
-              id={item.id}
-              price={item.price}
-              title={item.title}
-              imgSrc={item.thumbnail}
-              key={idx}
-             />
+              <CartItem
+                id={item.id}
+                price={item.price}
+                title={item.title}
+                imgSrc={item.thumbnail}
+                key={idx}
+              />
             )
           })
         }
 
         <Flex className='justify-between pt-6 pb-20 cart'>
-         <NavLink to="/shop" end>  <button className='hover:bg-primary hover:text-white rounded-sm'> Return To Shop</button></NavLink>
-         
-          <button className='hover:bg-primary hover:text-white rounded-sm'>Update Cart</button>
+          <NavLink to="/shop" end>  <button className='hover:bg-primary hover:text-white rounded-sm'> Return To Shop</button></NavLink>
+
+         <button className='hover:bg-primary hover:text-white rounded-sm'>Update Cart </button>
         </Flex>
 
         <Flex className='justify-between items-start'>

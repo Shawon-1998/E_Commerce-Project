@@ -13,7 +13,7 @@ import { FaShoppingBasket } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
 
 
- const Nav = ({ className }) => {
+ const Nav = () => {
   const Data = useSelector((state) => state.Products.cart)
   const DataWish = useSelector((state) => state.Products.wish)
   const [change, setChange] = useState(false)
@@ -47,7 +47,8 @@ import { FiUser } from "react-icons/fi";
                 <li><NavLink to="/" end>Home</NavLink></li>
                 <li><NavLink to="Contact" end> Contact </NavLink></li>
                 <li><NavLink to="/About" end>About</NavLink></li>
-                <li>Sign Up</li>
+                <li><NavLink to="/signUp" end>Sign Up</NavLink></li>
+               
               </ul>
               <div className={`md:flex ${shopping ? "block" : "hidden"} `}>
                 <div className='relative md:ms-0 md:me-2 lg:ms-34 lg:me-6' >
