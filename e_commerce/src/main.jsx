@@ -16,6 +16,7 @@ import WishList from './Pages/WishList.jsx';
 import AboutUs from './Pages/AboutUs.jsx';
  import { ToastContainer} from 'react-toastify';
 import SignUp from './Pages/SignUp.jsx';
+import Login from './Pages/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       { path: "cart", Component: Cart },
       { path: "About", Component: AboutUs },
       { path: "signUp", Component: SignUp },
+       { path: "login", Component: Login },
       { path: "wishList", Component: WishList },
       { path: "/Details/:id", Component:ProductDetails },
     ],

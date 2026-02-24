@@ -68,8 +68,9 @@ import { FiUser } from "react-icons/fi";
                       {Data.length}
                     </div>
                   </div>
-                  <div className='relative'>
+                  <div className=''>
                     <FiUser />
+                     
                   </div>
                 </Flex>
               </div>
