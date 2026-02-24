@@ -49,13 +49,17 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         //  cartProducts.find((findItem) => (findItem.id== id)) ? 
         //  dispatch(!cartData(cart)) : dispatch(cartData(cart)) 
         // notify()
+
         const matchItem = cartProducts.find((findItem) => (findItem.id == id))
-        !matchItem ? dispatch(cartData({...allProduct,ame :1})) : null
+
+        // allProduct coming from paginate
+        !matchItem ? dispatch(cartData({...allProduct, quan : 1})) : null
         notify(matchItem)
     }
     const handleWish = () => {
         //    wishProducts.find((findItem) => (findItem.id== id)) ? 
         //    dispatch(!wishList(cart)) : dispatch(wishList(cart))
+
         const matchItem = wishProducts.find((findItem) => (findItem.id == id))
         !matchItem ? dispatch(wishList(allProduct)) : null
         notify(matchItem)

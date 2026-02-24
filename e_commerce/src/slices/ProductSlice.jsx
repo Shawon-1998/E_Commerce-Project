@@ -31,10 +31,20 @@ export const ProductSlice = createSlice({
     removeWishReducer: (state,action) => {
      state.wish = [...state.wish.filter((item)=>item.id !==action.payload)]
     },
+    incrementReducer : (state,action)=>{
+      state.cart=state.cart.map((item)=>{
+          return item.id == action.payload ? {...item, quan : item.quan + 1} : item
+      })
+    },
+    decrementReducer : (state,action)=>{
+      state.cart=state.cart.map((item)=>{
+          return item.id == action.payload ? {...item, quan : item.quan - 1} : item
+      })
+    },
   },
 })
 
 
-export const { allProducts,filterData,cartData,wishList,removeCartReducer,removeWishReducer} = ProductSlice.actions
+export const { allProducts,filterData,cartData,wishList,removeCartReducer,removeWishReducer,incrementReducer,decrementReducer } = ProductSlice.actions
 
 export default ProductSlice.reducer

@@ -29,6 +29,7 @@ const Cart = () => {
                 title={item.title}
                 imgSrc={item.thumbnail}
                 key={idx}
+                quantity={item.quan}
               />
             )
           })

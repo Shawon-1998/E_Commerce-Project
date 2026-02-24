@@ -3,10 +3,10 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
 import { useDispatch } from 'react-redux';
-import { removeCartReducer } from '../slices/ProductSlice';
+import { decrementReducer, incrementReducer, removeCartReducer } from '../slices/ProductSlice';
 import { toast,Bounce } from 'react-toastify';
 
-const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
+const CartItem = ({ price, imgSrc, title, id, quantity }) => {
   const dispatch = useDispatch()
   const [productCount, setProductCount] = useState(0)
   
@@ -23,12 +23,12 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
           });
     
   const handleProductDecrement = () => {
-    if (productCount > 0) {
-      setProductCount(productCount - 1)
+    if (quantity > 1) {
+       dispatch(decrementReducer(id))
     }
   }
   const handleProductIncrement = () => {
-    setProductCount(productCount + 1)
+    dispatch(incrementReducer(id))
   }
   const handleRemove = () => {
     dispatch(removeCartReducer(id))
@@ -42,15 +42,15 @@ const CartItem = ({ price, imgSrc, title, Subprice, id }) => {
             <span className='w-4 h-4 text-xs bg-primary text-white absolute top-0 -left-2 rounded-full items-center flex justify-center cursor-pointer' onClick={handleRemove}>X</span>
             <img className='w-20 h-12' src={imgSrc} alt="product" />{title}</div>
         </div>
-        <div>${price}</div>
+        <div>${ price}</div>
         <div className='items-center flex gap-2 py-1.5 px-3 border'>
-          {productCount}
+          {quantity}
           <span className=' grid '>
             <button onClick={handleProductIncrement} className='Block'><IoIosArrowUp /></button>
             <button onClick={handleProductDecrement} className='Block'><IoIosArrowDown /></button>
           </span>
         </div>
-        <div>${Subprice}</div>
+        <div>${quantity*price}</div>
       </div>
     </>
   )
