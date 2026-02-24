@@ -39,6 +39,7 @@ const WishList = () => {
             )
           })
         } </div>
+        
         {
           !loading ? <div> <RelatedItems /> </div> :
             <div className='flex justify-between'>
