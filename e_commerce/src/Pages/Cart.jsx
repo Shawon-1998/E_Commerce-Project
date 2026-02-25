@@ -9,6 +9,7 @@ import CartItem from '../Components/CartItem'
 
 const Cart = () => {
   const cartData = useSelector((state) => state.Products.cart)
+  const subTotal = useSelector((state) => state.Products.subTotal)
 
   return (
     <>
@@ -50,7 +51,7 @@ const Cart = () => {
             <h2 className='text-lg font-medium pt-8'>Cart total</h2>
             <div className='flex justify-between pt-6 pb-4 border-b border-[#0000005d]'>
               <p>subTotal</p>
-              <span>${ }</span>
+              <span>${subTotal.toFixed(2)}</span>
             </div>
             <div className='flex pb-4 justify-between border-b border-[#0000005d]'>
               <p>Shipping</p>
@@ -58,7 +59,7 @@ const Cart = () => {
             </div>
             <div className='flex justify-between '>
               <p>Total</p>
-              <span>${ }</span>
+              <span>${subTotal.toFixed(2)}</span>
             </div>
             <div className='mt-8 mb-12 text-center'>
               <Button> Procees to checkout </Button>

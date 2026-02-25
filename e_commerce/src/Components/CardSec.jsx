@@ -67,12 +67,11 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         notify(matchItem)
          setChange(!change)
     }
-    
-    const handleRemove = () => {
-        dispatch(removeWishReducer(id))
-       
-    }
 
+    const handleRemove = () => {
+        dispatch(removeWishReducer(id))      
+    }
+    
     return (
         <>
             <div>
