@@ -37,7 +37,7 @@ const Cart = () => {
         }
 
         <Flex className='justify-between pt-6 pb-20 cart'>
-          <NavLink to="/shop" end>  <button className='hover:bg-primary hover:text-white rounded-sm'> Return To Shop</button></NavLink>
+          <NavLink to="/shop" end> <button className='hover:bg-primary hover:text-white rounded-sm'> Return To Shop</button></NavLink>
 
          <button className='hover:bg-primary hover:text-white rounded-sm'>Update Cart </button>
         </Flex>
