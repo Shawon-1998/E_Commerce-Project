@@ -65,11 +65,23 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         const matchItem = wishProducts.find((findItem) => (findItem.id == id))
         !matchItem ? dispatch(wishList(allProduct)) : null
         notify(matchItem)
-         setChange(!change)
+        setChange(!change)
+        
     }
 
     const handleRemove = () => {
-        dispatch(removeWishReducer(id))      
+        dispatch(removeWishReducer(id))
+        toast.error("Item's been removed", {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+            });      
     }
     
     return (

@@ -10,7 +10,7 @@ const CartItem = ({ price, imgSrc, title, id, quantity }) => {
   const dispatch = useDispatch()
   const [productCount, setProductCount] = useState(0)
   
-    const notify = () =>  toast.error('product been removed', {
+    const notify = () =>  toast.error("Item's been removed", {
           position: "top-right",
           autoClose: 1000,
           hideProgressBar: false,
