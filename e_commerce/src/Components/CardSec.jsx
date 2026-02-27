@@ -63,7 +63,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
         //    dispatch(!wishList(cart)) : dispatch(wishList(cart))
 
         const matchItem = wishProducts.find((findItem) => (findItem.id == id))
-        !matchItem ? dispatch(wishList(allProduct)) : null
+        !matchItem ? dispatch(wishList(allProduct)) :  dispatch(removeWishReducer(id))
         notify(matchItem)
         setChange(!change)
         
