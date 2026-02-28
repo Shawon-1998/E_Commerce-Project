@@ -7,7 +7,7 @@ import { RiLinkedinLine } from "react-icons/ri";
 const AboutCard = ({imgSrc,title,description}) => {
   return (
     <>
-      <div className=' w-92.5'>
+      <div className='px-5 md:px-0 md:w-92.5'>
        <div className='bg-[#F5F5F5] rounded-sm'>
          <img className='w-full' src={imgSrc} alt="" />
        </div>
