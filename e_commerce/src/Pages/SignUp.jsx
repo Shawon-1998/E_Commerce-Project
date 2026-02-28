@@ -11,8 +11,8 @@ const SignUp = () => {
         <>
          <Container>
            <BreadCrumbs />
-            <div className='w-full flex items-center'>
-                <div className='w-[60%]'>
+            <div className='w-full md:flex items-center'>
+                <div className='md:w-[60%]'>
                     <img src={imgSrc} alt="" />
                 </div>
                 <form className="max-w-md mx-auto">
