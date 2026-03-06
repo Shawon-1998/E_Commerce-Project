@@ -33,24 +33,21 @@ import { FiUser } from "react-icons/fi";
  
   return (
     <>
-
-      <nav className='relative  pt-11.75 pb-5.75   border-[#0000003d] border-b 
+      <nav className='bg-black md:bg-transparent pt-11.75 pb-5.75   border-[#0000003d] border-b 
       font-pop '>
-        <Container>
-           
+        <Container>  
+          <div className='relative  '>
           <div className='flex md:items-center justify-between text-white md:text-black 
-           absolute top-0 left-8 bg-black md:bg-transparent w-full md:static'>
-             <FaBarsStaggered className='md:hidden ms-5 mt-3' onClick={handleChange} />  
+           absolute top-0  w-full md:static'> 
             <div className='hidden md:block'>
               <NavLink to="/" end> <img src={logo} alt="" /></NavLink>
             </div>
-            <div className={`md:flex ${change ? "hidden" : "block"} gap-5 relative md:items-center justify-between bg-black md:bg-transparent`}>
+            <div className={`md:flex ${change ? "hidden" : "block"} gap-5 w-full md:w-auto relative md:items-center justify-between bg-black md:bg-transparent`}>
               <ul className='md:flex text-white md:text-black  gap-6  lg:gap-12 font-normal  py-3 px-3 hover:transition-all rounded-sm leading-10 '>
                 <li><NavLink to="/" end>Home</NavLink></li>
                 <li><NavLink to="Contact" end> Contact </NavLink></li>
                 <li><NavLink to="/About" end>About</NavLink></li>
-                <li><NavLink to="/signUp" end>Sign Up</NavLink></li>
-               
+                <li><NavLink to="/signUp" end>Sign Up</NavLink></li>          
               </ul>
               <div className='md:flex'>
                 <div className='relative md:ms-0 md:me-2 lg:ms-34 lg:me-6' >
@@ -73,9 +70,10 @@ import { FiUser } from "react-icons/fi";
                     <FiUser />         
                 </Flex>
               </div>
-            </div>      
-          </div>
-                 
+            </div>  
+          </div>        
+             <FaBarsStaggered className='md:hidden text-white absolute -top-5 right-2 ' onClick={handleChange} />     
+            </div>   
         </Container>
       </nav>
     </>
