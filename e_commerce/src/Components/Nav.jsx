@@ -16,8 +16,8 @@ import { FiUser } from "react-icons/fi";
  const Nav = () => {
   const Data = useSelector((state) => state.Products.cart)
   const DataWish = useSelector((state) => state.Products.wish)
-  const [change, setChange] = useState(false)
-  const [shopping, setShopping] = useState(false)
+  const [change, setChange] = useState(true)
+  
   let navigate = useNavigate();
 
   const handleCart = () => {
@@ -27,35 +27,37 @@ import { FiUser } from "react-icons/fi";
     navigate("/wishList")
   }
 
-  const handleToggle = () => {
+  const handleChange = () => {
     setChange(!change)
   }
-  const handleShopping = () => {
-    setShopping(!shopping)
-  }
+ 
   return (
     <>
 
-      <nav className=' pt-11.75 pb-5.75 border-[#0000003d] border-b font-pop '>
+      <nav className='relative  pt-11.75 pb-5.75   border-[#0000003d] border-b 
+      font-pop '>
         <Container>
-          <div className='flex md:items-center justify-between '>
-            <div className=''>
+           
+          <div className='flex md:items-center justify-between text-white md:text-black 
+           absolute top-0 left-8 bg-black md:bg-transparent w-full md:static'>
+             <FaBarsStaggered className='md:hidden ms-5 mt-3' onClick={handleChange} />  
+            <div className='hidden md:block'>
               <NavLink to="/" end> <img src={logo} alt="" /></NavLink>
             </div>
-            <div className='md:flex gap-5 relative md:items-center justify-between'>
-              <ul className={` ${change ? "block" : "hidden"} md:flex bg-black text-white md:bg-transparent md:text-black gap-6  lg:gap-12 font-normal md:static absolute top-5 left-20 py-3 px-3 hover:transition-all rounded-sm leading-10 `}>
+            <div className={`md:flex ${change ? "hidden" : "block"} gap-5 relative md:items-center justify-between bg-black md:bg-transparent`}>
+              <ul className='md:flex text-white md:text-black  gap-6  lg:gap-12 font-normal  py-3 px-3 hover:transition-all rounded-sm leading-10 '>
                 <li><NavLink to="/" end>Home</NavLink></li>
                 <li><NavLink to="Contact" end> Contact </NavLink></li>
                 <li><NavLink to="/About" end>About</NavLink></li>
                 <li><NavLink to="/signUp" end>Sign Up</NavLink></li>
                
               </ul>
-              <div className={`md:flex ${shopping ? "block" : "hidden"} `}>
+              <div className='md:flex'>
                 <div className='relative md:ms-0 md:me-2 lg:ms-34 lg:me-6' >
                   <input id='text' name='text' type="text" placeholder='What are you looking for?' className=' w-50 md:w-45 lg:w-60.75 md:py-2.5 lg:placeholder:text-[12px] md:ps-4 ps-2 bg-[#F5F5F5] rounded[4px] md:placeholder:text-[10px] placeholder:text-xs outline-none relative' />
                   <HiMiniMagnifyingGlass className='absolute top-1 md:top-4 right-4 text-lg' />
                 </div>
-                <Flex className='flex gap-4 text-xl mt-3 '>
+                <Flex className='md:flex  gap-4 text-xl mt-3 '>
                   <div className='relative'>
                     <IoHeartOutline className='text-[24px] opacity-80 cursor-pointer' onClick={handleWish} />
                     <div className='absolute -top-1 -right-2 h-4 w-4 font-medium bg-primary rounded-full flex items-center justify-center text-[10px] text-white'>
@@ -68,18 +70,12 @@ import { FiUser } from "react-icons/fi";
                       {Data.length}
                     </div>
                   </div>
-                  <div className=''>
-                    <FiUser />
-                     
-                  </div>
+                    <FiUser />         
                 </Flex>
               </div>
-            </div>
-
-            <FaShoppingBasket className='md:hidden' onClick={handleShopping} />
-            <FaBarsStaggered className='md:hidden' onClick={handleToggle} />
-
+            </div>      
           </div>
+                 
         </Container>
       </nav>
     </>

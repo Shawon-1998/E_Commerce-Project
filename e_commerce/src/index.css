@@ -35,7 +35,7 @@
 }
 
 /* navCOmponent */
-nav ul li {
+/* nav ul li {
   border-radius: 12px;
   padding: 0px 3px;
   transition: all 0.3s linear;
@@ -44,7 +44,7 @@ nav ul li {
 nav ul li:hover {
   background-color: white;
   color: black;
-}
+} */
 
 /* counter component part customize css */
 
