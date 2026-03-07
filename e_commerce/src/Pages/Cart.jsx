@@ -47,7 +47,7 @@ const Cart = () => {
             <input type="text" placeholder='Coupon Code' className='py-3.75 placeholder:ps-6  w-75 border outline-0 rounded-sm' />
             <Button className='md:my-0 my-5'>Apply Coupon</Button>
           </form>
-          <div className='md:w-117.5 w-full rounded-sm border px-6 mb-35'>
+          <div className='md:w-117.5 w-80 rounded-sm border px-6 mb-35'>
             <h2 className='text-lg font-medium pt-8'>Cart total</h2>
             <div className='flex justify-between pt-6 pb-4 border-b border-[#0000005d]'>
               <p>subTotal</p>
