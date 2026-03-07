@@ -18,7 +18,7 @@ const WishList = () => {
     <>
       <Container>
         <BreadCrumbs />
-        <div className='flex flex-wrap gap-y-5'> {
+        <div className='flex flex-wrap gap-y-5 md:mt-0 mt-70'> {
           wishData.map((item,idx) => {
             return (
               <CardSec

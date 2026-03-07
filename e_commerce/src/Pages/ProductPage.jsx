@@ -63,7 +63,7 @@ const ProductPage = () => {
         <>
             <Container>
                 <BreadCrumbs />
-                <div className='flex justify-between'>
+                <div className='flex justify-between mt-60 md:mt-0'>
                     <h3 className='font-pop text-xl font-bold text-[#262626]'>Shop by Category</h3>
                     <div className='flex justify-between mb-3.75'>
                         <div>

@@ -49,7 +49,7 @@ const ProductDetails = () => {
         {
           !loading ?
           /* Custom class name (prduct) */
-            <div className='my-15 product lg:flex justify-between'>
+            <div className='md:my-15 mt-60 md:mt-0 product lg:flex justify-between'>
               <div className='flex lg:gap-7.5'>
                 <div className='flex flex-col gap-4 '>
                   {

@@ -15,8 +15,8 @@ const Cart = () => {
     <>
       <Container >
         <BreadCrumbs />
-        <div className=' py-6 px-10 shadow-md flex gap-50 justify-between'>
-          <span className='w-50'>Product</span>
+        <div className=' py-6 px-10 shadow-md flex md:gap-50 justify-between'>
+          <span className='md:w-50'>Product</span>
           <span>Price</span>
           <span>Quantity</span>
           <span>SubTotal</span>
@@ -42,10 +42,10 @@ const Cart = () => {
          <button className='hover:bg-primary hover:text-white rounded-sm'>Update Cart </button>
         </Flex>
 
-        <Flex className='justify-between items-start'>
-          <form className='flex gap-4' action="">
+        <div className='md:flex justify-between items-start'>
+          <form className='md:flex gap-4' action="">
             <input type="text" placeholder='Coupon Code' className='py-3.75 placeholder:ps-6  w-75 border outline-0 rounded-sm' />
-            <Button className=''>Apply Coupon</Button>
+            <Button className='md:my-0 my-5'>Apply Coupon</Button>
           </form>
           <div className='w-117.5 rounded-sm border px-6 mb-35'>
             <h2 className='text-lg font-medium pt-8'>Cart total</h2>
@@ -65,7 +65,7 @@ const Cart = () => {
               <Button> Procees to checkout </Button>
             </div>
           </div>
-        </Flex>
+        </div>
       </Container>
     </>
   )
