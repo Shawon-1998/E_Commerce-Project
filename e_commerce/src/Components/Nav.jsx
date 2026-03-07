@@ -34,8 +34,8 @@ import { FiUser } from "react-icons/fi";
   return (
     <>
 
-      <nav className='bg-black md:bg-transparent pt-11.75 pb-5.75   border-[#0000003d] border-b 
-      font-pop '>
+      <nav className='bg-black md:bg-transparent pt-5.75 pb-5.75   border-[#0000003d] border-b 
+      font-pop  '>
         <Container>  
           <div className='relative  '>
           <div className='flex md:items-center justify-between text-white md:text-black 
@@ -43,8 +43,8 @@ import { FiUser } from "react-icons/fi";
             <div className='hidden md:block'>
               <NavLink to="/" end> <img src={logo} alt="" /></NavLink>
             </div>
-            <div className={`md:flex ${change ? "hidden" : "block"} gap-5 w-full md:w-auto relative items-center md:justify-between bg-black md:bg-transparent`}>
-              <ul className='md:flex text-white md:text-black  gap-6  lg:gap-12 font-normal  py-3 px-3 hover:transition-all rounded-sm leading-10 '>
+            <div className={`md:flex ${change ? "hidden" : "block"} gap-5 w-full md:w-auto relative items-center md:justify-between bg-black md:bg-transparent p-5`}>
+              <ul className='md:flex text-white md:text-black  gap-6  lg:gap-12 font-normal  py-3 px-3   rounded-sm leading-10 '>
                 <li><NavLink to="/" end>Home</NavLink></li>
                 <li><NavLink to="Contact" end> Contact </NavLink></li>
                 <li><NavLink to="/About" end>About</NavLink></li>
@@ -52,8 +52,8 @@ import { FiUser } from "react-icons/fi";
               </ul>
               <div className='md:flex'>
                 <div className='relative md:ms-0 md:me-2 lg:ms-34 lg:me-6' >
-                  <input id='text' name='text' type="text" placeholder='What are you looking for?' className=' w-full md:w-45 lg:w-60.75 md:py-2.5 lg:placeholder:text-[12px] placeholder:text-[#00000093]  md:ps-4 ps-2 bg-[#F5F5F5] rounded[4px] md:placeholder:text-[10px] placeholder:text-xs outline-none text-black text-[14px] md:text-base' />
-                  <HiMiniMagnifyingGlass className='absolute top-1 md:top-4 text-black right-5 md:right-4 text-lg' />
+                  <input id='text' name='text' type="text" placeholder='What are you looking for?' className=' w-full md:w-45 lg:w-60.75 py-2.5 lg:placeholder:text-[12px] placeholder:text-[#00000093]  md:ps-4 ps-2 bg-[#F5F5F5] rounded[4px] md:placeholder:text-[10px] placeholder:text-xs outline-none text-black text-[14px] md:text-base' />
+                  <HiMiniMagnifyingGlass className='absolute top-3 md:top-4 text-black right-5 md:right-4 text-lg' />
                 </div>
                 <Flex className='md:flex  gap-4 text-xl mt-3 '>
                   <div className='relative'>

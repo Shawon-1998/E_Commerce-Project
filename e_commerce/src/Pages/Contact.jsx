@@ -11,8 +11,8 @@ const Contact = () => {
         <>
             <Container>
                 <BreadCrumbs />
-            <Flex className='items-start gap-15.25'>
-                 <div className='pt-10 px-8.75 pb-12.75 w-[28%] contact shadow-xl'>
+            <div className='md:flex items-start gap-15.25'>
+                 <div className=' pt-10 px-8.75 pb-12.75 md:w-[28%] contact shadow-xl mb-10 md:mb-0'>
                     <Flex className='gap-4'>
                         <span className='h-10 w-10 rounded-full hover:text-white bg-primary items-center justify-center flex'>
                             <BsTelephone />
@@ -34,7 +34,7 @@ const Contact = () => {
                     <p>Emails: support@exclusive.com</p>
                 </div>
                </div>
-               <div className='w-[72%]'>
+               <div className='md:w-[72%]'>
                   <form className='Input flex gap-4 ' action="">
                     <input id='text' name='text' type="text" placeholder='Your Name' />
                     <input id='email' name='email' type="email" placeholder='Your Email'/>
@@ -47,7 +47,7 @@ const Contact = () => {
                      <Button> Send Massage</Button>
                  </div>
                </div>
-            </Flex>
+            </div>
 
             </Container>
 
