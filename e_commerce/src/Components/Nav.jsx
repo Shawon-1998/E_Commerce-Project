@@ -73,7 +73,7 @@ import { FiUser } from "react-icons/fi";
               </div>
             </div>  
           </div>        
-             <FaBarsStaggered className='md:hidden  mt-5 md:mt-0 cursor-pointer z-100! text-white absolute -top-5 right-2 ' onClick={handleChange} />     
+             <FaBarsStaggered className='md:hidden mt-1  cursor-pointer z-100! text-white absolute -top-5 right-2 ' onClick={handleChange} />     
             </div>   
         </Container>
       </nav>
