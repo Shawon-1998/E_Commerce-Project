@@ -4,7 +4,7 @@ import { NavLink } from "react-router";
 const Header = () => {
     return (
         <>
-            <header className='bg-black  lg:px-5 px-0 '>
+            <header className='bg-black  '>
                 <div className="container">
                     <Flex className='text-sm py-3.75 flex  text-[#FAFAFA] '>
                         <div className='w-[77%] lg:flex font-pop justify-end font-normal text-sm gap-2 '>

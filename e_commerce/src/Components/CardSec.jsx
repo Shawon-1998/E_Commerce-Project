@@ -94,9 +94,9 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
                     <img src={ImgSrc} alt="" className='w-full cursor-pointer' 
                     onClick={handleProductDetails} />
                     <div className=' '>
-                        <h3 className={`bg-primary px-3 py-1 -z-20 md:z-0 text-[#fafafac0] 
+                        <h3 className={`bg-primary px-3 py-1  text-[#fafafac0] 
                         absolute left-3 top-3 rounded-sm ${className1} block`}>-{discount}%</h3>
-                        <div className='flex flex-col gap-2 absolute top-3 right-3 -z-20 md:z-0'>
+                        <div className='flex flex-col gap-2 absolute top-3 right-3 '>
                            { change ? <IoHeartOutline
                                 className='bg-white rounded-full  h-6 w-6 text-lg cursor-pointer' onClick={handleWish} /> :
                                  <RiHeart3Fill className='text-primary rounded-full  h-6 w-6 text-lg cursor-pointer' onClick={handleWish} />}
