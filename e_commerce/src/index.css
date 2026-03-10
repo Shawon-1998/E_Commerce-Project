@@ -41,6 +41,7 @@
   padding: 0px 3px;
   transition: all 0.3s linear;
 }
+ 
 
 nav ul li:hover {
   background-color: white;
@@ -48,6 +49,13 @@ nav ul li:hover {
 } */
 
 /* counter component part customize css */
+
+  @layer components{
+    .hoverList li{
+      @apply md:hover:border-b h-10 
+    }
+  }
+
 
 .time p {
   font-size: x-small;

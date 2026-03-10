@@ -44,7 +44,7 @@ import { FiUser } from "react-icons/fi";
               <NavLink to="/" end> <img src={logo} alt="" /></NavLink>
             </div>
             <div className={`md:flex ${change ? "hidden" : "block"} gap-5 w-full md:w-auto relative items-center md:justify-between bg-black md:bg-transparent p-5`}>
-              <ul className='md:flex text-white md:text-black  gap-6  lg:gap-12 font-normal  py-3 px-3   rounded-sm leading-10 '>
+              <ul className='md:flex text-white md:text-black hoverList gap-6  md:gap-12 font-normal  py-3 px-3   rounded-sm leading-10 '>
                 <li><NavLink to="/" end>Home</NavLink></li>
                 <li><NavLink to="Contact" end> Contact </NavLink></li>
                 <li><NavLink to="/About" end>About</NavLink></li>

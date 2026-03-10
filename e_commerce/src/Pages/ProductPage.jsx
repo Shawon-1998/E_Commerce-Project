@@ -68,7 +68,7 @@ const ProductPage = () => {
                     <div className='flex justify-between mb-3.75'>
                         <div>
                             <label htmlFor="text"> Show: </label>
-                            <select onChange={(e) => setValue(e.target.value)} name="item" id="item" className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
+                            <select onChange={(e) => setValue(e.target.value)}  className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
                                 <option value="6">6</option>
                                 <option value="9">9</option>
                                 <option value="12">12</option>

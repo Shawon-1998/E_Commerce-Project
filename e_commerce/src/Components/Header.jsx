@@ -4,7 +4,7 @@ import { NavLink } from "react-router";
 const Header = () => {
     return (
         <>
-                <div className="container  block md:hidden ">
+                <div className="container  block md:hidden">
             <header className='bg-black  '>
                     <Flex className='text-sm py-3.75 flex  text-[#FAFAFA] '>
                         <div className='w-[77%] lg:flex font-pop justify-end font-normal text-sm gap-2 '>
@@ -15,7 +15,7 @@ const Header = () => {
                                 </NavLink> </p>
                         </div>
                         <Flex className='w-[23%] justify-end flex-none gap-1 '>
-                            <select name="lang" id="lang" className='bg-black cursor-pointer text-white outline-none'>
+                            <select  className='bg-black cursor-pointer text-white outline-none'>
                                 <option value="English">English</option>
                                 <option value="Bangla">Bangla</option>
                             </select>
@@ -25,7 +25,7 @@ const Header = () => {
             </header>
                 </div>
 
-            <header className='bg-black hidden md:block '>
+            <header className='bg-black hidden md:block'>
                 <div className="container">
                     <Flex className='text-sm py-3.75 flex  text-[#FAFAFA] '>
                         <div className='w-[77%] lg:flex font-pop justify-end font-normal text-sm gap-2 '>
