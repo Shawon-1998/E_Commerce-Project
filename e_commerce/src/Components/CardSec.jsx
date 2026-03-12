@@ -104,7 +104,7 @@ const CardSec = ({ productName, ImgSrc, price, rating, discountPrice, digit, dis
                              text-lg ' />
                         </div>
                     </div>
-                    <button onClick={handleCart} className='absolute bg-black text-white block w-full py-2 px-21.75 font-pop cursor-pointer -bottom-10 group-hover:bottom-0 ease-linear duration-400'> Add to cart</button>
+                    <button onClick={handleCart} className='absolute bg-black text-white block w-full py-2 px-21.75 font-pop cursor-pointer md:-bottom-10 bottom-0 md:group-hover:bottom-0 ease-linear duration-400'> Add to cart</button>
                 </div>
                 <span className={`${className} w-4 h-4 text-xs  text-white absolute top-0 -left-5 rounded-full items-center flex justify-center cursor-pointer`} onClick={handleRemove}>{remove}</span>
                 <h3 className='font-medium mt-4 '>{productName}</h3>
