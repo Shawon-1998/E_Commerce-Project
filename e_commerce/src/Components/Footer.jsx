@@ -38,7 +38,7 @@ const Footer = () => {
               <h2 className='font-medium font-pop text-xl pb-6'>Quick Link</h2>
               <li>Privacy Policy</li>
               <li>Terms Of Use</li>
-              <li>FAQ</li>
+              <li>FAQs</li>
               <li>Contact</li>
 
             </ul>
