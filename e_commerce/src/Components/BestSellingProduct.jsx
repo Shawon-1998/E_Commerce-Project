@@ -18,6 +18,7 @@ const BestSellingProduct = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
+        initialSlide: 0,
         responsive: [
             {
                 breakpoint: 1170,
