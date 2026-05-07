@@ -13,72 +13,69 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 
 const ExpOurProduct = () => {
-  function SampleNextArrow(props) {
-         const { onClick } = props;
-         return (
-             <div className='block absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-5 -top-12' onClick={onClick} >
-            <FaArrowRight />
-             </div>
-         );
-     }
- 
-     function SamplePrevArrow(props) {
-         const { onClick } = props;
-         return (
-             <div className='block absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-17 -top-12' onClick={onClick} >
-              <FaArrowLeft/>
-             </div>
-         );
-     }
+    function SampleNextArrow(props) {
+        const { onClick } = props;
+        return (
+            <div className='block absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-5 -top-12' onClick={onClick} >
+                <FaArrowRight />
+            </div>
+        );
+    }
+
+    function SamplePrevArrow(props) {
+        const { onClick } = props;
+        return (
+            <div className='block absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-17 -top-12' onClick={onClick} >
+                <FaArrowLeft />
+            </div>
+        );
+    }
 
 
     const settings = {
-       
+        // 1. SET MOBILE AS DEFAULT (Root Settings)
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        rows:2,
+        slidesToShow: 1,      // Default for smallest mobile
+        slidesToScroll: 1,
+        rows: 1,              // Default for mobile
         initialSlide: 0,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
+
+        // 2. USE RESPONSIVE TO SCALE UP
         responsive: [
             {
-                breakpoint: 1170,
+                // Desktop
+                breakpoint: 5000, // Very high number to catch everything above 1070
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
+                    slidesToScroll: 4,
+                    rows: 2,
                 }
             },
             {
-                breakpoint: 992,
+                breakpoint: 1070,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 2,
-                    initialSlide: 2
+                    slidesToShow: 4,
+                    slidesToScroll: 3,
+                    rows: 2
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    rows: 1 // Force 1 row for smaller screens
                 }
             }
         ]
     };
+
     return (
         <>
-           <div className="container">
+            <div className="container">
                 <div className='mt-37.5 mb-10'>
                     <SecHeading
                         title="Our Products"
@@ -87,101 +84,102 @@ const ExpOurProduct = () => {
                 </div>
 
                 <div className="slider-container">
+
                     <Slider {...settings} >
-                            <CardSec
-                                ImgSrc={item1}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                                  btn='Add to cart'
-                            />
-                            <CardSec
-                                ImgSrc={item2}
-                                productName='AK-900 Wired Keyboard'
-                                price='960'
-                                discountPrice='1160'
-                                digit='75'
-                                  btn='Add to cart'
-                            />
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='IPS LCD Gaming Monitor'
-                                price='370'
-                                discountPrice='400'
-                                digit='99'
-                                  btn='Add to cart'
-                            />
-                              <CardSec
-                                ImgSrc={item4}
-                                productName='S-Series Comfort Chair '
-                                price='375'
-                                discountPrice='400'
-                                digit='99'
-                                  btn='Add to cart'
-                            />
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                                  btn='Add to cart'
-                            />
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                                  btn='Add to cart'
-                            />
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                                  btn='Add to cart'
-                            />
-                            <CardSec
-                                ImgSrc={item4}
-                                productName='S-Series Comfort Chair '
-                                price='375'
-                                discountPrice='400'
-                                digit='99'
-                                  btn='Add to cart'
-                            />
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                                  btn='Add to cart'
-                            />
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                                  btn='Add to cart'
-                            />
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                                  btn='Add to cart'
-                                 
-                            />
+                        <CardSec
+                            ImgSrc={item1}
+                            productName='HAVIT HV-G92 Gamepad'
+                            price='120'
+                            discountPrice='160'
+                            digit='88'
+                            btn='Add to cart'
+                        />
+                        <CardSec
+                            ImgSrc={item2}
+                            productName='AK-900 Wired Keyboard'
+                            price='960'
+                            discountPrice='1160'
+                            digit='75'
+                            btn='Add to cart'
+                        />
+                        <CardSec
+                            ImgSrc={item3}
+                            productName='IPS LCD Gaming Monitor'
+                            price='370'
+                            discountPrice='400'
+                            digit='99'
+                            btn='Add to cart'
+                        />
+                        <CardSec
+                            ImgSrc={item4}
+                            productName='S-Series Comfort Chair '
+                            price='375'
+                            discountPrice='400'
+                            digit='99'
+                            btn='Add to cart'
+                        />
+                        <CardSec
+                            ImgSrc={item3}
+                            productName='HAVIT HV-G92 Gamepad'
+                            price='120'
+                            discountPrice='160'
+                            digit='88'
+                            btn='Add to cart'
+                        />
+                        <CardSec
+                            ImgSrc={item3}
+                            productName='HAVIT HV-G92 Gamepad'
+                            price='120'
+                            discountPrice='160'
+                            digit='88'
+                            btn='Add to cart'
+                        />
+                        <CardSec
+                            ImgSrc={item3}
+                            productName='HAVIT HV-G92 Gamepad'
+                            price='120'
+                            discountPrice='160'
+                            digit='88'
+                            btn='Add to cart'
+                        />
+                        <CardSec
+                            ImgSrc={item4}
+                            productName='S-Series Comfort Chair '
+                            price='375'
+                            discountPrice='400'
+                            digit='99'
+                            btn='Add to cart'
+                        />
+                        <CardSec
+                            ImgSrc={item3}
+                            productName='HAVIT HV-G92 Gamepad'
+                            price='120'
+                            discountPrice='160'
+                            digit='88'
+                            btn='Add to cart'
+                        />
+                        <CardSec
+                            ImgSrc={item3}
+                            productName='HAVIT HV-G92 Gamepad'
+                            price='120'
+                            discountPrice='160'
+                            digit='88'
+                            btn='Add to cart'
+                        />
+                        <CardSec
+                            ImgSrc={item3}
+                            productName='HAVIT HV-G92 Gamepad'
+                            price='120'
+                            discountPrice='160'
+                            digit='88'
+                            btn='Add to cart'
+
+                        />
                     </Slider>
                 </div>
                 <Button className='mb-15 mx-auto block mt-9.25 '>View All Products</Button>
                 {/* <div  className='border border-[#00000013]'/> */}
-           </div>
+            </div>
         </>
     )
 }

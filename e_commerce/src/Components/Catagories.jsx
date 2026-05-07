@@ -16,66 +16,59 @@ import { FaArrowRight } from "react-icons/fa";
 
 
 const Catagories = () => {
- function SampleNextArrow(props) {
-        const { onClick } = props;
-        return (
-            <div className='block absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-5 -top-12' onClick={onClick} >
-           <FaArrowRight />
-            </div>
-        );
-    }
+  function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+      <div className='block absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-5 -top-12' onClick={onClick} >
+        <FaArrowRight />
+      </div>
+    );
+  }
 
-    function SamplePrevArrow(props) {
-        const { onClick } = props;
-        return (
-            <div className='block absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-17 -top-12' onClick={onClick} >
-             <FaArrowLeft/>
-            </div>
-        );
-    }
-const settings = {
-       
-        infinite: true,
-        speed: 500,
-        slidesToShow: 6,
-        slidesToScroll: 4,
-        initialSlide: 0,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        responsive: [
-            {
-                breakpoint: 1170,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
+  function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <div className='block absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-17 -top-12' onClick={onClick} >
+        <FaArrowLeft />
+      </div>
+    );
+  }
+  const settings = {
+
+    infinite: true,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <>
       <div className='container'>
@@ -85,42 +78,59 @@ const settings = {
             heading='Flash Browse By Category'
           />
         </div>
-         {/* use custom css className cataroies  */}
+        {/* use custom css className cataroies  */}
         <div className="slider-container">
           <Slider {...settings} className='mb-15  '>
-            <CatagoriesCards className='catagories'
-              imgSrc={phone}
-              productName='phone'
-            />
-            <CatagoriesCards className='catagories'
-              imgSrc={computer}
-              productName='Computers'
-            />
-            <CatagoriesCards className='catagories'
-              imgSrc={watch}
-              productName='SmartWatch'
-            />
-            <CatagoriesCards className='catagories'
-              imgSrc={headPhone}
-              productName='HeadPhones'
-            />
-            <Cards className='catagories'
-              imgSrc={gaming}
-              productName='Gaming'
-            />
-            <CatagoriesCards className='catagories'
-              imgSrc={watch}
-              productName='SmartWatch'
-            />
-           
-            <CatagoriesCards className='catagories'
-              imgSrc={headPhone}
-              productName='HeadPhones'
-            />
-            <CatagoriesCards className='catagories'
-              imgSrc={gaming}
-              productName='Gaming'
-            />
+
+            <div>
+              <CatagoriesCards className='catagories'
+                imgSrc={phone}
+                productName='phone'
+              />
+            </div>
+            <div>
+              <CatagoriesCards className='catagories'
+                imgSrc={computer}
+                productName='Computers'
+              />
+            </div>
+            <div>
+              <CatagoriesCards className='catagories'
+                imgSrc={watch}
+                productName='SmartWatch'
+              />
+            </div>
+            <div>
+              <CatagoriesCards className='catagories'
+                imgSrc={headPhone}
+                productName='HeadPhones'
+              />
+            </div>
+            <div>
+              <Cards className='catagories'
+                imgSrc={gaming}
+                productName='Gaming'
+              />
+            </div>
+            <div>
+              <CatagoriesCards className='catagories'
+                imgSrc={watch}
+                productName='SmartWatch'
+              />
+            </div>
+
+            <div>
+              <CatagoriesCards className='catagories'
+                imgSrc={headPhone}
+                productName='HeadPhones'
+              />
+            </div>
+            <div>
+              <CatagoriesCards className='catagories'
+                imgSrc={gaming}
+                productName='Gaming'
+              />
+            </div>
           </Slider>
           <div className='border border-[#00000013]' />
         </div>

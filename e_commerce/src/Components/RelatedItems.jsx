@@ -11,10 +11,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 
-const RelatedItems= () => {
- 
-   const settings = {
-       
+const RelatedItems = () => {
+
+    const settings = {
+
         infinite: true,
         speed: 500,
         slidesToShow: 4,
@@ -58,56 +58,56 @@ const RelatedItems= () => {
         <>
             <div className='container'>
                 <div className='mt-37.5 mb-10 flex flex-wrap justify-between'>
-                    <SecHeading     
+                    <SecHeading
                         title="Related Items"
                     />
-                  
+
                 </div>
 
                 <div className="slider-container">
                     <Slider {...settings}>
 
-                      
-                            <CardSec
-                                ImgSrc={item1}
-                                productName='HAVIT HV-G92 Gamepad'
-                                price='120'
-                                discountPrice='160'
-                                digit='88'
-                                btn='Add to cart'
-                                discount='40'
-                                className=''
-                        
-                     />
-                            <CardSec
-                                ImgSrc={item2}
-                                productName='AK-900 Wired Keyboard'
-                                price='960'
-                                discountPrice='1160'
-                                digit='75'
-                                btn='Add to cart'
-                                discount='40'
-                            />
-                      
-                            <CardSec
-                                ImgSrc={item3}
-                                productName='IPS LCD Gaming Monitor'
-                                price='370'
-                                discountPrice='400'
-                                digit='99'
-                                btn='Add to cart'
-                                discount='35'
-                            />
-                       
-                            <CardSec
-                                ImgSrc={item4}
-                                productName='S-Series Comfort Chair '
-                                price='375'
-                                discountPrice='400'
-                                digit='99' 
-                                btn='Add to cart'  
-                                discount='30'                         />
-                        
+
+                        <CardSec
+                            ImgSrc={item1}
+                            productName='HAVIT HV-G92 Gamepad'
+                            price='120'
+                            discountPrice='160'
+                            digit='88'
+                            btn='Add to cart'
+                            discount='40'
+                            className=''
+
+                        />
+                        <CardSec
+                            ImgSrc={item2}
+                            productName='AK-900 Wired Keyboard'
+                            price='960'
+                            discountPrice='1160'
+                            digit='75'
+                            btn='Add to cart'
+                            discount='40'
+                        />
+
+                        <CardSec
+                            ImgSrc={item3}
+                            productName='IPS LCD Gaming Monitor'
+                            price='370'
+                            discountPrice='400'
+                            digit='99'
+                            btn='Add to cart'
+                            discount='35'
+                        />
+
+                        <CardSec
+                            ImgSrc={item4}
+                            productName='S-Series Comfort Chair '
+                            price='375'
+                            discountPrice='400'
+                            digit='99'
+                            btn='Add to cart'
+                            discount='30' />
+
                         <div className='mb-35'>
                             <CardSec
                                 ImgSrc={item3}
@@ -121,7 +121,7 @@ const RelatedItems= () => {
                         </div>
                     </Slider>
                 </div>
-              
+
             </div>
 
         </>

@@ -19,6 +19,7 @@ const ProductPage = () => {
     const [value, setValue] = useState(6)
     const dispatch = useDispatch()
 
+
     //     useEffect(() => {
     //     fetch('https://dummyjson.com/products')
     //         .then(res => res.json())
@@ -56,7 +57,7 @@ const ProductPage = () => {
         const filterProduct = products.filter((filterItem) => {
             return (filterItem.category == item)
         })
-        dispatch(filterData(filterProduct)) 
+        dispatch(filterData(filterProduct))
     }
 
     return (
@@ -68,7 +69,7 @@ const ProductPage = () => {
                     <div className='flex justify-between mb-3.75'>
                         <div>
                             <label htmlFor="text"> Show: </label>
-                            <select onChange={(e) => setValue(e.target.value)}  className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
+                            <select onChange={(e) => setValue(e.target.value)} className='border cursor-pointer border-[#D9D9D9] w-24.75 text-center'>
                                 <option value="6">6</option>
                                 <option value="9">9</option>
                                 <option value="12">12</option>
@@ -85,8 +86,8 @@ const ProductPage = () => {
                                 category.map((item, idx) => {
                                     return (
                                         //parameter dorkar hole onlick er moddhe arrow function use korbo 
-                                        <li key={idx} 
-                                        onClick={() => handleFilter(item)} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
+                                        <li key={idx}
+                                            onClick={() => handleFilter(item)} className='flex gap-10 lg:gap-0 lg:w-54.25 lg:justify-between cursor-pointer'> {item} </li>
                                     )
                                 })
                             }

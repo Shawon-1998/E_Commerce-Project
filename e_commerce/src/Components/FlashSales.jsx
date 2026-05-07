@@ -19,7 +19,7 @@ const FlashSales = () => {
         const { onClick } = props;
         return (
             <div className=' cursor-pointer absolute rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-5 -top-12' onClick={onClick} >
-           <FaArrowRight />
+                <FaArrowRight />
             </div>
         );
     }
@@ -28,13 +28,13 @@ const FlashSales = () => {
         const { onClick } = props;
         return (
             <div className=' absolute cursor-pointer rounded-full p-3 lg:text-lg text-sm bg-gray-100 right-17 -top-12' onClick={onClick} >
-             <FaArrowLeft/>
+                <FaArrowLeft />
             </div>
         );
     }
 
     const settings = {
-       
+
         infinite: true,
         speed: 500,
         slidesToShow: 4,
@@ -85,8 +85,8 @@ const FlashSales = () => {
                         heading='Flash Sales'
                     />
                     <CountDown
-                    conductDate='2026-12-31 00:00:00'
-                     className='lg:self-end'/>
+                        conductDate='2026-12-31 00:00:00'
+                        className='lg:self-end' />
                 </div>
                 <div className="slider-container">
                     <Slider {...settings}>

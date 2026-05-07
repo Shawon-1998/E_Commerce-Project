@@ -55,10 +55,11 @@ const Paginate = ({ itemsPerPage, product }) => {
         previousLabel=""
         renderOnZeroPageCount={null}
         className='absolute -bottom-20 left-0 flex flex-wrap gap-5'
-        pageClassName='text-white px-6 bg-black cursor-pointer'
+        pageClassName='text-white px-6 bg-black cursor-pointer '
       />
     </>
   )
 }
 
 export default Paginate
+
